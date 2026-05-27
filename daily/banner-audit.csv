@@ -1,0 +1,71 @@
+day,section,page_path,banner_src,resolved_image_path,image_exists,image_size_bytes,status,is_dedicated_per_day,has_visible_placeholder,placeholder_details,notes
+1,s1,daily/s1/day1.htm,../../images/daily/s1/day1-banner.jpg,images/daily/s1/day1-banner.jpg,True,859129,GOOD,True,False,,
+2,s1,daily/s1/day2.htm,../../images/daily/s1/day2-banner.jpg,images/daily/s1/day2-banner.jpg,True,654998,GOOD,True,False,,
+3,s1,daily/s1/day3.htm,../../images/daily/s1/day3-banner.jpg,images/daily/s1/day3-banner.jpg,True,8117301,GOOD,True,False,,
+4,s1,daily/s1/day4.htm,../../images/daily/s1/day4-banner.jpg,images/daily/s1/day4-banner.jpg,True,9420530,GOOD,True,False,,
+5,s1,daily/s1/day5.htm,../../images/daily/s1/day5-banner.jpg,images/daily/s1/day5-banner.jpg,True,6790024,GOOD,True,False,,
+6,s1,daily/s1/day6.htm,../../images/daily/s1/day6-banner.jpg,images/daily/s1/day6-banner.jpg,True,9119140,GOOD,True,False,,
+7,s1,daily/s1/day7.htm,../../images/daily/s1/day7-banner.jpg,images/daily/s1/day7-banner.jpg,True,7616589,GOOD,True,False,,
+8,s1,daily/s1/day8.htm,../../images/daily/s1/day8-banner.jpg,images/daily/s1/day8-banner.jpg,True,6797376,GOOD,True,False,,
+9,s1,daily/s1/day9.htm,../../images/daily/s1/day9-banner.jpg,images/daily/s1/day9-banner.jpg,True,7944887,GOOD,True,False,,
+10,s1,daily/s1/day10.htm,../../images/daily/s1/day10-banner.jpg,images/daily/s1/day10-banner.jpg,True,6583655,GOOD,True,False,,
+11,s2,daily/s2/day11.htm,../../images/daily/s2/day11-banner.png,images/daily/s2/day11-banner.png,True,6311470,GOOD,True,False,,
+12,s2,daily/s2/day12.htm,../../images/daily/s2/day12.png,images/daily/s2/day12.png,True,7732247,GOOD,True,False,,
+13,s2,daily/s2/day13.htm,../../images/daily/s2/day13.png,images/daily/s2/day13.png,True,8166736,GOOD,True,False,,
+14,s2,daily/s2/day14.htm,../../images/daily/s2/day14.png,images/daily/s2/day14.png,True,9323618,GOOD,True,False,,
+15,s2,daily/s2/day15.htm,../../images/daily/s2/day15.png,images/daily/s2/day15.png,True,8950954,GOOD,True,False,,
+16,s2,daily/s2/day16.htm,../../images/daily/s2/day16.png,images/daily/s2/day16.png,True,9067398,GOOD,True,False,,
+17,s2,daily/s2/day17.htm,../../images/daily/s2/day17.png,images/daily/s2/day17.png,True,8121616,GOOD,True,False,,
+18,s2,daily/s2/day18.htm,../../images/daily/s2/day18.jpg,images/daily/s2/day18.jpg,True,275873,GOOD,True,False,,
+19,s2,daily/s2/day19.htm,../../images/daily/s2/day19.jpg,images/daily/s2/day19.jpg,True,216638,GOOD,True,False,,
+20,s2,daily/s2/day20.htm,../../images/daily/s2/day20.png,images/daily/s2/day20.png,True,8713655,GOOD,True,False,,
+21,s3,daily/s3/day21.htm,../../images/daily/s3/day21.png,images/daily/s3/day21.png,True,6261436,GOOD,True,False,,
+22,s3,daily/s3/day22.htm,../../images/daily/s3/day22.png,images/daily/s3/day22.png,True,5754983,GOOD,True,False,,
+23,s3,daily/s3/day23.htm,../../images/daily/s3/day23.png,images/daily/s3/day23.png,True,1830650,GOOD,True,False,,
+24,s3,daily/s3/day24.htm,../../images/daily/s3/day24.png,images/daily/s3/day24.png,True,6153402,GOOD,True,False,,
+25,s3,daily/s3/day25.htm,../../images/daily/s3/day25.png,images/daily/s3/day25.png,True,8662575,GOOD,True,False,,
+26,s3,daily/s3/day26.htm,../../images/daily/s3/day26.png,images/daily/s3/day26.png,True,7935629,GOOD,True,False,,
+27,s3,daily/s3/day27.htm,../../images/daily/s3/day27.png,images/daily/s3/day27.png,True,8715580,GOOD,True,False,,
+28,s3,daily/s3/day28.htm,../../images/daily/s3/day28.png,images/daily/s3/day28.png,True,8290507,GOOD,True,False,,
+29,s3,daily/s3/day29.htm,../../images/daily/s3/day29.png,images/daily/s3/day29.png,True,9108920,GOOD,True,False,,
+30,s3,daily/s3/day30.htm,../../images/daily/s3/day30.png,images/daily/s3/day30.png,True,10040461,GOOD,True,False,,
+31,s4,daily/s4/day31.htm,../../images/daily/s4/day31.png,images/daily/s4/day31.png,True,7581505,GOOD,True,False,,
+32,s4,daily/s4/day32.htm,../../images/daily/s4/day32.png,images/daily/s4/day32.png,True,9035606,GOOD,True,False,,
+33,s4,daily/s4/day33.htm,../../images/daily/s4/day33.png,images/daily/s4/day33.png,True,7381450,GOOD,True,False,,
+34,s4,daily/s4/day34.htm,../../images/daily/s4/day34.png,images/daily/s4/day34.png,True,9403302,GOOD,True,False,,
+35,s4,daily/s4/day35.htm,../../images/daily/s4/day35.png,images/daily/s4/day35.png,True,6803138,GOOD,True,False,,
+36,s4,daily/s4/day36.htm,../../images/daily/s4/day36.png,images/daily/s4/day36.png,True,7738021,GOOD,True,False,,
+37,s4,daily/s4/day37.htm,../../images/daily/s4/day37.png,images/daily/s4/day37.png,True,8175314,GOOD,True,False,,
+38,s4,daily/s4/day38.htm,../../images/daily/s4/day38.png,images/daily/s4/day38.png,True,8928540,GOOD,True,False,,
+39,s4,daily/s4/day39.htm,../../images/daily/s4/day39.png,images/daily/s4/day39.png,True,8967546,GOOD,True,False,,
+40,s4,daily/s4/day40.htm,../../images/daily/s4/day40.png,images/daily/s4/day40.png,True,9871558,GOOD,True,False,,
+41,s5,daily/s5/day41.htm,../../images/daily/s5/day41-banner.jpg,images/daily/s5/day41-banner.jpg,True,173645,GOOD,True,False,,
+42,s5,daily/s5/day42.htm,../../images/daily/s5/day42-banner.jpg,images/daily/s5/day42-banner.jpg,True,373981,GOOD,True,False,,
+43,s5,daily/s5/day43.htm,../../images/daily/s5/day43-banner.jpg,images/daily/s5/day43-banner.jpg,True,137376,GOOD,True,False,,
+44,s5,daily/s5/day44.htm,../../images/daily/s5/day44-banner.jpg,images/daily/s5/day44-banner.jpg,True,447497,GOOD,True,False,,
+45,s5,daily/s5/day45.htm,../../images/daily/s5/day45-banner.jpg,images/daily/s5/day45-banner.jpg,True,242017,GOOD,True,False,,
+46,s5,daily/s5/day46.htm,../../images/daily/s5/day46-banner.jpg,images/daily/s5/day46-banner.jpg,True,252805,GOOD,True,False,,
+47,s5,daily/s5/day47.htm,../../images/daily/s5/day47-banner.jpg,images/daily/s5/day47-banner.jpg,True,172026,GOOD,True,False,,
+48,s5,daily/s5/day48.htm,../../images/daily/s5/day48-banner.jpg,images/daily/s5/day48-banner.jpg,True,174516,GOOD,True,False,,
+49,s5,daily/s5/day49.htm,../../images/daily/s5/day49-banner.jpg,images/daily/s5/day49-banner.jpg,True,140550,GOOD,True,False,,
+50,s5,daily/s5/day50.htm,../../images/daily/s5/day50-banner.jpg,images/daily/s5/day50-banner.jpg,True,158612,GOOD,True,False,,
+51,s6,daily/s6/day51.htm,../../images/daily/s6/day51.png,images/daily/s6/day51.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day51.png
+52,s6,daily/s6/day52.htm,../../images/daily/s6/day52.png,images/daily/s6/day52.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day52.png
+53,s6,daily/s6/day53.htm,../../images/daily/s6/day53.png,images/daily/s6/day53.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day53.png
+54,s6,daily/s6/day54.htm,../../images/daily/s6/day54.png,images/daily/s6/day54.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day54.png
+55,s6,daily/s6/day55.htm,../../images/daily/s6/day55.png,images/daily/s6/day55.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day55.png
+56,s6,daily/s6/day56.htm,../../images/daily/s6/day56.png,images/daily/s6/day56.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day56.png
+57,s6,daily/s6/day57.htm,../../images/daily/s6/day57.png,images/daily/s6/day57.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day57.png
+58,s6,daily/s6/day58.htm,../../images/daily/s6/day58.png,images/daily/s6/day58.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day58.png
+59,s6,daily/s6/day59.htm,../../images/daily/s6/day59.png,images/daily/s6/day59.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day59.png
+60,s6,daily/s6/day60.htm,../../images/daily/s6/day60.png,images/daily/s6/day60.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s6/day60.png
+61,s7,daily/s7/day61.htm,../../images/daily/s7/day61.png,images/daily/s7/day61.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day61.png
+62,s7,daily/s7/day62.htm,../../images/daily/s7/day62.png,images/daily/s7/day62.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day62.png
+63,s7,daily/s7/day63.htm,../../images/daily/s7/day63.png,images/daily/s7/day63.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day63.png
+64,s7,daily/s7/day64.htm,../../images/daily/s7/day64.png,images/daily/s7/day64.png,False,,FILENAME_MISMATCH,True,False,,Correct image likely exists as day64.jpg
+65,s7,daily/s7/day65.htm,../../images/daily/s7/day65.png,images/daily/s7/day65.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day65.png
+66,s7,daily/s7/day66.htm,../../images/daily/s7/day66.png,images/daily/s7/day66.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day66.png
+67,s7,daily/s7/day67.htm,../../images/daily/s7/day67.png,images/daily/s7/day67.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day67.png
+68,s7,daily/s7/day68.htm,../../images/daily/s7/day68.png,images/daily/s7/day68.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day68.png
+69,s7,daily/s7/day69.htm,../../images/daily/s7/day69.png,images/daily/s7/day69.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day69.png
+70,s7,daily/s7/day70.htm,../../images/daily/s7/day70.png,images/daily/s7/day70.png,False,,MISSING,False,False,,Referenced file does not exist: ../../images/daily/s7/day70.png
