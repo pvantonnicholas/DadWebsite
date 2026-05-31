@@ -49,3 +49,8 @@ Create new task files in `tasks/` as we define work in these areas.
 ---
 
 **Next Step:** Explore other parts of the site and decide where to focus after the Daily Readings phase.
+
+---
+
+### Note from Chapter 1 modernisation (May 2026)
+The rich sidebar content that originated in the legacy `chapter1.htm` (Tozer quote, family photos, historical feedback, legacy notes) has been heavily duplicated across many daily pages (often marked "Exact sidebar from day40.htm"). The new `book/chapter1.htm` now has a deliberately lighter sidebar focused only on the three 2009 historical reader responses. A future cross-site improvement would be to reduce this duplication (e.g. via a shared include or component system) rather than continuing to copy-paste sidebar blocks.
