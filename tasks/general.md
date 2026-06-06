@@ -4,8 +4,9 @@ This file is for tasks that affect the whole site or multiple sections.
 
 ## High-Level Ideas
 
-- [ ] Modernize the homepage (`home.htm`)
-- [ ] Improve consistency of navigation across the site
+- [x] Audit root pages for redundancy vs `home.htm` (June 2026) — see `tasks/root-pages-cleanup.md`
+- [x] Execute root pages cleanup plan (PRs 1–8 in `tasks/root-pages-cleanup.md`)
+- [x] Improve consistency of navigation across the site (Resources sub-nav on root `main.css` pages)
 - [ ] Audit and clean up broken image links outside the daily/ section
 - [ ] Mobile responsiveness review
 - [ ] Performance / image optimization across the whole site

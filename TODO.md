@@ -8,10 +8,10 @@ For detailed work within a specific area, see the files in the `tasks/` folder.
 
 ---
 
-## Current Priorities (May 2026)
+## Current Priorities (June 2026)
 
 - [x] Complete banner modernization for Daily Readings (s1–s7)
-- [ ] Decide next major area of the site to work on
+- [x] **Root pages cleanup** — see `tasks/root-pages-cleanup.md` (PRs 1–8 complete; PR 3 template optional)
 - [ ] Maintain good documentation so Daily Readings work can be easily resumed later
 
 ---

@@ -4,77 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Lord is my Shepherd, I have everything I need</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        :root {
+            --primary: #1A237E;  /* Bright navy */
+            --accent: #00E5FF;   /* Vivid cyan */
+            --highlight: #FF8A65; /* Warm peach */
+            --bg: #FFFFFF;       /* Crisp white */
+            --card-bg: #F5F5F5;  /* Light gray for cards */
+            --link-color: #D81B60; /* Vibrant magenta */
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        nav { grid-column: 1 / -1; }
+
+        .main-content {
+            grid-column: 1 / -1;
+            padding: 20px;
+        }
+
+        .main-content p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .main-content a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .main-content a:hover {
+            color: #C2185B;
+            text-decoration: underline;
+        }
+
+        .section-content img {
+            max-width: 100%;
+            width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .highlight { background: rgba(255, 138, 101, 0.2); }
+
+        .scholar-quote {
+            text-align: center;
+            font-size: 1.1rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-italic {
+            font-style: italic;
+        }
+
+        footer {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-x-3">
-                    <div class="font-semibold text-xl">Anton Nicholas</div>
-                </div>
-                <div class="hidden md:flex items-center gap-x-8 text-sm">
-                    <div class="relative group">
-                        <button class="flex items-center gap-x-1 text-slate-700 hover:text-slate-900 font-medium">Main Pages <i class="fa-solid fa-chevron-down text-xs ml-1"></i></button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-xl border mt-2 py-2 w-48">
-                            <a href="home.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Home</a>
-                            <a href="thefruitofprayer.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">The Fruit of Prayer</a>
-                            <a href="malaysia.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Malaysia</a>
-                            <a href="update.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Updates</a>
-                        </div>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Lord is my Shepherd, I have everything I need</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li class="main-pages">
+                    <a href="home.htm">Main Pages</a>
+                    <div class="sub-nav">
+                        <a href="home.htm">Home</a>
+                        <a href="thefruitofprayer.htm">The Fruit of Prayer</a>
+                        <a href="malaysia.htm">Malaysia</a>
+                        <a href="update.htm">Updates</a>
                     </div>
-                    <a href="daily/index.htm" class="text-slate-700 hover:text-slate-900 font-medium">Resources</a>
-                    <div class="relative group">
-                        <button class="flex items-center gap-x-1 text-slate-700 hover:text-slate-900 font-medium">Profiles <i class="fa-solid fa-chevron-down text-xs ml-1"></i></button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-xl border mt-2 py-2 w-52">
-                            <a href="profiles/oriental.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">BP Nicholas</a>
-                            <a href="profiles/benedict.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Benedict Ponniah</a>
-                            <a href="profiles/paul.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Paul Nicholas</a>
-                            <a href="profiles/jannine.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Jannine Nicholas</a>
-                            <a href="profiles/dietitian.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Valerie Meilton</a>
-                        </div>
+                </li>
+                <li class="main-pages">
+                    <a href="daily/index.htm">Resources</a>
+                    <div class="sub-nav">
+                        <a href="daily/index.htm">Daily Readings</a>
+                        <a href="tapes.htm">Tapes</a>
+                        <a href="thelordismylight.htm">The Lord is My Light</a>
                     </div>
-                    <a href="events/malaysia.htm" class="text-slate-700 hover:text-slate-900 font-medium">Events &amp; Testimonies</a>
-                </div>
-            </div>
+                </li>
+                <li class="main-pages">
+                    <a href="thefruitofprayer.htm">Profiles</a>
+                    <div class="sub-nav">
+                        <a href="profiles/oriental.htm">BP Nicholas</a>
+                        <a href="profiles/benedict.htm">Benedict Ponniah</a>
+                        <a href="profiles/paul.htm">Paul Nicholas</a>
+                        <a href="profiles/jannine.htm">Jannine Nicholas</a>
+                        <a href="profiles/dietitian.htm">Valerie Meilton</a>
+                    </div>
+                </li>
+                <li><a href="events/malaysia.htm">Events &amp; Testimonies</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <p class="text-center">
+                <a href="home.htm">Our HOME PAGE has been modernised. Press here to view some in-depth pictures.</a>
+            </p>
+
+            <p class="text-center">Here below is the declaration Paul had to make before being admitted as a scholar to Christ's College, Cambridge:</p>
+
+            <blockquote class="scholar-quote">
+                I, Paul Nicholas, elected scholar of this College do hereby solemnly promise that I will faithfully keep all the Statutes and Ordinances of the College so far as they concern me. I will obey the Master in all his lawful commands; and will pay due respect to the Fellows all and several, and I will be faithful and loyal to the College.
+            </blockquote>
+
+            <p class="text-center">It was such a joy when Paul surprised us by informing us on 24th January 2010 that he has created his own website now.</p>
+
+            <p class="text-center">
+                <a href="http://sites.google.com/site/paulnich7">Read Paul's own superb and genuine story: it's an interesting read.</a><br>
+                <a href="http://sites.google.com/site/paulnich7/">http://sites.google.com/site/paulnich7/</a>
+            </p>
+
+            <p class="text-center text-italic">Below is a photograph of Paul Nicholas taken in December 2003, together with the Master of Christ's College, Prof Malcolm Bowie (front row centre) and the other elected scholars from that year, prior to the admission ceremony.</p>
+
+            <p class="text-center text-italic">Paul is in the back row, second from the right.</p>
+
+            <p class="text-center text-italic">(back row: R. Lim, A. Ng, G J Naylor, E C Harris, K Y Tan, K E Low, L S Tan, M R Parry, P A I Nicholas, P J Caroe)</p>
+
+            <p class="text-center">
+                <img src="images/profiles/scholar.jpg" alt="Paul Nicholas with Master and scholars, Christ's College Cambridge, December 2003" width="900" height="634" loading="lazy">
+            </p>
+
+            <p class="text-center">29<sup>th</sup> January 2007, we received the sad news that on 28<sup>th</sup> January, Professor Malcolm Bowie (seated 7th on the left) passed away peacefully. Professor Bowie was the Master of Christ College, Cambridge whilst Paul was an Undergraduate there.</p>
+            <p class="text-center">To Professor Bowie's family we send our deepest condolences and our sincere prayers. May he rest in peace!</p>
         </div>
-    </nav>
 
-    <div class="max-w-4xl mx-auto px-6 py-10">
-        <div class="bg-white rounded-3xl shadow-sm border p-8 md:p-12">
-            <div class="prose prose-slate max-w-none">
-                <p class="text-center text-lg">
-                    <a href="home.htm" class="text-blue-700 hover:underline font-medium">Our HOME PAGE has been modernised. Press here to view some in-depth pictures.</a>
-                </p>
-
-                <p class="text-center text-lg mt-8">Here below is the declaration Paul had to make before being admitted as a scholar to Christ's College, Cambridge:</p>
-
-                <blockquote class="text-center text-lg border-l-0 px-4 py-6 bg-amber-50 rounded-2xl not-italic">
-                    I, Paul Nicholas, elected scholar of this College do hereby solemnly promise that I will faithfully keep all the Statutes and Ordinances of the College so far as they concern me. I will obey the Master in all his lawful commands; and will pay due respect to the Fellows all and several, and I will be faithful and loyal to the College.
-                </blockquote>
-
-                <p class="text-center text-lg">It was such a joy when Paul surprised us by informing us on 24th January 2010 that he has created his own website now.</p>
-
-                <p class="text-center">
-                    <a href="http://sites.google.com/site/paulnich7" class="text-red-800 font-semibold hover:underline">Read Paul's own superb and genuine story: it's an interesting read.</a><br>
-                    <a href="http://sites.google.com/site/paulnich7/" class="text-blue-700 hover:underline text-sm mt-2 inline-block">http://sites.google.com/site/paulnich7/</a>
-                </p>
-
-                <p class="text-center text-slate-700 italic mt-8">Below is a photograph of Paul Nicholas taken in December 2003, together with the Master of Christ's College, Prof Malcolm Bowie (front row centre) and the other elected scholars from that year, prior to the admission ceremony.</p>
-
-                <p class="text-center text-slate-700 italic">Paul is in the back row, second from the right.</p>
-
-                <p class="text-center text-slate-600 text-sm italic">(back row: R. Lim, A. Ng, G J Naylor, E C Harris, K Y Tan, K E Low, L S Tan, M R Parry, P A I Nicholas, P J Caroe)</p>
-
-                <img src="images/profiles/scholar.jpg" alt="Paul Nicholas with Master and scholars, Christ's College Cambridge, December 2003" width="900" height="634" class="mx-auto mt-6 rounded-xl shadow max-w-full h-auto" loading="lazy">
-
-                <div class="mt-10 text-center text-lg space-y-4">
-                    <p>29<sup>th</sup> January 2007, we received the sad news that on 28<sup>th</sup> January, Professor Malcolm Bowie (seated 7th on the left) passed away peacefully. Professor Bowie was the Master of Christ College, Cambridge whilst Paul was an Undergraduate there.</p>
-                    <p>To Professor Bowie's family we send our deepest condolences and our sincere prayers. May he rest in peace!</p>
-                </div>
-            </div>
-        </div>
+        <footer class="footer">
+            <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
+            <!-- Flag Counter -->
+            <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+        </footer>
     </div>
+	<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=223118; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript>
+<a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img 
+ src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a></noscript>
+
+<!-- End of StatCounter Code -->
+
+    <script src="assets/js/sections.js"></script>
 </body>
 </html>

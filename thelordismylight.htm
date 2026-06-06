@@ -4,120 +4,288 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Lord is my Light</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        :root {
+            --primary: #5D4037;  /* Warm brown */
+            --accent: #FFB300;    /* Golden amber */
+            --highlight: #FFD740; /* Bright gold */
+            --bg: #FFF8E1;        /* Pale cream */
+            --card-bg: #FFF3E0;   /* Light amber */
+            --link-color: #D81B60; /* Vibrant magenta */
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        header {
+            grid-column: 1 / 3;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        nav { grid-column: 1 / 3; }
+
+        .main-content {
+            grid-column: 1 / 2;
+            padding: 20px;
+        }
+
+        .main-content p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .main-content a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .main-content a:hover {
+            color: #C2185B;
+            text-decoration: underline;
+        }
+
+        .psalm-box {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .psalm-box h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .psalm-box .psalm-ref {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .psalm-box .verse-block {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .psalm-box .response {
+            margin-bottom: 30px;
+        }
+
+        .psalm-box .response span {
+            color: #C62828;
+            font-weight: 600;
+        }
+
+        .psalm-box .verse-text {
+            color: #6A1B9A;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .cd-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cd-section img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .section-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            background: rgba(255, 215, 64, 0.2);
+        }
+
+        .sidebar {
+            grid-column: 2 / 3;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            align-self: start;
+        }
+
+        .sidebar p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            color: #C62828;
+            font-weight: 600;
+        }
+
+        .sidebar a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #C2185B;
+            text-decoration: underline;
+        }
+
+        footer {
+            grid-column: 1 / 3;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .sidebar {
+                max-width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
-<body class="bg-slate-50">
-    <!-- Navigation -->
-    <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-x-3">
-                    <div class="font-semibold text-xl">Anton Nicholas</div>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/main/dove.gif" width="150" height="150" alt="" loading="lazy">
+            <h1>The Lord is my Light</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li class="main-pages">
+                    <a href="home.htm">Main Pages</a>
+                    <div class="sub-nav">
+                        <a href="home.htm">Home</a>
+                        <a href="thefruitofprayer.htm">The Fruit of Prayer</a>
+                        <a href="malaysia.htm">Malaysia</a>
+                        <a href="update.htm">Updates</a>
+                    </div>
+                </li>
+                <li class="main-pages">
+                    <a href="daily/index.htm">Resources</a>
+                    <div class="sub-nav">
+                        <a href="daily/index.htm">Daily Readings</a>
+                        <a href="tapes.htm">Tapes</a>
+                        <a href="thelordismylight.htm">The Lord is My Light</a>
+                    </div>
+                </li>
+                <li class="main-pages">
+                    <a href="thefruitofprayer.htm">Profiles</a>
+                    <div class="sub-nav">
+                        <a href="profiles/oriental.htm">BP Nicholas</a>
+                        <a href="profiles/benedict.htm">Benedict Ponniah</a>
+                        <a href="profiles/paul.htm">Paul Nicholas</a>
+                        <a href="profiles/jannine.htm">Jannine Nicholas</a>
+                        <a href="profiles/dietitian.htm">Valerie Meilton</a>
+                    </div>
+                </li>
+                <li><a href="events/malaysia.htm">Events &amp; Testimonies</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="psalm-box highlight">
+                <h2>Heal my soul, for I have sinned</h2>
+                <p class="psalm-ref">(Psalm 41)</p>
+
+                <p class="response"><strong>Response:</strong> <span>Heal my soul for I have sinned against you</span></p>
+
+                <div class="verse-block">
+                    <p><strong>Verse 1:</strong></p>
+                    <p class="verse-text">Happy is the man who considers the poor and the weak.<br>
+                    The Lord will save him in the day of evil;<br>
+                    Will guard him, give him life, make him happy in the land,<br>
+                    And will not give him up to the will of his foes.</p>
                 </div>
-                <div class="hidden md:flex items-center gap-x-8 text-sm">
-                    <div class="relative group">
-                        <button class="flex items-center gap-x-1 text-slate-700 hover:text-slate-900 font-medium">Main Pages <i class="fa-solid fa-chevron-down text-xs ml-1"></i></button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-xl border mt-2 py-2 w-48">
-                            <a href="home.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Home</a>
-                            <a href="thefruitofprayer.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">The Fruit of Prayer</a>
-                            <a href="malaysia.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Malaysia</a>
-                            <a href="update.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Updates</a>
-                        </div>
-                    </div>
-                    <a href="daily/index.htm" class="text-slate-700 hover:text-slate-900 font-medium">Resources</a>
-                    <div class="relative group">
-                        <button class="flex items-center gap-x-1 text-slate-700 hover:text-slate-900 font-medium">Profiles <i class="fa-solid fa-chevron-down text-xs ml-1"></i></button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-xl border mt-2 py-2 w-52">
-                            <a href="profiles/oriental.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">BP Nicholas</a>
-                            <a href="profiles/benedict.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Benedict Ponniah</a>
-                            <a href="profiles/paul.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Paul Nicholas</a>
-                            <a href="profiles/jannine.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Jannine Nicholas</a>
-                            <a href="profiles/dietitian.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Valerie Meilton</a>
-                        </div>
-                    </div>
-                    <a href="events/malaysia.htm" class="text-slate-700 hover:text-slate-900 font-medium">Events &amp; Testimonies</a>
+
+                <div class="verse-block">
+                    <p><strong>Verse 2:</strong></p>
+                    <p class="verse-text">The Lord will help him on his bed of pain,<br>
+                    He will bring him back from sickness to health.<br>
+                    As for me, I said, “Lord have mercy on me.<br>
+                    Heal my soul for I have sinned against you.”</p>
+                </div>
+
+                <div class="verse-block">
+                    <p><strong>Verse 3:</strong></p>
+                    <p class="verse-text">If you uphold, I shall be unharmed<br>
+                    And set in your presence forevermore.<br>
+                    Blessed be the Lord, the god of Israel from age to age.<br>
+                    Amen.</p>
                 </div>
             </div>
+
+            <div class="cd-section">
+                <p><a href="audio/lordlight.mp3">To listen to one of the tracks from 'The Lord is my Light' please click here</a></p>
+                <a href="audio/lordlight.mp3">
+                    <img src="images/main/CDCOVER.gif" alt="CD Cover" loading="lazy">
+                </a>
+            </div>
+
+            <p><a href="book/chapter1.htm">Do browse through this incredible miraculous stories by---Capturing what happened</a></p>
+            <p>For the consequential act of Good Friday delivered Valerie, our adopted family member of all her painful nasty lumps and my dear wife Saida of agonizing physical pain.</p>
+            <p><a href="book/chapter1.htm"><strong>Press this link</strong></a> — it might surprise you once you start reading it.</p>
+            <p><a href="home.htm">Press here for the HOME PAGE</a></p>
         </div>
-    </nav>
 
-    <div class="max-w-5xl mx-auto px-6 py-10">
-        <div class="bg-white rounded-3xl shadow-sm border p-8 md:p-12">
-            <!-- Original content preserved with light modern styling -->
-            <div class="text-center mb-10">
-                <img src="http://www.antonnicholas.org.uk/images/main/dove.gif" width="150" height="150" class="mx-auto mb-6" alt="">
-                <h1 class="text-4xl font-semibold tracking-tight">The Lord is my Light</h1>
-            </div>
-
-            <!-- Original table structure lightly modernized for readability while preserving content -->
-            <div class="grid md:grid-cols-12 gap-8">
-                <!-- Left column - Original content -->
-                <div class="md:col-span-8">
-                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 mb-8">
-                        <h2 class="text-2xl font-semibold text-center mb-4 text-amber-900">Heal my soul, for I have sinned</h2>
-                        <p class="text-center italic text-amber-800">(Psalm 41)</p>
-                        
-                        <div class="mt-8 space-y-6 text-lg leading-relaxed">
-                            <p><strong>Response:</strong> <span class="text-red-700">Heal my soul for I have sinned against you</span></p>
-                            
-                            <div>
-                                <p><strong>Verse 1:</strong></p>
-                                <p class="text-purple-700">Happy is the man who considers the poor and the weak.<br>
-                                The Lord will save him in the day of evil;<br>
-                                Will guard him, give him life, make him happy in the land,<br>
-                                And will not give him up to the will of his foes.</p>
-                            </div>
-                            
-                            <div>
-                                <p><strong>Verse 2:</strong></p>
-                                <p class="text-purple-700">The Lord will help him on his bed of pain,<br>
-                                He will bring him back from sickness to health.<br>
-                                As for me, I said, “Lord have mercy on me.<br>
-                                Heal my soul for I have sinned against you.”</p>
-                            </div>
-                            
-                            <div>
-                                <p><strong>Verse 3:</strong></p>
-                                <p class="text-purple-700">If you uphold, I shall be unharmed<br>
-                                And set in your presence forevermore.<br>
-                                Blessed be the Lord, the god of Israel from age to age.<br>
-                                Amen.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <p class="mb-4"><a href="http://www.antonnicholas.org.uk/audio/lordlight.mp3" class="inline-flex items-center gap-x-2 text-blue-700 hover:underline">
-                            <i class="fa-solid fa-play"></i> 
-                            To listen to one of the tracks from 'The Lord is my Light' please click here
-                        </a></p>
-                        
-                        <a href="http://www.antonnicholas.org.uk/audio/lordlight.mp3">
-                            <img src="http://www.antonnicholas.org.uk/images/main/CDCOVER.gif" alt="CD Cover" class="mx-auto max-w-xs rounded-xl shadow">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right sidebar - original content -->
-                <div class="md:col-span-4">
-                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-                        <p class="text-sm text-red-800 font-semibold">For enquiries about this beautifully rendered CD that brings the presence of God, please <a href="mailto:anton.nicholas@btinternet.com" class="underline">email us</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 pt-8 border-t text-sm">
-                <p><a href="book/chapter1.htm" class="text-blue-700 hover:underline font-medium">Do browse through this incredible miraculous stories by---Capturing what happened</a></p>
-                <p class="mt-2">For the consequential act of Good Friday delivered Valerie, our adopted family member of all her painful nasty lumps and my dear wife Saida of agonizing physical pain.</p>
-                
-                <p class="mt-4"><a href="https://www.antonnicholas.org.uk/book/chapter1.htm" class="text-blue-700 hover:underline font-medium"><strong>Press this link</strong></a> — it might surprise you once you start reading it.</p>
-                
-                <div class="mt-6">
-                    <a href="home.htm" class="text-blue-700 hover:underline">Press here for the HOME PAGE</a>
-                </div>
-            </div>
+        <div class="sidebar">
+            <p>For enquiries about this beautifully rendered CD that brings the presence of God, please <a href="mailto:anton.nicholas@btinternet.com">email us</a></p>
         </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
+            <!-- Flag Counter -->
+            <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+        </footer>
     </div>
+    <!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=223118;
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript>
+<a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img
+ src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a></noscript>
+
+<!-- End of StatCounter Code -->
+
+    <script src="assets/js/sections.js"></script>
 </body>
 </html>

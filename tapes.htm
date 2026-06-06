@@ -4,112 +4,348 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consequently, faith comes from hearing the message - Romans 10:17a</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        :root {
+            --primary: #5D4037;  /* Warm brown */
+            --accent: #FF8F00;   /* Amber */
+            --highlight: #FFE082; /* Light amber */
+            --bg: #FFF8E1;       /* Warm cream */
+            --card-bg: #FFECB3;  /* Light amber card */
+            --link-color: #D81B60; /* Vibrant magenta */
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        nav { grid-column: 1 / -1; }
+
+        .main-content {
+            grid-column: 1 / -1;
+            padding: 20px;
+        }
+
+        .main-content p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .main-content a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .main-content a:hover {
+            color: #C2185B;
+            text-decoration: underline;
+        }
+
+        .section-content img {
+            max-width: 100%;
+            width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .highlight { background: rgba(255, 224, 130, 0.4); }
+
+        .tapes-hero {
+            display: grid;
+            grid-template-columns: 150px 1fr 280px;
+            gap: 32px;
+            align-items: start;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .tapes-hero img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .tapes-hero h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .tapes-hero .verse {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .tapes-hero .welcome {
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .tapes-layout {
+            display: grid;
+            grid-template-columns: 100px 1fr 280px;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .tape-spine img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .reflection-box {
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .reflection-box p {
+            margin-bottom: 20px;
+        }
+
+        .scripture {
+            color: #1565C0;
+        }
+
+        .tape-sidebar {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tape-sidebar p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .tape-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tape-sidebar li {
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .tape-sidebar a {
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .tape-sidebar img {
+            width: 165px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .closing-line {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 40px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-italic {
+            font-style: italic;
+        }
+
+        footer {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                padding: 20px;
+            }
+
+            .tapes-hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .tapes-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .tape-spine {
+                text-align: center;
+            }
+
+            .tape-spine img {
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-x-3">
-                    <div class="font-semibold text-xl">Anton Nicholas</div>
-                </div>
-                <div class="hidden md:flex items-center gap-x-8 text-sm">
-                    <div class="relative group">
-                        <button class="flex items-center gap-x-1 text-slate-700 hover:text-slate-900 font-medium">Main Pages <i class="fa-solid fa-chevron-down text-xs ml-1"></i></button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-xl border mt-2 py-2 w-48">
-                            <a href="home.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Home</a>
-                            <a href="thefruitofprayer.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">The Fruit of Prayer</a>
-                            <a href="malaysia.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Malaysia</a>
-                            <a href="update.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Updates</a>
-                        </div>
-                    </div>
-                    <a href="daily/index.htm" class="text-slate-700 hover:text-slate-900 font-medium">Resources</a>
-                    <div class="relative group">
-                        <button class="flex items-center gap-x-1 text-slate-700 hover:text-slate-900 font-medium">Profiles <i class="fa-solid fa-chevron-down text-xs ml-1"></i></button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-xl border mt-2 py-2 w-52">
-                            <a href="profiles/oriental.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">BP Nicholas</a>
-                            <a href="profiles/benedict.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Benedict Ponniah</a>
-                            <a href="profiles/paul.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Paul Nicholas</a>
-                            <a href="profiles/jannine.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Jannine Nicholas</a>
-                            <a href="profiles/dietitian.htm" class="block px-4 py-2 text-sm hover:bg-slate-50">Valerie Meilton</a>
-                        </div>
-                    </div>
-                    <a href="events/malaysia.htm" class="text-slate-700 hover:text-slate-900 font-medium">Events &amp; Testimonies</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body>
+    <div class="container">
+        <header>
+            <h1>Consequently, faith comes from hearing the message - Romans 10:17a</h1>
+        </header>
 
-    <div class="max-w-6xl mx-auto px-6 py-10">
-        <div class="bg-white rounded-3xl shadow-sm border p-8 md:p-12">
-            <div class="grid md:grid-cols-[150px_1fr_280px] gap-8 items-start mb-10 bg-amber-50 rounded-2xl p-6">
-                <img src="images/main/dove.gif" alt="" width="150" height="150" class="mx-auto">
-                <div class="text-center md:text-left">
-                    <h2 class="text-2xl font-semibold text-red-900">&quot;Could you men not tarry with me for one hour?&quot;</h2>
-                    <p class="text-xl text-red-800 italic mt-2">Matthew 26:40</p>
-                    <p class="text-red-900 mt-3">Our response is, &quot;Father, we will do so.&quot;</p>
+        <nav>
+            <ul>
+                <li class="main-pages">
+                    <a href="home.htm">Main Pages</a>
+                    <div class="sub-nav">
+                        <a href="home.htm">Home</a>
+                        <a href="thefruitofprayer.htm">The Fruit of Prayer</a>
+                        <a href="malaysia.htm">Malaysia</a>
+                        <a href="update.htm">Updates</a>
+                    </div>
+                </li>
+                <li class="main-pages">
+                    <a href="daily/index.htm">Resources</a>
+                    <div class="sub-nav">
+                        <a href="daily/index.htm">Daily Readings</a>
+                        <a href="tapes.htm">Tapes</a>
+                        <a href="thelordismylight.htm">The Lord is My Light</a>
+                    </div>
+                </li>
+                <li class="main-pages">
+                    <a href="thefruitofprayer.htm">Profiles</a>
+                    <div class="sub-nav">
+                        <a href="profiles/oriental.htm">BP Nicholas</a>
+                        <a href="profiles/benedict.htm">Benedict Ponniah</a>
+                        <a href="profiles/paul.htm">Paul Nicholas</a>
+                        <a href="profiles/jannine.htm">Jannine Nicholas</a>
+                        <a href="profiles/dietitian.htm">Valerie Meilton</a>
+                    </div>
+                </li>
+                <li><a href="events/malaysia.htm">Events &amp; Testimonies</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="tapes-hero">
+                <img src="images/main/dove.gif" alt="" width="150" height="150">
+                <div>
+                    <h2>&quot;Could you men not tarry with me for one hour?&quot;</h2>
+                    <p class="verse">Matthew 26:40</p>
+                    <p>Our response is, &quot;Father, we will do so.&quot;</p>
                 </div>
-                <p class="text-xl font-semibold text-red-900 text-center italic">Welcome to Anton Nicholas Prayer Ministry</p>
+                <p class="welcome">Welcome to Anton Nicholas Prayer Ministry</p>
             </div>
 
-            <p class="text-center text-sm text-slate-600 mb-8">
-                <a href="home.htm" class="text-blue-700 hover:underline">Press here for the HOME PAGE</a> to visit other pages on this website.
+            <p class="text-center">
+                <a href="home.htm">Press here for the HOME PAGE</a> to visit other pages on this website.
             </p>
 
-            <h1 class="text-3xl font-bold text-center mb-8">The Abiding Presence of God:</h1>
+            <h1 class="text-center">The Abiding Presence of God:</h1>
 
-            <div class="flex flex-col lg:flex-row gap-8">
-                <img src="images/main/TAPE1.gif" alt="Prayer ministry tapes" width="100" height="692" class="hidden lg:block shrink-0 mx-auto lg:mx-0" loading="lazy">
+            <div class="tapes-layout">
+                <div class="tape-spine">
+                    <img src="images/main/TAPE1.gif" alt="Prayer ministry tapes" width="100" height="692" loading="lazy">
+                </div>
 
-                <div class="flex-1 space-y-4 text-lg">
+                <div>
                     <p>The Lord's prayer bore fruit. The testimonies are inserted in the tapes. The covenant keeping God and His powerful names; El-Shaddai, God El-Elohim, Jehovah Jireh, Jehovah Shammah and the other precious names were faithful to their promises.</p>
                     <p>This is the message Anton takes to the nations of the world to pray and pray and pray!</p>
                     <p>God is opening up prayer meetings in various parts of the world that host 24-hours a day meetings, interpersed with intense worship and prophetic prayer. Our prophetic prayer is that all of us will join in these 24-hour prayer meetings and for God the Holy Ghost to protect our family members from all forms of dangers, natural and spiritual.</p>
 
-                    <div class="border-2 border-purple-900 rounded-xl p-6 space-y-4">
-                        <p class="text-center underline text-blue-700 font-medium">Some points to ponder about: Scriptural thoughts for Reflection</p>
+                    <div class="reflection-box">
+                        <p class="text-center">Some points to ponder about: Scriptural thoughts for Reflection</p>
                         <p>If we believe in the concept that God created us and that we are made in His Image than surely it follows that we take heed to what He says. For if we do than a Heavenly peace that the world cannot understand resides within us.</p>
-                        <p class="text-blue-800">Isaiah 26:3. Thou dost keep him in perfect peace, whose mind is stayed on thee, because he trusts in thee.</p>
-                        <p class="text-blue-800">4. Trust in the Lord for ever, for the Lord God is an everlasting rock.</p>
-                        <p class="text-center font-medium">Please read these words of wisdom:</p>
-                        <p class="text-center font-bold underline text-blue-800">Psalm 1</p>
-                        <div class="text-blue-800 text-center space-y-1">
+                        <p class="scripture">Isaiah 26:3. Thou dost keep him in perfect peace, whose mind is stayed on thee, because he trusts in thee.</p>
+                        <p class="scripture">4. Trust in the Lord for ever, for the Lord God is an everlasting rock.</p>
+                        <p class="text-center">Please read these words of wisdom:</p>
+                        <p class="text-center"><b>Psalm 1</b></p>
+                        <div class="scripture text-center">
                             <p>1. How blessed is the man who does not walk in the counsel of the wicked,</p>
                             <p>Nor stand in the path of sinners,</p>
                             <p>Nor sit in the seat of scoffers!</p>
-                            <p class="bg-amber-100 inline-block px-2">2. But his delight is in the law of the Lord,</p>
-                            <p class="bg-amber-100 inline-block px-2">And in His law he meditates day and night.</p>
+                            <p class="highlight">2. But his delight is in the law of the Lord,</p>
+                            <p class="highlight">And in His law he meditates day and night.</p>
                         </div>
-                        <p class="font-semibold">Please do read the testimony of what happened to Paul Anton Imbaraj Nicholas after praying, meditating and memorizing the above verses of Psalm 1, the great grandson of B.P. Nicholas. It is contained within this article written by a prominent Malaysian journalist, Wan Ahmad Hulaimi, the former Manager of The Straits Times of Malaysia, office in London, England. (wrote as a &quot;Bernama&quot;- news Agency, dispatch from London)</p>
-                        <p class="text-center"><a href="malaysianews.htm" class="text-red-700 font-bold hover:underline">Please click this link</a></p>
+                        <p><b>Please do read the testimony of what happened to Paul Anton Imbaraj Nicholas after praying, meditating and memorizing the above verses of Psalm 1, the great grandson of B.P. Nicholas. It is contained within this article written by a prominent Malaysian journalist, Wan Ahmad Hulaimi, the former Manager of The Straits Times of Malaysia, office in London, England. (wrote as a &quot;Bernama&quot;- news Agency, dispatch from London)</b></p>
+                        <p class="text-center"><a href="malaysianews.htm">Please click this link</a></p>
                     </div>
                 </div>
 
-                <div class="lg:w-72 shrink-0 bg-amber-50 rounded-2xl p-5 space-y-4 text-sm">
-                    <p class="font-bold text-red-700 text-base">Please click below to listen to a portion of Anton's teaching:</p>
-                    <ul class="space-y-3">
-                        <li><a href="audio/prayer.mp3" class="text-blue-700 hover:underline font-medium italic">How to make your prayer time exciting</a></li>
+                <div class="tape-sidebar">
+                    <p><b>Please click below to listen to a portion of Anton's teaching:</b></p>
+                    <ul>
+                        <li><a href="audio/prayer.mp3">How to make your prayer time exciting</a></li>
                         <li>
-                            <a href="audio/mother.mp3" class="text-blue-700 hover:underline font-medium italic">In Memory of my dear Mother, Theresa Jeyamani Nicholas</a>
-                            <span class="block text-slate-600 mt-1">excerpt from a sermon preached in Singapore</span>
-                            <p class="italic mt-2">&quot;No man is poor who has had a godly mother&quot;. —Abraham Lincoln</p>
-                            <a href="audio/mother.mp3"><img src="images/main/theresa.jpg" alt="Theresa Jeyamani Nicholas" width="165" height="364" class="mt-2 rounded shadow mx-auto" loading="lazy"></a>
+                            <a href="audio/mother.mp3">In Memory of my dear Mother, Theresa Jeyamani Nicholas</a>
+                            <span>excerpt from a sermon preached in Singapore</span>
+                            <p class="text-italic">&quot;No man is poor who has had a godly mother&quot;. —Abraham Lincoln</p>
+                            <a href="audio/mother.mp3"><img src="images/main/theresa.jpg" alt="Theresa Jeyamani Nicholas" width="165" height="364" loading="lazy"></a>
                         </li>
-                        <li><a href="audio/anoint1.mp3" class="text-blue-700 hover:underline font-medium italic">Experience the anointing, taste the blessing! (1 of 2)</a></li>
-                        <li><a href="audio/anoint2.mp3" class="text-blue-700 hover:underline font-medium italic">Experience the anointing, taste the blessing! (2 of 2)</a></li>
-                        <li><a href="audio/global.mp3" class="text-blue-700 hover:underline font-medium italic">A Global Revival is coming: Get Prepared Warrior!</a></li>
-                        <li><a href="audio/word.mp3" class="text-blue-700 hover:underline font-medium italic">Pray the Word, Brethren</a></li>
-                        <li><a href="audio/wedding.mp3" class="text-blue-700 hover:underline font-medium italic">Anton&amp;Saida's Wedding</a></li>
-                        <li><a href="audio/empm.mp3" class="text-blue-700 hover:underline font-medium italic">An Early Morning Prayer Meeting</a></li>
-                        <li><a href="video/birthday.mpg" class="text-blue-700 hover:underline font-medium italic">Dad's Birthday Celebration</a></li>
-                        <li><a href="audio/birthday.mp3" class="text-blue-700 hover:underline font-medium italic">Paul's Birthday Celebration</a></li>
+                        <li><a href="audio/anoint1.mp3">Experience the anointing, taste the blessing! (1 of 2)</a></li>
+                        <li><a href="audio/anoint2.mp3">Experience the anointing, taste the blessing! (2 of 2)</a></li>
+                        <li><a href="audio/global.mp3">A Global Revival is coming: Get Prepared Warrior!</a></li>
+                        <li><a href="audio/word.mp3">Pray the Word, Brethren</a></li>
+                        <li><a href="audio/wedding.mp3">Anton&amp;Saida's Wedding</a></li>
+                        <li><a href="audio/empm.mp3">An Early Morning Prayer Meeting</a></li>
+                        <li><a href="video/birthday.mpg">Dad's Birthday Celebration</a></li>
+                        <li><a href="audio/birthday.mp3">Paul's Birthday Celebration</a></li>
                     </ul>
                 </div>
             </div>
 
-            <p class="text-center text-3xl font-bold mt-12">Please let His presence saturate you!</p>
+            <p class="closing-line">Please let His presence saturate you!</p>
         </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
+            <!-- Flag Counter -->
+            <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+        </footer>
     </div>
+	<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=223118; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript>
+<a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img 
+ src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a></noscript>
+
+<!-- End of StatCounter Code -->
+
+    <script src="assets/js/sections.js"></script>
 </body>
 </html>
