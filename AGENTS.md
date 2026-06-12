@@ -2,11 +2,45 @@
 
 **Project:** Personal/family website for Anton Nicholas (DadWebsite).
 
-**Last Updated:** May 2026
+**Last Updated:** June 2026
 
-## Current Focus (as of late May 2026)
+## Current Focus (as of June 2026)
 
-The team has largely completed modernization of the **Daily Readings** section (s1–s7, 70 days) and is now shifting focus to **other parts of the site**. Daily Readings work is paused but should be easy to resume.
+The **homepage (`home.htm`) redesign** is the active workstream. Daily Readings modernization (s1–s7, 70 days) is complete and paused; it should be easy to resume.
+
+## Homepage Design Direction (June 2026 — supersedes earlier notes)
+
+**Aesthetic: "warm broadsheet"** — a newspaper front page rendered as a quiet
+archive. Parchment palette (`--paper #f7f3ea` family) with harmonised muted
+accents (terracotta `#9a4e3c`, gold `#8a7342`, sage `#5f6f56`, slate `#516878`,
+plum `#6f5a62`), raised panels (`--paper-raised`), hairline rules, and a dark
+"depth" band (`#3d352c` / gold `#bfa06a`) reserved for the seasonal message.
+Never: shadows, border-radius, gradients, icons, emoji, symmetrical card grids.
+
+**Readability first:** base font 22px desktop / 19px mobile, line-height 1.65.
+Many readers are older family and friends — when in doubt, larger and clearer.
+Fonts: EB Garamond (body), Playfair Display (headlines).
+
+**Homepage hierarchy (in order of prominence):**
+
+1. Word for the Season — slim dark band under the masthead; one editable line
+2. Latest YouTube videos — two newest, side by side, in a commented swap block
+3. Prophetic Word — the lead story, with embedded videos
+4. Rail: Daily Readings, Nights of Prayer, Profile previews, Bulletin
+5. Story rows (Legacy, Saida, Early Life, Malaysia, Hymn, Connections,
+   Church Life, Milestones) — opening + photo visible, remainder behind
+   inline "Continue reading" expansion (no pop-ups, no modals)
+
+**Content rules:** all text from the legacy homepage (`archive/home-original.htm`,
+extracted in `content/home.md`) must be preserved verbatim — it is Anton's own
+voice; never paraphrase or "improve" it. British English. Nothing from the old
+page may be dropped without explicit agreement.
+
+**Maintenance:** the season message and latest-video IDs live in clearly
+commented blocks in `home.htm` so they can be swapped without touching
+anything else. External AI builders (Grok Build, Cursor Composer) are used
+via self-contained prompt files (e.g. `grok-build-prompt.md`); keep prompts
+in sync with this design direction.
 
 ## Daily Readings Status
 
