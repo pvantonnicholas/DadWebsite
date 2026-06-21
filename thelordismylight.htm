@@ -1,291 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lord is my Light</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <style>
-        :root {
-            --primary: #5D4037;  /* Warm brown */
-            --accent: #FFB300;    /* Golden amber */
-            --highlight: #FFD740; /* Bright gold */
-            --bg: #FFF8E1;        /* Pale cream */
-            --card-bg: #FFF3E0;   /* Light amber */
-            --link-color: #D81B60; /* Vibrant magenta */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lord is my Light — Anton &amp; Saida Nicholas</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&amp;family=Playfair+Display:wght@700;900&amp;display=swap">
+  <style>
+    :root {
+      --paper: #f7f3ea;
+      --paper-raised: #efe8db;
+      --paper-inset: #e8e0d2;
+      --ink: #2a241c;
+      --ink-soft: #4d4539;
+      --muted: #7a7164;
+      --rule: #d5cbb8;
+      --rule-strong: #bfb39e;
+      --terracotta: #9a4e3c;
+      --gold: #8a7342;
+      --sage: #5f6f56;
+      --slate: #516878;
+      --plum: #6f5a62;
+      --depth: #3d352c;
+      --depth-gold: #bfa06a;
+    }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            gap: 40px;
-            padding: 40px;
-        }
+    html { font-size: 22px; }
 
-        header {
-            grid-column: 1 / 3;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
 
-        header img {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
 
-        nav { grid-column: 1 / 3; }
+    .masthead {
+      text-align: center;
+      padding: 1rem 0 0;
+      border-bottom: 4px solid var(--terracotta);
+      background: var(--paper);
+    }
 
-        .main-content {
-            grid-column: 1 / 2;
-            padding: 20px;
-        }
+    .dateline {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      padding: 0 0.25rem;
+    }
 
-        .main-content p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-        }
+    .nameplate-rules {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.3rem 0;
+    }
 
-        .main-content a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
+    .nameplate {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      color: var(--ink);
+    }
 
-        .main-content a:hover {
-            color: #C2185B;
-            text-decoration: underline;
-        }
+    .nameplate .amp { color: var(--terracotta); }
 
-        .psalm-box {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            text-align: center;
-        }
+    .motto {
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin: 0.35rem 0 0.1rem;
+    }
 
-        .psalm-box h2 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
+    .section-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.95rem;
+      background: var(--paper);
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-top: 0.45rem;
+      padding: 0.4rem 0 0.55rem;
+      border-top: 1px solid var(--rule);
+    }
 
-        .psalm-box .psalm-ref {
-            font-style: italic;
-            margin-bottom: 30px;
-        }
+    .section-nav a { color: var(--ink-soft); text-decoration: none; padding: 0 0.7rem; font-weight: 600; }
+    .section-nav a:hover { color: var(--terracotta); }
+    .section-nav a[aria-current="page"] { color: var(--terracotta); }
+    .section-nav span { color: var(--rule); user-select: none; }
 
-        .psalm-box .verse-block {
-            text-align: left;
-            margin-bottom: 30px;
-        }
+    .page-title-band {
+      background: var(--depth);
+      border-bottom: 1px solid var(--depth-gold);
+      padding: 1rem 0;
+      text-align: center;
+    }
 
-        .psalm-box .response {
-            margin-bottom: 30px;
-        }
+    .page-title-band h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      color: var(--depth-gold);
+      text-transform: uppercase;
+    }
 
-        .psalm-box .response span {
-            color: #C62828;
-            font-weight: 600;
-        }
+    .page-title-band p {
+      font-style: italic;
+      color: #ebe4d8;
+      font-size: 1.05rem;
+      margin-top: 0.35rem;
+    }
 
-        .psalm-box .verse-text {
-            color: #6A1B9A;
-            font-size: 1.05rem;
-            line-height: 1.9;
-        }
+    .section-kicker {
+      font-size: 0.88rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
 
-        .cd-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .section-kicker::after {
+      content: "";
+      display: block;
+      width: 1.75rem;
+      height: 2px;
+      margin-top: 0.25rem;
+      background: currentColor;
+      opacity: 0.45;
+    }
 
-        .cd-section img {
-            max-width: 320px;
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+    .k-red    { color: var(--terracotta); }
+    .k-gold   { color: var(--gold); }
+    .k-sage   { color: var(--sage); }
+    .k-slate  { color: var(--slate); }
+    .k-plum   { color: var(--plum); }
 
-        .section-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+    h1, h2, h3 { color: var(--ink); }
 
-        .highlight {
-            background: rgba(255, 215, 64, 0.2);
-        }
+    .scripture {
+      font-style: italic;
+      font-size: 1rem;
+      border-left: 3px solid var(--gold);
+      padding: 0.35rem 0 0.35rem 0.75rem;
+      margin: 0.5rem 0;
+      color: var(--ink-soft);
+    }
 
-        .sidebar {
-            grid-column: 2 / 3;
-            padding: 20px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            align-self: start;
-        }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 1.2rem;
+      border-top: 1px solid var(--rule-strong);
+      background: var(--paper-raised);
+      padding: 0.2rem 0 0;
+    }
 
-        .sidebar p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-            color: #C62828;
-            font-weight: 600;
-        }
+    .wide-col {
+      padding: 0.9rem 0.85rem 0.85rem 0.9rem;
+      background: transparent;
+    }
 
-        .sidebar a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
+    .wide-col:not(:last-child) { border-right: 1px solid var(--rule); }
 
-        .sidebar a:hover {
-            color: #C2185B;
-            text-decoration: underline;
-        }
+    .col {
+      padding: 0.9rem 0.85rem 0.85rem 0.9rem;
+      background: transparent;
+    }
 
-        footer {
-            grid-column: 1 / 3;
-        }
+    .col:not(:last-child) { border-right: 1px solid var(--rule); }
 
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
+    .col h2, .wide-col h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.22;
+      margin: 0.15rem 0 0.5rem;
+    }
 
-            .sidebar {
-                max-width: 100%;
-                padding: 15px;
-            }
-        }
-    </style>
+    .col p, .wide-col p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    figure { margin: 0.55rem 0 0.4rem; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--paper-inset);
+      padding: 4px;
+    }
+
+    .figure-centre {
+      max-width: 180px;
+      margin: 0.55rem auto 0.4rem;
+    }
+
+    .figure-centre img { width: 100%; }
+
+    .figure-cd {
+      max-width: 320px;
+      margin: 0.55rem auto 0.4rem;
+    }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .audio-block {
+      margin: 0.55rem 0 0.75rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .audio-block audio {
+      display: block;
+      width: 100%;
+      margin-top: 0.4rem;
+    }
+
+    .psalm-ref {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .psalm-response {
+      margin-bottom: 0.5rem;
+    }
+
+    .verse-label {
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+
+    .body-section {
+      border-top: 1px solid var(--rule-strong);
+      padding: 1.1rem 0 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .body-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin: 0.15rem 0 0.5rem;
+    }
+
+    .body-section p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .enquiry-panel {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--gold);
+      padding: 0.85rem 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    a { color: var(--terracotta); }
+
+    footer {
+      border-top: 4px solid var(--terracotta);
+      margin-top: 1.6rem;
+      padding: 1rem 0 1.6rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      background: var(--paper);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(154, 78, 60, 0.22); }
+    footer a:hover { color: var(--terracotta); border-bottom-color: var(--terracotta); }
+    .footer-links { margin-top: 0.3rem; }
+    .footer-counters { margin-top: 0.75rem; }
+
+    @media (max-width: 820px) {
+      html { font-size: 19px; }
+      .nameplate { font-size: 2.5rem; }
+      .dateline { flex-direction: column; gap: 0.15rem; text-align: center; }
+      .two-col { grid-template-columns: 1fr; }
+      .col:not(:last-child), .wide-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1rem;
+        margin-bottom: 0.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
     <div class="container">
-        <header>
-            <img src="images/main/dove.gif" width="150" height="150" alt="" loading="lazy">
-            <h1>The Lord is my Light</h1>
-        </header>
-
-        <nav>
-            <ul>
-                <li class="main-pages">
-                    <a href="home.htm">Main Pages</a>
-                    <div class="sub-nav">
-                        <a href="home.htm">Home</a>
-                        <a href="thefruitofprayer.htm">The Fruit of Prayer</a>
-                        <a href="malaysia.htm">Malaysia</a>
-                        <a href="update.htm">Updates</a>
-                    </div>
-                </li>
-                <li class="main-pages">
-                    <a href="daily/index.htm">Resources</a>
-                    <div class="sub-nav">
-                        <a href="daily/index.htm">Daily Readings</a>
-                        <a href="tapes.htm">Tapes</a>
-                        <a href="thelordismylight.htm">The Lord is My Light</a>
-                    </div>
-                </li>
-                <li class="main-pages">
-                    <a href="thefruitofprayer.htm">Profiles</a>
-                    <div class="sub-nav">
-                        <a href="profiles/oriental.htm">BP Nicholas</a>
-                        <a href="profiles/benedict.htm">Benedict Ponniah</a>
-                        <a href="https://nicholaslondon.org">Paul Nicholas</a>
-                        <a href="profiles/jannine.htm">Jannine Nicholas</a>
-                        <a href="profiles/dietitian.htm">Valerie Meilton</a>
-                    </div>
-                </li>
-                <li><a href="events/malaysia.htm">Events &amp; Testimonies</a></li>
-            </ul>
-        </nav>
-
-        <div class="main-content">
-            <div class="psalm-box highlight">
-                <h2>Heal my soul, for I have sinned</h2>
-                <p class="psalm-ref">(Psalm 41)</p>
-
-                <p class="response"><strong>Response:</strong> <span>Heal my soul for I have sinned against you</span></p>
-
-                <div class="verse-block">
-                    <p><strong>Verse 1:</strong></p>
-                    <p class="verse-text">Happy is the man who considers the poor and the weak.<br>
-                    The Lord will save him in the day of evil;<br>
-                    Will guard him, give him life, make him happy in the land,<br>
-                    And will not give him up to the will of his foes.</p>
-                </div>
-
-                <div class="verse-block">
-                    <p><strong>Verse 2:</strong></p>
-                    <p class="verse-text">The Lord will help him on his bed of pain,<br>
-                    He will bring him back from sickness to health.<br>
-                    As for me, I said, “Lord have mercy on me.<br>
-                    Heal my soul for I have sinned against you.”</p>
-                </div>
-
-                <div class="verse-block">
-                    <p><strong>Verse 3:</strong></p>
-                    <p class="verse-text">If you uphold, I shall be unharmed<br>
-                    And set in your presence forevermore.<br>
-                    Blessed be the Lord, the god of Israel from age to age.<br>
-                    Amen.</p>
-                </div>
-            </div>
-
-            <div class="cd-section">
-                <p><a href="audio/lordlight.mp3">To listen to one of the tracks from 'The Lord is my Light' please click here</a></p>
-                <a href="audio/lordlight.mp3">
-                    <img src="images/main/CDCOVER.gif" alt="CD Cover" loading="lazy">
-                </a>
-            </div>
-
-            <p><a href="book/chapter1.htm">Do browse through this incredible miraculous stories by---Capturing what happened</a></p>
-            <p>For the consequential act of Good Friday delivered Valerie, our adopted family member of all her painful nasty lumps and my dear wife Saida of agonizing physical pain.</p>
-            <p><a href="book/chapter1.htm"><strong>Press this link</strong></a> — it might surprise you once you start reading it.</p>
-            <p><a href="home.htm">Press here for the HOME PAGE</a></p>
-        </div>
-
-        <div class="sidebar">
-            <p>For enquiries about this beautifully rendered CD that brings the presence of God, please <a href="mailto:anton.nicholas@btinternet.com">email us</a></p>
-        </div>
-
-        <footer class="footer">
-            <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
-            <!-- Flag Counter -->
-            <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
-        </footer>
+      <div class="dateline">
+        <div>Est. 1 August 2002 · Malaya · London · Malaysia</div>
+        <div>1,893,704 readers and counting</div>
+      </div>
+      <div class="nameplate-rules">
+        <div class="nameplate">ANTON <span class="amp">&amp;</span> SAIDA NICHOLAS</div>
+      </div>
+      <div class="motto">“The Lord is My Shepherd; I shall not want.” — Psalm 23:1</div>
+      <nav class="section-nav" aria-label="Sections">
+        <a href="daily/index.htm">Daily Readings</a><span>·</span>
+        <a href="thefruitofprayer.htm">Prophecy</a><span>·</span>
+        <a href="profiles/oriental.htm">Family Legacy</a><span>·</span>
+        <a href="book/chapter1.htm">Saida's Journey</a><span>·</span>
+        <a href="malaysia.htm">Malaysia</a><span>·</span>
+        <a href="testimonies/index.htm">Testimonies</a><span>·</span>
+        <a href="update.htm">Updates</a>
+      </nav>
     </div>
-    <!-- Start of StatCounter Code -->
-<script type="text/javascript">
-var sc_project=223118;
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript>
-<a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img
- src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a></noscript>
+  </div>
 
-<!-- End of StatCounter Code -->
+  <div class="page-title-band">
+    <div class="container">
+      <h1>THE LORD IS MY LIGHT</h1>
+      <p>Heal my soul, for I have sinned — Psalm 41</p>
+    </div>
+  </div>
 
-    <script src="assets/js/sections.js"></script>
+  <div class="container">
+
+    <figure class="figure-centre">
+      <img src="images/main/dove.gif" width="150" height="150" alt="" loading="lazy">
+    </figure>
+
+    <div class="two-col">
+
+      <!-- PSALM 41 -->
+      <div class="wide-col">
+        <div class="section-kicker k-gold">PSALM 41</div>
+        <h2>Heal my soul, for I have sinned</h2>
+        <p class="psalm-ref">(Psalm 41)</p>
+        <p class="psalm-response"><strong>Response:</strong> Heal my soul for I have sinned against you</p>
+
+        <p class="verse-label">Verse 1:</p>
+        <p class="scripture">Happy is the man who considers the poor and the weak.<br>
+        The Lord will save him in the day of evil;<br>
+        Will guard him, give him life, make him happy in the land,<br>
+        And will not give him up to the will of his foes.</p>
+
+        <p class="verse-label">Verse 2:</p>
+        <p class="scripture">The Lord will help him on his bed of pain,<br>
+        He will bring him back from sickness to health.<br>
+        As for me, I said, “Lord have mercy on me.<br>
+        Heal my soul for I have sinned against you.”</p>
+
+        <p class="verse-label">Verse 3:</p>
+        <p class="scripture">If you uphold, I shall be unharmed<br>
+        And set in your presence forevermore.<br>
+        Blessed be the Lord, the god of Israel from age to age.<br>
+        Amen.</p>
+      </div>
+
+      <!-- CD & ENQUIRIES -->
+      <div class="wide-col">
+        <div class="section-kicker k-gold">THE LORD IS MY LIGHT</div>
+        <h2>The Lord is my Light</h2>
+
+        <div class="audio-block">
+          <p><a href="audio/lordlight.mp3">To listen to one of the tracks from 'The Lord is my Light' please click here</a></p>
+          <audio controls preload="none" src="audio/lordlight.mp3">
+            <a href="audio/lordlight.mp3">To listen to one of the tracks from 'The Lord is my Light' please click here</a>
+          </audio>
+        </div>
+
+        <figure class="figure-cd">
+          <a href="audio/lordlight.mp3">
+            <img src="images/main/CDCOVER.gif" alt="CD Cover" loading="lazy">
+          </a>
+        </figure>
+
+        <div class="enquiry-panel">
+          <p>For enquiries about this beautifully rendered CD that brings the presence of God, please <a href="mailto:anton.nicholas@btinternet.com">email us</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BODY TEXT -->
+    <section class="body-section">
+      <div class="section-kicker k-gold">CAPTURING WHAT HAPPENED</div>
+      <p><a href="book/chapter1.htm">Do browse through this incredible miraculous stories by---Capturing what happened</a></p>
+      <p>For the consequential act of Good Friday delivered Valerie, our adopted family member of all her painful nasty lumps and my dear wife Saida of agonizing physical pain.</p>
+      <p><a href="book/chapter1.htm"><strong>Press this link</strong></a> — it might surprise you once you start reading it.</p>
+      <p><a href="home.htm">Press here for the HOME PAGE</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      © Anton Nicholas · Blessed and inaugurated 1 August 2002
+      <div class="footer-links">
+        <a href="daily/index.htm">Daily Readings</a> ·
+        <a href="thefruitofprayer.htm">The Fruit of Prayer</a> ·
+        <a href="https://nicholaslondon.org">Paul Nicholas</a> ·
+        <a href="https://twitter.com/AntonNicholas1">@AntonNicholas1</a>
+      </div>
+      <div class="footer-counters">
+        <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Start of StatCounter Code -->
+  <script type="text/javascript">
+    var sc_project=223118;
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+  <noscript>
+    <a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a>
+  </noscript>
+  <!-- End of StatCounter Code -->
+
 </body>
 </html>
