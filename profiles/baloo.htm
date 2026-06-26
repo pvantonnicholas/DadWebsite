@@ -379,6 +379,29 @@
       .two-col, .three-col, .video-grid, .figure-row, .figure-row.three, .edition-layout { grid-template-columns: 1fr; }
       .col:not(:last-child), .wide-col:not(:last-child) { border-right: none; }
     }
+
+    /* ---- Condensed long-page pattern: index + media sizing + expanders ---- */
+    .page-index { border: 1px solid var(--rule-strong); background: var(--paper-raised); padding: 1rem 1.1rem; margin: 1.2rem 0; }
+    .page-index .idx-kicker { font-size: 0.82rem; font-variant: small-caps; letter-spacing: 0.12em; color: var(--gold); font-weight: 700; margin-bottom: 0.55rem; }
+    .page-index ol { list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 2.5rem; }
+    .page-index li { margin: 0 0 0.35rem; break-inside: avoid; font-size: 0.97rem; }
+    .page-index a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; }
+    .page-index a:hover { color: var(--terracotta); border-bottom-color: var(--terracotta); }
+    .body-section[id] { scroll-margin-top: 0.8rem; }
+
+    /* constrain oversized media so the page reads at newspaper density */
+    .video-frame { max-width: 560px; margin: 0.6rem auto 0.35rem; }
+    .body-section > figure, .body-section p > figure { max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    /* fold appendix material away, one tap from view */
+    details.more { border-left: 3px solid var(--rule-strong); background: var(--paper); padding: 0.2rem 0.95rem; margin: 0.65rem 0; }
+    details.more > summary { cursor: pointer; list-style: none; font-variant: small-caps; letter-spacing: 0.07em; font-weight: 700; color: var(--slate); padding: 0.4rem 0; }
+    details.more > summary::-webkit-details-marker { display: none; }
+    details.more > summary::after { content: " \25BE"; color: var(--muted); }
+    details.more[open] > summary::after { content: " \25B4"; }
+    details.more[open] > summary { border-bottom: 1px solid var(--rule); margin-bottom: 0.5rem; }
+    @media (max-width: 820px) { .page-index ol { column-count: 1; } }
+
   </style>
 </head>
 <body>
@@ -413,19 +436,30 @@
   </div>
 
   <div class="container">
-    <section class="body-section">
+        <nav class="page-index" aria-label="On this page">
+      <div class="idx-kicker">On this page</div>
+      <ol>
+        <li><a href="#introduction">Saida's Grandmother</a></li>
+        <li><a href="#grandmother-story">Story of Dadima Avalbai Baloo</a></li>
+        <li><a href="#saidas-background">Saida's Background</a></li>
+        <li><a href="#amanda-johnson">Anton praying for Amanda Johnson, 2024</a></li>
+      </ol>
+    </nav>
+
+<section class="body-section" id="introduction">
       <div class="section-kicker k-plum">SAIDA&#x27;S GRANDMOTHER</div>
       <p>Saida&#x27;s Grandmother. Dadima Avalbai Baloo. Born in Bhanvar, Gujarat, 1880 and died 1969 in Kampala, Uganda.</p>
       <p>Dadima, (father&#x27;s mother) to the writer of the note Sultan Baloo.</p>
     </section>
 
-    <section class="body-section">
+    <section class="body-section" id="grandmother-story">
       <div class="section-kicker k-plum">STORY OF SAIDA&#x27;S GRANDMOTHER, DADIMA AVA</div>
       <h2>Story of Saida&#x27;s Grandmother, Dadima Avalbai Baloo.
 One of those formidable ladies who came over to Kampala, Uganda around 1910 and pioneered a business. A highly energetic entrepreneur.</h2>
       <p>
 </p>
-      <p>
+      <details class="more"><summary>Vancouver visit, family photograph and obituary notes</summary>
+<p>
 <figure><img src="../images/profiles/SaidasGM.jpg" alt="" width="532" height="622" loading="lazy"></figure>
 <br> <br>
 We are deeply grateful to the grandson Mr Sultan R Baloo and his wife Roshan. We met this couple after a long period of absence. We visited them in Vancouver, Canada, this spring 2016.
@@ -443,13 +477,21 @@ The photograph below shows some members of Saida&#x27;s family.
 		Now and then we do pass a&quot; Jamat Khana&quot; on Addiscombe Road, Croydon, Surrey, just opposite the Sandilands tram stop. <br> <br> 20th April 2023: Just received the sad news that Saida&#x27;s sister in law Yasmin Baloo passed away. We grieve the precious loss of Nizar Baloo&#x27;s wife. We convey our deep condolences to the family. For the first time we will attend the Jamat Khana for the funeral.<br>
 <br> A sad note that Bahadur Baloo passed away peacefully on 16th April 2020 at 6pm. The funeral service will take place on Friday 24th April 2020 at Burnaby and he will he be buried in Surrey, Canada.<br> <br> We are so thankful that we had a grand time with him in the year 2016. Due to the global Covid-19 epidemic we were sadly unable to attend the funeral but he will be fondly remembered. <br> <br>
 </p>
+
+</details>
+    </section>
+
+    <section class="body-section" id="saidas-background">
       <h3> Saida&#x27;s background. </h3>
+      <details class="more"><summary>The Aga Khan School, Kampala, Uganda</summary>
       <h3> The Aga Khan School, Kampala, Uganda.<figure><img src="../images/main/agakhan_school.JPG" alt="Aga Khan sign" width="320" height="200" loading="lazy"></figure></h3>
       <p>
 <figure><img src="../images/main/school.jpg" alt="Saida&#x27;s former school" width="450" height="315" loading="lazy"></figure>
 <p>
 <br> The above photograph is the school Saida attended in Kampala, Uganda, located on Makerere Road, Old Kampala. Saida completed her secondary/senior education in the United Kingdom.
        </p>
+
+</details>
 <p>	
 	On this Marriage Prophetic video below, Saida&#x27;s husband Anton is speaking directly to his son. On the essential truth,of how to pray effectively with fruitful results manifesting themselves.<br> <br>  Paul Anton Imbaraj Nicholas is the first great grandson of the Banking Visionary B P Nicholas. Paul Nicholas has emulated the mantle of his great grandfather. Both videos of the wedding have now been viewed by more than 12,000 individuals. <br><br>
 
@@ -463,10 +505,10 @@ The photograph below shows some members of Saida&#x27;s family.
       </div>
       <p class="video-caption"><a href="https://www.youtube.com/watch?v=qXFgl9FzJPs">Watch on YouTube</a></p>
 <br> <br>
+    </section>
 
-
-<p>
-<h2> Anton praying for Amanda Johnson. 2024 </h2>
+    <section class="body-section" id="amanda-johnson">
+      <h2> Anton praying for Amanda Johnson. 2024 </h2>
       <div class="video-frame">
         <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/vGxWuXUAMxk" data-video-title="YouTube video player" aria-label="Play: YouTube video player">
           <img src="https://i.ytimg.com/vi/vGxWuXUAMxk/hqdefault.jpg" alt="" loading="lazy">
@@ -475,6 +517,7 @@ The photograph below shows some members of Saida&#x27;s family.
       </div>
       <p class="video-caption"><a href="https://www.youtube.com/watch?v=vGxWuXUAMxk">Watch on YouTube</a></p>
 <br> <br>
+      <details class="more"><summary>Further Amanda Johnson prayer videos, 2024</summary>
       <div class="video-frame">
         <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/Z7Ka4MCUAHg" data-video-title="YouTube video player" aria-label="Play: YouTube video player">
           <img src="https://i.ytimg.com/vi/Z7Ka4MCUAHg/hqdefault.jpg" alt="" loading="lazy">
@@ -490,12 +533,10 @@ The photograph below shows some members of Saida&#x27;s family.
         </button>
       </div>
       <p class="video-caption"><a href="https://www.youtube.com/watch?v=boMCzWctij0">Watch on YouTube</a></p>
-</p>
 <br> <br>
-</p></p>
-      <p>
-</p>
-      <p>
+</details>
+      <details class="more"><summary>Daily reading link, Jannine at St John's, Valerie research and flag counter</summary>
+<p>
 		You might find this daily reading interesting  — give it a quick glance!
 <br> <br>
 <a href="../daily/s4/day31.htm">
@@ -583,7 +624,9 @@ The Flag counter below was introduced for the first time on 8th January 2014.
 Sadly the firm who installed my previous beautiful counter many years ago,and filled it with exciting statistics,suddenly went out of business.As a result we lost all our treasured statistics. <br> <br>
 We like national flags portraying on our website so we are re-introducing the flag counter freshly again,( January 2014) through another firm.It is so exciting to see visitors coming from the far corners of the earth!
              </p>
-    </section>
+    
+</details>
+</section>
   </div>
 
   <footer>

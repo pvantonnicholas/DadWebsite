@@ -379,6 +379,29 @@
       .two-col, .three-col, .video-grid, .figure-row, .figure-row.three, .edition-layout { grid-template-columns: 1fr; }
       .col:not(:last-child), .wide-col:not(:last-child) { border-right: none; }
     }
+
+    /* ---- Condensed long-page pattern: index + media sizing + expanders ---- */
+    .page-index { border: 1px solid var(--rule-strong); background: var(--paper-raised); padding: 1rem 1.1rem; margin: 1.2rem 0; }
+    .page-index .idx-kicker { font-size: 0.82rem; font-variant: small-caps; letter-spacing: 0.12em; color: var(--gold); font-weight: 700; margin-bottom: 0.55rem; }
+    .page-index ol { list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 2.5rem; }
+    .page-index li { margin: 0 0 0.35rem; break-inside: avoid; font-size: 0.97rem; }
+    .page-index a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; }
+    .page-index a:hover { color: var(--terracotta); border-bottom-color: var(--terracotta); }
+    .body-section[id] { scroll-margin-top: 0.8rem; }
+
+    /* constrain oversized media so the page reads at newspaper density */
+    .video-frame { max-width: 560px; margin: 0.6rem auto 0.35rem; }
+    .body-section > figure, .body-section p > figure { max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    /* fold appendix material away, one tap from view */
+    details.more { border-left: 3px solid var(--rule-strong); background: var(--paper); padding: 0.2rem 0.95rem; margin: 0.65rem 0; }
+    details.more > summary { cursor: pointer; list-style: none; font-variant: small-caps; letter-spacing: 0.07em; font-weight: 700; color: var(--slate); padding: 0.4rem 0; }
+    details.more > summary::-webkit-details-marker { display: none; }
+    details.more > summary::after { content: " \25BE"; color: var(--muted); }
+    details.more[open] > summary::after { content: " \25B4"; }
+    details.more[open] > summary { border-bottom: 1px solid var(--rule); margin-bottom: 0.5rem; }
+    @media (max-width: 820px) { .page-index ol { column-count: 1; } }
+
   </style>
 </head>
 <body>
@@ -413,35 +436,54 @@
   </div>
 
   <div class="container">
-    <section class="body-section">
+        <nav class="page-index" aria-label="On this page">
+      <div class="idx-kicker">On this page</div>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#professional-journey">Professional Journey</a></li>
+        <li><a href="#smoking-cessation">Smoking Cessation and Training</a></li>
+        <li><a href="#valeries-family">Valerie's Family</a></li>
+        <li><a href="#extended-family">Extended Family and Nicholas Household</a></li>
+        <li><a href="#visitor-statistics">Visitor Statistics</a></li>
+        <li><a href="#family-legacy">Family Legacy</a></li>
+      </ol>
+    </nav>
+
+<section class="body-section" id="introduction">
       <div class="section-kicker k-sage">INTRODUCTION</div>
       Valerie Meilton BSc, Registered Dietitian
       <figure><img src="../images/profiles/DIET.gif" alt="Valerie Meilton" loading="lazy"></figure>
     </section>
 
-    <section class="body-section">
+    <section class="body-section" id="professional-journey">
       <div class="section-kicker k-sage">PROFESSIONAL JOURNEY</div>
       <h2>Professional Journey</h2>
       <figure><img src="../images/profiles/DIET.gif" alt="Valerie Meilton" loading="lazy"></figure>
       <h3>A Brief Profile: Dietitian Experienced in Both NHS and Private Sectors</h3>
       <p>Valerie graduated from Reading University with an honours degree in Zoology and then completed her dietetics training at the University of London. She rose to become Chief III Dietitian at Guy&#x27;s Teaching Hospital in London. Whilst at Guy&#x27;s, she played a vital part in setting up a Clinical Nutrition Working Party which produced an Enteral Feeding Policy. She also trained about 12 Dietetic Students a year, many of whom now hold senior positions in various hospitals throughout the United Kingdom. She assisted in various research projects, one of which included the effect of a long-term fat-modified diet on serum lipoprotein levels of cholesterol and triglyceride in patients on home haemodialysis (<a href="../clinicalscience.htm">published in Clinical Science 1981</a>).</p>
       <figure><img src="../images/profiles/DIET.gif" alt="Valerie Meilton" width="320" height="470" loading="lazy"></figure>
-      <p>In 1991, Valerie pioneered the dietetic service at a Rehabilitation Hospital and a Hospice in West London. She also had experience as a Community Dietitian within a Home Support Team (which included HIV-positive clients). Valerie acted single-handedly as the Dietitian at the prestigious Princess Grace Hospital and the Harley Street Clinic. Whilst there, she took sole responsibility for both hospitals, which included 2 ITU units and a renal unit. The patients came from all over the world. She also wrote diet sheets for private consultant referrals and gained experience on the management side too.</p>
+      <details class="more"><summary>Rehabilitation, hospice, Harley Street and bridge-fear story link</summary>
+<p>In 1991, Valerie pioneered the dietetic service at a Rehabilitation Hospital and a Hospice in West London. She also had experience as a Community Dietitian within a Home Support Team (which included HIV-positive clients). Valerie acted single-handedly as the Dietitian at the prestigious Princess Grace Hospital and the Harley Street Clinic. Whilst there, she took sole responsibility for both hospitals, which included 2 ITU units and a renal unit. The patients came from all over the world. She also wrote diet sheets for private consultant referrals and gained experience on the management side too.</p>
       <p>Read an extraordinary story about Valerie: <a href="../daily/s5/day49.htm">&#x27;A horrendous fear of crossing bridges&#x27;</a>.</p>
-    </section>
+    
+</details>
+</section>
 
-    <section class="body-section">
+    <section class="body-section" id="smoking-cessation">
       <div class="section-kicker k-sage">SMOKING CESSATION AND TRAINING</div>
       <h2>Smoking Cessation and Training</h2>
       <figure><img src="../images/profiles/Peng.jpg" alt="BDA Course" loading="lazy"></figure>
       <h3>Smoking Cessation at Hillview Surgery</h3>
       <p>Valerie Meilton is a Smoking Cessation Community Advisor. She underwent training with The Thelma Golding Centre of Ealing, Hammersmith, and Hounslow Smoking Cessation Service. We offer a word of thanks to Dr. Shergill of Hillview Surgery, Bilton Road, Perivale, Greenford, Middlesex, who encouraged Valerie to take up this venture.</p>
       <p>At the initial visit, we explain the treatment process and give clients advice about possible medication. After discussing their smoking habits, we then take a carbon monoxide reading, which is repeated at every visit to assess progress. We help clients prepare for their individual quit day and see them once a week to offer encouragement. This encouragement is really necessary for someone who wants to give up smoking. It is very much a team effort: clients are referred by GPs or Practice Nurses, often from a new patient check; reception staff book the client for the six-week course and help in the smooth running of the clinics.</p>
-      <h3>BDA Course</h3>
+      <details class="more"><summary>British Dietetic Association course photograph</summary>
+<h3>BDA Course</h3>
       <figure><img src="../images/profiles/Peng.jpg" alt="BDA Course" width="600" height="825" loading="lazy"></figure>
-    </section>
+    
+</details>
+</section>
 
-    <section class="body-section">
+    <section class="body-section" id="valeries-family">
       <div class="section-kicker k-sage">VALERIE&#x27;S FAMILY</div>
       <h2>Valerie&#x27;s Family</h2>
       <figure><img src="../images/profiles/SteveGia.JPG" alt="Family" loading="lazy"></figure>
@@ -452,7 +494,7 @@
       <figure><img src="../images/profiles/chrischristine.jpg" alt="Christopher and Christine" width="400" height="570" loading="lazy"></figure>
     </section>
 
-    <section class="body-section">
+    <section class="body-section" id="extended-family">
       <div class="section-kicker k-sage">EXTENDED FAMILY AND NICHOLAS HOUSEHOLD</div>
       <h2>Extended Family and Nicholas Household</h2>
       <figure><img src="../images/main/famsch.jpg" alt="Nicholas Family" loading="lazy"></figure>
@@ -461,7 +503,8 @@
       <p>Psalm 133 verse 3<br>Harmony is as refreshing as the dew from Mount Hermon that falls on the mountains of Zion. And the LORD has pronounced his blessing, even life forevermore.</p>
       <figure><img src="../images/main/famsch.jpg" alt="Nicholas Family" width="475" height="315" loading="lazy"></figure>
       <h3>Work Experience Summary</h3>
-      <p>A summary of work experience: Valerie has covered both locum and permanent positions as Dietitian at:</p>
+      <details class="more"><summary>Hospital list, Paul and Jannine achievements, Saida's background</summary>
+<p>A summary of work experience: Valerie has covered both locum and permanent positions as Dietitian at:</p>
       <ul>
 <li>Ashford Hospital, Kent</li>
 <li>Colchester Group of Hospitals</li>
@@ -484,9 +527,11 @@
       <p>Presenting Jannine Nicholas, (pictured above) the President to The Winfield Society (2011-2012, Equivalent to the St. John&#x27;s College Law Society).</p>
       <h3>Saida&#x27;s Background</h3>
       <p>Solely for the hits coming in from Africa, if you want to glimpse at a picture of a school that Saida was a pupil at, then please press this <a href="../thefruitofprayer.htm">link: Saida had some happy times in Kampala, Uganda</a>. Saida attended the Aga Khan School in Kampala, Uganda, located on Makerere Road, Old Kampala. Saida completed her secondary/senior education in the United Kingdom. <a href="../book/chapter1.htm">This story is worth reading</a>.</p>
-    </section>
+    
+</details>
+</section>
 
-    <section class="body-section">
+    <section class="body-section" id="visitor-statistics">
       <p>Visitor Statistics</p>
       <p>Tracking our global reach with the flag counter.</p>
       <p>Flag Counter</p>
@@ -496,7 +541,7 @@
       <p>Commencing 8th January 2014</p>
     </section>
 
-    <section class="body-section">
+    <section class="body-section" id="family-legacy">
       <h2>Family Legacy</h2>
       <div class="legacy-grid">
         <div class="legacy-card">
@@ -512,7 +557,9 @@
         <div class="legacy-card">
           <figure><img src="../images/profiles/grad_val.jpg" alt="Paul Nicholas" loading="lazy"></figure>
           <p>Paul Nicholas</p>
-          <p>Paul Nicholas, great-grandson of B.P. Nicholas, graduated with an Honours Degree in Mathematics from Christ&#x27;s College, Cambridge in 2005. He later earned an MSc with distinction from Imperial College London, funded by his employer, reflecting the family&#x27;s mathematical legacy.</p>
+          <details class="more"><summary>Legacy cards — Paul and Jannine Nicholas summaries</summary>
+<p>Paul Nicholas, great-grandson of B.P. Nicholas, graduated with an Honours Degree in Mathematics from Christ&#x27;s College, Cambridge in 2005. He later earned an MSc with distinction from Imperial College London, funded by his employer, reflecting the family&#x27;s mathematical legacy.</p>
+</details>
         </div>
         <div class="legacy-card">
           <figure><img src="../images/profiles/grad_jvn.jpg" alt="Jannine Nicholas" loading="lazy"></figure>
@@ -520,7 +567,7 @@
           <p>Jannine Nicholas graduated with a BA (Hons) in Law from St. John&#x27;s College, Cambridge in 2012, achieving 96% in Economics and serving as President of The Winfield Society (2011-2012). Her academic excellence continues the family&#x27;s Cambridge tradition.</p>
         </div>
       </div>
-    </section>
+</section>
   </div>
 
   <footer>

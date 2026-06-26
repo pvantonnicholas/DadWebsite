@@ -354,6 +354,11 @@
       .two-col, .three-col, .video-grid, .figure-row, .figure-row.three, .edition-layout { grid-template-columns: 1fr; }
       .col:not(:last-child), .wide-col:not(:last-child) { border-right: none; }
     }
+
+    /* ---- Condensed long-page pattern: media sizing only (borderline pages) ---- */
+    .video-frame { max-width: 560px; margin: 0.6rem auto 0.35rem; }
+    .body-section > figure, .body-section p > figure, .lead-section > figure, .wide-col figure, .col figure { max-width: 600px; margin-left: auto; margin-right: auto; }
+
   </style>
 </head>
 <body>
