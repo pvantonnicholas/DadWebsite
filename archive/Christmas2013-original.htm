@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Letter 2013</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        :root {
+            --primary: #B71C1C;
+            --accent: #2E7D32;
+            --highlight: #FFD740;
+            --bg: #FFF8F0;
+            --card-bg: #FFEBEE;
+            --link-color: #D81B60;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        nav { grid-column: 1 / -1; }
+
+        .main-content {
+            grid-column: 1 / -1;
+            padding: 20px;
+        }
+
+        .main-content a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .main-content a:hover {
+            text-decoration: underline;
+        }
+
+        .pdf-viewer {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pdf-viewer object,
+        .pdf-viewer iframe {
+            width: 100%;
+            max-width: 900px;
+            height: 80vh;
+            min-height: 600px;
+            border: none;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .pdf-fallback {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        footer { grid-column: 1 / -1; }
+
+        @media (max-width: 900px) {
+            .container { padding: 20px; }
+            .pdf-viewer object,
+            .pdf-viewer iframe {
+                min-height: 400px;
+                height: 70vh;
+            }
+            header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Christmas Letter 2013</h1>
+            <p style="margin-top: 12px; font-size: 1.1rem;">Real life testimonies with pictures of miraculous interventions of The Holy Spirit</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li class="main-pages">
+                    <a href="home.htm">Main Pages</a>
+                    <div class="sub-nav">
+                        <a href="home.htm">Home</a>
+                        <a href="thefruitofprayer.htm">The Fruit of Prayer</a>
+                        <a href="malaysia.htm">Malaysia</a>
+                        <a href="update.htm">Updates</a>
+                    </div>
+                </li>
+                <li class="main-pages">
+                    <a href="daily/index.htm">Resources</a>
+                    <div class="sub-nav">
+                        <a href="daily/index.htm">Daily Readings</a>
+                        <a href="tapes.htm">Tapes</a>
+                        <a href="thelordismylight.htm">The Lord is My Light</a>
+                    </div>
+                </li>
+                <li class="main-pages">
+                    <a href="thefruitofprayer.htm">Profiles</a>
+                    <div class="sub-nav">
+                        <a href="profiles/oriental.htm">BP Nicholas</a>
+                        <a href="profiles/benedict.htm">Benedict Ponniah</a>
+                        <a href="https://nicholaslondon.org">Paul Nicholas</a>
+                        <a href="profiles/jannine.htm">Jannine Nicholas</a>
+                        <a href="profiles/dietitian.htm">Valerie Meilton</a>
+                    </div>
+                </li>
+                <li><a href="events/malaysia.htm">Events &amp; Testimonies</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="pdf-viewer">
+                <object data="Christmas2013.pdf" type="application/pdf">
+                    <iframe src="Christmas2013.pdf" title="Christmas Letter 2013 PDF"></iframe>
+                </object>
+                <p class="pdf-fallback">
+                    If the letter does not display above, <a href="Christmas2013.pdf">download the Christmas 2013 PDF</a>.
+                </p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
+            <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+        </footer>
+    </div>
+
+    <script type="text/javascript">var sc_project=223118;</script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+    <noscript>
+        <a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a>
+    </noscript>
+
+    <script src="assets/js/sections.js"></script>
+</body>
+</html>

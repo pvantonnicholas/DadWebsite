@@ -1,310 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letter of recommendation for 'The Psalms by Juliana Nicholas'</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <style>
-        :root {
-            --primary: #1A237E;  /* Deep navy */
-            --accent: #C62828;   /* Deep red */
-            --highlight: #FFF9C4; /* Soft yellow */
-            --bg: #FAFAFA;       /* Light gray */
-            --card-bg: #F5F5F5;  /* Card gray */
-            --link-color: #D81B60; /* Vibrant magenta */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter of recommendation for 'The Psalms by Juliana Nicholas' — Anton &amp; Saida Nicholas</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&amp;family=Playfair+Display:wght@700;900&amp;display=swap">
+  <style>
+    :root {
+      --paper: #f7f3ea;
+      --paper-raised: #efe8db;
+      --paper-inset: #e8e0d2;
+      --ink: #2a241c;
+      --ink-soft: #4d4539;
+      --muted: #7a7164;
+      --rule: #d5cbb8;
+      --rule-strong: #bfb39e;
+      --terracotta: #9a4e3c;
+      --gold: #8a7342;
+      --sage: #5f6f56;
+      --slate: #516878;
+      --plum: #6f5a62;
+      --depth: #3d352c;
+      --depth-gold: #bfa06a;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            padding: 40px;
-        }
+    html { font-size: 22px; }
 
-        header {
-            grid-column: 1;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px;
-            border-radius: 20px;
-            margin-bottom: 0;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        header h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
-        }
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
 
-        nav { grid-column: 1; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
 
-        .main-content {
-            grid-column: 1;
-            padding: 20px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .masthead {
+      text-align: center;
+      padding: 1rem 0 0;
+      border-bottom: 4px solid var(--terracotta);
+      background: var(--paper);
+    }
 
-        .main-content p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-        }
+    .dateline {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      padding: 0 0.25rem;
+    }
 
-        .main-content a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
+    .nameplate-rules {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.3rem 0;
+    }
 
-        .main-content a:hover {
-            color: #C2185B;
-            text-decoration: underline;
-        }
+    .nameplate {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      color: var(--ink);
+    }
 
-        .main-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+    .nameplate .amp { color: var(--terracotta); }
 
-        .main-content .float-left {
-            float: left;
-            margin: 0 24px 16px 0;
-            max-width: 233px;
-            width: 233px;
-        }
+    .motto {
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin: 0.35rem 0 0.1rem;
+    }
 
-        .main-content .signature {
-            width: 200px;
-            height: 56px;
-        }
+    .section-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.95rem;
+      background: var(--paper);
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-top: 0.45rem;
+      padding: 0.4rem 0 0.55rem;
+      border-top: 1px solid var(--rule);
+    }
 
-        .main-content .portrait {
-            max-width: 244px;
-            display: block;
-            margin: 0 auto 16px;
-        }
+    .section-nav a { color: var(--ink-soft); text-decoration: none; padding: 0 0.7rem; font-weight: 600; }
+    .section-nav a:hover { color: var(--terracotta); }
+    .section-nav a[aria-current="page"] { color: var(--terracotta); }
+    .section-nav span { color: var(--rule); user-select: none; }
 
-        .letter-date {
-            text-align: right;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
+    .page-title-band {
+      background: var(--depth);
+      border-bottom: 1px solid var(--depth-gold);
+      padding: 1rem 0;
+      text-align: center;
+    }
 
-        .letter-address {
-            text-align: center;
-        }
+    .page-title-band h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      color: var(--depth-gold);
+      line-height: 1.25;
+      max-width: 52rem;
+      margin: 0 auto;
+    }
 
-        .highlight {
-            background: rgba(255, 249, 196, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-        }
+    .page-title-band p {
+      font-style: italic;
+      color: #ebe4d8;
+      font-size: 1.05rem;
+      margin-top: 0.35rem;
+    }
 
-        .highlight-green {
-            background: rgba(200, 230, 201, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            font-style: italic;
-        }
+    .section-kicker {
+      font-size: 0.88rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
 
-        .section-content iframe {
-            max-width: 100%;
-            width: 560px;
-            height: 340px;
-            border-radius: 10px;
-            margin: 20px auto;
-            display: block;
-        }
+    .section-kicker::after {
+      content: "";
+      display: block;
+      width: 1.75rem;
+      height: 2px;
+      margin-top: 0.25rem;
+      background: currentColor;
+      opacity: 0.45;
+    }
 
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+    .k-red    { color: var(--terracotta); }
+    .k-gold   { color: var(--gold); }
+    .k-sage   { color: var(--sage); }
+    .k-slate  { color: var(--slate); }
+    .k-plum   { color: var(--plum); }
 
-        h2 {
-            font-size: 1.4rem;
-            text-decoration: underline;
-            margin: 40px 0 20px;
-        }
+    h1, h2, h3 { color: var(--ink); }
 
-        footer {
-            grid-column: 1;
-        }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 1.2rem;
+      border-top: 1px solid var(--rule-strong);
+      background: var(--paper-raised);
+      padding: 0.2rem 0 0;
+    }
 
-        @media (max-width: 900px) {
-            .container {
-                padding: 20px;
-            }
+    .wide-col {
+      padding: 0.9rem 0.85rem 0.85rem 0.9rem;
+      background: transparent;
+    }
 
-            .main-content .float-left {
-                float: none;
-                display: block;
-                margin: 0 auto 20px;
-            }
+    .wide-col:not(:last-child) { border-right: 1px solid var(--rule); }
 
-            .section-content iframe {
-                width: 100%;
-                height: auto;
-                aspect-ratio: 16 / 9;
-            }
-        }
-    </style>
+    .wide-col p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .body-section {
+      border-top: 1px solid var(--rule-strong);
+      padding: 1.1rem 0.9rem 0.85rem;
+      margin-bottom: 1.2rem;
+      background: var(--paper-raised);
+    }
+
+    .body-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin: 0.15rem 0 0.5rem;
+      text-decoration: underline;
+    }
+
+    .body-section p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    figure { margin: 0.55rem 0 0.4rem; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--paper-inset);
+      padding: 4px;
+    }
+
+    .figure-centre {
+      max-width: 244px;
+      margin: 0.55rem auto 0.4rem;
+    }
+
+    .figure-float {
+      float: left;
+      max-width: 233px;
+      margin: 0 1rem 0.5rem 0;
+    }
+
+    .figure-float img { width: 233px; }
+
+    .signature {
+      max-width: 200px;
+      margin: 0.25rem 0;
+    }
+
+    .signature img { width: 200px; height: auto; padding: 0; border: 0; background: transparent; }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .letter-address { text-align: center; margin: 0.75rem 0; }
+    .letter-date { text-align: right; font-weight: 600; font-size: 1.1rem; }
+
+    .letter-body { overflow: hidden; }
+
+    .highlight {
+      background: rgba(255, 249, 196, 0.6);
+      padding: 0.85rem 0.9rem;
+      margin: 0.75rem 0;
+      border: 1px solid var(--rule);
+    }
+
+    .highlight-green {
+      background: rgba(200, 230, 201, 0.5);
+      padding: 0.85rem 0.9rem;
+      margin: 0.75rem 0;
+      text-align: center;
+      font-style: italic;
+      border: 1px solid var(--rule);
+    }
+
+    .text-centre { text-align: center; }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--rule);
+      background: #000;
+      margin: 0.55rem 0 0.35rem;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-facade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: #000;
+    }
+
+    .video-facade img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 64px;
+      height: 64px;
+      margin: -32px 0 0 -32px;
+      border-radius: 50%;
+      background: rgba(154, 78, 60, 0.9);
+      pointer-events: none;
+    }
+
+    .video-play::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -12px 0 0 -6px;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .video-caption {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    a { color: var(--terracotta); }
+
+    footer {
+      border-top: 4px solid var(--terracotta);
+      margin-top: 1.6rem;
+      padding: 1rem 0 1.6rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      background: var(--paper);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(154, 78, 60, 0.22); }
+    footer a:hover { color: var(--terracotta); border-bottom-color: var(--terracotta); }
+    .footer-links { margin-top: 0.3rem; }
+    .footer-counters { margin-top: 0.75rem; }
+
+    @media (max-width: 820px) {
+      html { font-size: 19px; }
+      .nameplate { font-size: 2.5rem; }
+      .dateline { flex-direction: column; gap: 0.15rem; text-align: center; }
+      .page-title-band h1 { font-size: 1.2rem; }
+      .two-col { grid-template-columns: 1fr; }
+      .wide-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1rem;
+        margin-bottom: 0.6rem;
+      }
+      .figure-float {
+        float: none;
+        max-width: 100%;
+        margin: 0 auto 0.75rem;
+      }
+      .figure-float img { width: 100%; }
+    }
+    @media (max-width: 380px) {
+      .two-col, .three-col, .video-grid, .figure-row, .figure-row.three, .edition-layout { grid-template-columns: 1fr; }
+      .col:not(:last-child), .wide-col:not(:last-child) { border-right: none; }
+    }
+  </style>
 </head>
 <body>
+
+  <div class="masthead">
     <div class="container">
-        <header>
-            <h1>Letter of Recommendation</h1>
-        </header>
-
-        <nav>
-            <ul>
-                <li class="main-pages">
-                    <a href="home.htm">Main Pages</a>
-                    <div class="sub-nav">
-                        <a href="home.htm">Home</a>
-                        <a href="thefruitofprayer.htm">The Fruit of Prayer</a>
-                        <a href="malaysia.htm">Malaysia</a>
-                        <a href="update.htm">Updates</a>
-                    </div>
-                </li>
-                <li class="main-pages">
-                    <a href="daily/index.htm">Resources</a>
-                    <div class="sub-nav">
-                        <a href="daily/index.htm">Daily Readings</a>
-                        <a href="tapes.htm">Tapes</a>
-                        <a href="thelordismylight.htm">The Lord is My Light</a>
-                    </div>
-                </li>
-                <li class="main-pages">
-                    <a href="thefruitofprayer.htm">Profiles</a>
-                    <div class="sub-nav">
-                        <a href="profiles/oriental.htm">BP Nicholas</a>
-                        <a href="profiles/benedict.htm">Benedict Ponniah</a>
-                        <a href="https://nicholaslondon.org">Paul Nicholas</a>
-                        <a href="profiles/jannine.htm">Jannine Nicholas</a>
-                        <a href="profiles/dietitian.htm">Valerie Meilton</a>
-                    </div>
-                </li>
-                <li><a href="events/malaysia.htm">Events &amp; Testimonies</a></li>
-            </ul>
-        </nav>
-
-        <div class="main-content">
-            <p style="text-align: center;"><a href="home.htm">Press here for the HOME PAGE to view some in-depth pictures.</a></p>
-            <p style="text-align: center;">The above page is updated regularly</p>
-
-            <img src="images/main/juliana.jpg" alt="Juliana Nicholas, lead singer on The Lord is My Light" class="portrait" width="244" loading="lazy">
-            <p style="text-align: center; font-style: italic;">Juliana Nicholas, lead singer on 'The Lord is My Light' CD</p>
-
-            <div class="letter-address">
-                <p><strong>St. Joseph's Catholic Church<br>Claretian Missionaries</strong></p>
-                <p>68 Grange Park Road, Leyton, London E10 5ES<br>
-                Tel. 020-8539-2908 Fax 020-8928-1057<br>
-                E-mail <i>leyton@dioceseofbrentwood.org</i> Web Page <i>www.claret.org.uk/joseph</i></p>
-                <p>Part of Brentwood Diocesan Trust Registered Charity No. 23409</p>
-            </div>
-
-            <p class="letter-date">25 June 2003</p>
-
-            <p><strong>The Psalms by Juliana Nicholas</strong></p>
-            <p><strong>To whomsoever it may concern</strong></p>
-
-            <div class="clearfix">
-                <img src="images/main/cutler1.gif" alt="" class="float-left" width="233" loading="lazy">
-
-                <p>Recently Mrs. Juliana Nicholas, a married lay Catholic mother from Malaysia, asked to come to our parish to sing a selection of the psalms that she has written and produced. She concentrates particularly on psalms that speak of God's mercy for all of us.</p>
-
-                <p>Like many parish priests I receive many requests from different people and groups to be able to speak at Mass. This request, however, was very different. This was a request to come and sing during Mass. After speaking with Juliana we decided to ask her to sing the psalm at Mass, to sing during the reception of Holy Communion and to sing at the end of Mass for those who wished to stay and hear her.</p>
-
-                <p>She has a very beautiful singing voice, very pure and clear. It was very moving to listen to her singing, a true meditation on the words of Sacred Scripture. Her prayerful singing touched the people of the parish. It is rare to have the opportunity to have someone who sings so professionally at Mass. Juliana believes that she has a calling to share the mercy of God through her singing. We found that this is true. The people voluntarily stayed behind after Mass to listen to her. They all said: &quot;When can she come again?&quot; We were so pleased to have invited her to our parish.</p>
-
-                <p>If you are thinking of inviting Juliana, I recommend her ministry to you whole-heartedly. You will not be disappointed and it will be something that your parish will remember for a long time to come.</p>
-
-                <p>At no point did Juliana ask for money or for a collection. She simply asked for the opportunity to sell her CDs after Mass. People only bought them if her singing moved them. Juliana sold many copies after the Masses in our parish.</p>
-
-                <p>Juliana is looking for opportunities to share her love of God with others as a Catholic. It is rare to encounter such a person. Please consider seriously if you could enable her ministry in your parish. You will not be disappointed.</p>
-
-                <p>Yours truly,</p>
-                <p><img src="Image2.gif" width="200" height="56" alt="Signature" class="signature"></p>
-                <p><strong><u>Rev. Christopher Cutler CMF</u></strong><br>Parish Priest</p>
-            </div>
-
-            <p><strong>Return to <a href="malaysia.htm">Malaysia page</a> for the full story.</strong></p>
-            <p>Anton Nicholas is Sylvester's brother, who is married to Juliana Nicholas.</p>
-
-            <div class="highlight">
-                <p>We need to plant here without any optional caveats the challenging words of A. W. Tozer, &quot;It is doubtful that God can use anyone greatly until He has hurt him deeply&quot;.</p>
-                <p><a href="book/chapter1.htm">So Press Here to read what the Anton Nicholas family had to persevere through. It will make a fascinating read.</a></p>
-            </div>
-
-            <p>Or to paraphrase the famous words of Pastor Charles R. Swindoll, &quot;Before God can use a man He has got to crush him.&quot;</p>
-
-            <p><a href="video/antonvideomal.htm">Do watch this video of Anton speaking on YouTube</a> showing exactly what was, in preparation, prophetically and strategically shared about The Holy Ghost at the gathering in Kuala Lumpur, Malaysia. View why he received their rapt attention, for the Malaysians heard the prophetic Word.</p>
-
-            <p>The first segment of the video is shown below. <a href="testimonies/prophecies/index.htm">A portion of the 2010 prophetic word is cited within the video.</a></p>
-
-            <p>
-                <a href="testimonies/prophecies/index.htm">Press here to read the whole 2011 prophecy.</a>
-                To VIEW the remaining three segments please follow this <a href="video/antonvideomal.htm">Link</a>.
-            </p>
-
-            <iframe src="https://www.youtube.com/embed/fK6RHeq4zpo" title="Anton speaking in Kuala Lumpur, Malaysia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            <h2>Bahasa Malaysia/ Indonesian Translation.</h2>
-
-            <p>*Pada hari Sabtu 18 September 2010, kami menghadiri Doa Malam yang amat megharukan di Hyde Park, London, United Kingdom. Antara 8 pm dan 8-30 malam, senja berlabuh dan sebahagian besar dari 80.000 jemaah berkumpul berada di lutut mereka, kepala tertunduk dalam doa khusyuk di rumput di Hyde Park.</p>
-
-            <p>Dalam pengabdian dan penghormatan ini Himne dinyanyikan, <strong>&quot;Lead Kindly Light&quot;</strong>.</p>
-
-            <p>Tekan butang di bawah ini untuk video YouTube dan rasa sendiri sambil mendoa betapa kuat impartasi dari Roh Kudus. Sila cuba dan lihat samada Kehadiran manis Roh Kudus menyentuh anda! Anda hanya boleh tahu bila <u>melihat</u> video ini.</p>
-
-            <p>Kami amat gembira mendapat peluang menghadiri acara ini, dari jam 3 petang hingga 8-30 WIB.</p>
-
-            <p style="text-align: center;">a) Ini himne Kristian, Lead Kindly Light juga kegemaran Mahatma (Mohandas Karamchand) Gandhi dan secara rutin dinyanyikan di pertemuan doa nya.</p>
-            <p style="text-align: center;">Mr Gandhi mendesak dan menggalakkan ketidak kerasan dan pembangkangan awam sebagai sarana untuk mencapai kemerdekaan India.</p>
-
-            <p>b) ahli orkes, dekoratif memakai turban hitam, memainkan lagu ini di pemakaman Perdana Menteri pertama Bebas India, Jawaharlal Nehru, sebelum tubuh ditempatkan di kereta yang menempatkan meriam.*</p>
-
-            <iframe src="https://www.youtube.com/embed/3j2hBSgZMrw" title="Lead Kindly Light" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            <p style="text-align: center; font-size: 1.2rem; font-weight: 700; text-decoration: underline;">*Lead Kindly Light*</p>
-
-            <p>On Saturday 18th September 2010, we attended the much needed Prayer Vigil at Hyde Park, London. Between 8 pm and 8-30 pm, darkness had fallen and most of the 80,000 congregants assembled were on their knees, heads bowed in solemn prayer on the grass in Hyde Park. In devotion and reverence this Hymn was sung, <strong>&quot;Lead Kindly Light&quot;</strong>.</p>
-
-            <p><strong>Watch the video pasted above</strong> and prayerfully observe on how strong the impartation of the Holy Ghost is. Do check it out and see whether the sweet Presence of the Holy Ghost touches you! You can only know through viewing the video. <span class="highlight">It surely will, for moments of this nature are very rare.</span></p>
-
-            <p class="highlight-green">
-                <em>Some of the words:</em> &quot;Lead, kindly light, amid th'encircling gloom, lead thou me on; the night is dark, and I am far from home, lead thou me on. Keep thou my feet; I do not ask to see the distant scene; one step enough for me&quot;
-                <strong>The cherished words of The Blessed Cardinal John Henry Newman.</strong>
-            </p>
-        </div>
-
-        <footer class="footer">
-            <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
-            <!-- Flag Counter -->
-            <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
-        </footer>
+      <div class="dateline">
+        <div>Est. 1 August 2002 · Malaya · London · Malaysia</div>
+        <div>1,893,704 readers and counting</div>
+      </div>
+      <div class="nameplate-rules">
+        <div class="nameplate">ANTON <span class="amp">&amp;</span> SAIDA NICHOLAS</div>
+      </div>
+      <div class="motto">“The Lord is My Shepherd; I shall not want.” — Psalm 23:1</div>
+      <nav class="section-nav" aria-label="Sections">
+        <a href="daily/index.htm">Daily Readings</a><span>·</span>
+        <a href="thefruitofprayer.htm">Prophecy</a><span>·</span>
+        <a href="profiles/oriental.htm">Family Legacy</a><span>·</span>
+        <a href="book/chapter1.htm">Saida's Journey</a><span>·</span>
+        <a href="malaysia.htm">Malaysia</a><span>·</span>
+        <a href="testimonies/index.htm">Testimonies</a><span>·</span>
+        <a href="update.htm">Updates</a>
+      </nav>
     </div>
-    <!-- Start of StatCounter Code -->
-<script type="text/javascript">
-var sc_project=223118;
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript>
-<a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img
- src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a></noscript>
+  </div>
 
-<!-- End of StatCounter Code -->
+  <div class="page-title-band">
+    <div class="container">
+      <h1>Letter of recommendation for 'The Psalms by Juliana Nicholas'</h1>
+      <p>Letter of Recommendation</p>
+    </div>
+  </div>
 
-    <script src="assets/js/sections.js"></script>
+  <div class="container">
+
+    <div class="two-col">
+      <div class="wide-col">
+        <div class="section-kicker k-plum">HOME PAGE</div>
+        <p><a href="home.htm">Press here for the HOME PAGE to view some in-depth pictures.</a></p>
+        <p>The above page is updated regularly</p>
+      </div>
+      <div class="wide-col">
+        <div class="section-kicker k-plum">JULIANA NICHOLAS</div>
+        <figure class="figure-centre">
+          <img src="images/main/juliana.jpg" alt="Juliana Nicholas, lead singer on The Lord is My Light" width="244" loading="lazy">
+          <figcaption>Juliana Nicholas, lead singer on 'The Lord is My Light' CD</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <section class="body-section">
+      <div class="section-kicker k-plum">ST. JOSEPH'S CATHOLIC CHURCH</div>
+      <div class="letter-address">
+        <p><strong>St. Joseph's Catholic Church<br>Claretian Missionaries</strong></p>
+        <p>68 Grange Park Road, Leyton, London E10 5ES<br>
+        Tel. 020-8539-2908 Fax 020-8928-1057<br>
+        E-mail <i>leyton@dioceseofbrentwood.org</i> Web Page <i>www.claret.org.uk/joseph</i></p>
+        <p>Part of Brentwood Diocesan Trust Registered Charity No. 23409</p>
+      </div>
+
+      <p class="letter-date">25 June 2003</p>
+
+      <p><strong>The Psalms by Juliana Nicholas</strong></p>
+      <p><strong>To whomsoever it may concern</strong></p>
+
+      <div class="letter-body">
+        <figure class="figure-float">
+          <img src="images/main/cutler1.gif" alt="" width="233" loading="lazy">
+        </figure>
+
+        <p>Recently Mrs. Juliana Nicholas, a married lay Catholic mother from Malaysia, asked to come to our parish to sing a selection of the psalms that she has written and produced. She concentrates particularly on psalms that speak of God's mercy for all of us.</p>
+
+        <p>Like many parish priests I receive many requests from different people and groups to be able to speak at Mass. This request, however, was very different. This was a request to come and sing during Mass. After speaking with Juliana we decided to ask her to sing the psalm at Mass, to sing during the reception of Holy Communion and to sing at the end of Mass for those who wished to stay and hear her.</p>
+
+        <p>She has a very beautiful singing voice, very pure and clear. It was very moving to listen to her singing, a true meditation on the words of Sacred Scripture. Her prayerful singing touched the people of the parish. It is rare to have the opportunity to have someone who sings so professionally at Mass. Juliana believes that she has a calling to share the mercy of God through her singing. We found that this is true. The people voluntarily stayed behind after Mass to listen to her. They all said: &quot;When can she come again?&quot; We were so pleased to have invited her to our parish.</p>
+
+        <p>If you are thinking of inviting Juliana, I recommend her ministry to you whole-heartedly. You will not be disappointed and it will be something that your parish will remember for a long time to come.</p>
+
+        <p>At no point did Juliana ask for money or for a collection. She simply asked for the opportunity to sell her CDs after Mass. People only bought them if her singing moved them. Juliana sold many copies after the Masses in our parish.</p>
+
+        <p>Juliana is looking for opportunities to share her love of God with others as a Catholic. It is rare to encounter such a person. Please consider seriously if you could enable her ministry in your parish. You will not be disappointed.</p>
+
+        <p>Yours truly,</p>
+        <figure class="signature">
+          <img src="Image2.gif" width="200" height="56" alt="Signature" loading="lazy">
+        </figure>
+        <p><strong><u>Rev. Christopher Cutler CMF</u></strong><br>Parish Priest</p>
+      </div>
+    </section>
+
+    <section class="body-section">
+      <div class="section-kicker k-plum">MALAYSIA &amp; TESTIMONY</div>
+      <p><strong>Return to <a href="malaysia.htm">Malaysia page</a> for the full story.</strong></p>
+      <p>Anton Nicholas is Sylvester's brother, who is married to Juliana Nicholas.</p>
+
+      <div class="highlight">
+        <p>We need to plant here without any optional caveats the challenging words of A. W. Tozer, &quot;It is doubtful that God can use anyone greatly until He has hurt him deeply&quot;.</p>
+        <p><a href="book/chapter1.htm">So Press Here to read what the Anton Nicholas family had to persevere through. It will make a fascinating read.</a></p>
+      </div>
+
+      <p>Or to paraphrase the famous words of Pastor Charles R. Swindoll, &quot;Before God can use a man He has got to crush him.&quot;</p>
+
+      <p><a href="video/antonvideomal.htm">Do watch this video of Anton speaking on YouTube</a> showing exactly what was, in preparation, prophetically and strategically shared about The Holy Ghost at the gathering in Kuala Lumpur, Malaysia. View why he received their rapt attention, for the Malaysians heard the prophetic Word.</p>
+
+      <p>The first segment of the video is shown below. <a href="testimonies/prophecies/index.htm">A portion of the 2010 prophetic word is cited within the video.</a></p>
+
+      <p>
+        <a href="testimonies/prophecies/index.htm">Press here to read the whole 2011 prophecy.</a>
+        To VIEW the remaining three segments please follow this <a href="video/antonvideomal.htm">Link</a>.
+      </p>
+
+      <div class="video-frame">
+        <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/fK6RHeq4zpo" data-video-title="Anton speaking in Kuala Lumpur, Malaysia" aria-label="Play: Anton speaking in Kuala Lumpur, Malaysia">
+          <img src="https://i.ytimg.com/vi/fK6RHeq4zpo/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true"></span>
+          <noscript><a href="https://www.youtube.com/watch?v=fK6RHeq4zpo">Watch on YouTube</a></noscript>
+        </button>
+      </div>
+      <p class="video-caption"><a href="https://www.youtube.com/watch?v=fK6RHeq4zpo">Watch on YouTube</a></p>
+    </section>
+
+    <section class="body-section">
+      <h2>Bahasa Malaysia/ Indonesian Translation.</h2>
+
+      <p>*Pada hari Sabtu 18 September 2010, kami menghadiri Doa Malam yang amat megharukan di Hyde Park, London, United Kingdom. Antara 8 pm dan 8-30 malam, senja berlabuh dan sebahagian besar dari 80.000 jemaah berkumpul berada di lutut mereka, kepala tertunduk dalam doa khusyuk di rumput di Hyde Park.</p>
+
+      <p>Dalam pengabdian dan penghormatan ini Himne dinyanyikan, <strong>&quot;Lead Kindly Light&quot;</strong>.</p>
+
+      <p>Tekan butang di bawah ini untuk video YouTube dan rasa sendiri sambil mendoa betapa kuat impartasi dari Roh Kudus. Sila cuba dan lihat samada Kehadiran manis Roh Kudus menyentuh anda! Anda hanya boleh tahu bila <u>melihat</u> video ini.</p>
+
+      <p>Kami amat gembira mendapat peluang menghadiri acara ini, dari jam 3 petang hingga 8-30 WIB.</p>
+
+      <p class="text-centre">a) Ini himne Kristian, Lead Kindly Light juga kegemaran Mahatma (Mohandas Karamchand) Gandhi dan secara rutin dinyanyikan di pertemuan doa nya.</p>
+      <p class="text-centre">Mr Gandhi mendesak dan menggalakkan ketidak kerasan dan pembangkangan awam sebagai sarana untuk mencapai kemerdekaan India.</p>
+
+      <p>b) ahli orkes, dekoratif memakai turban hitam, memainkan lagu ini di pemakaman Perdana Menteri pertama Bebas India, Jawaharlal Nehru, sebelum tubuh ditempatkan di kereta yang menempatkan meriam.*</p>
+
+      <div class="video-frame">
+        <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/3j2hBSgZMrw" data-video-title="Lead Kindly Light" aria-label="Play: Lead Kindly Light">
+          <img src="https://i.ytimg.com/vi/3j2hBSgZMrw/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true"></span>
+          <noscript><a href="https://www.youtube.com/watch?v=3j2hBSgZMrw">Watch on YouTube</a></noscript>
+        </button>
+      </div>
+      <p class="video-caption"><a href="https://www.youtube.com/watch?v=3j2hBSgZMrw">Watch on YouTube</a></p>
+
+      <p class="text-centre" style="font-size: 1.1rem; font-weight: 700; text-decoration: underline;">*Lead Kindly Light*</p>
+
+      <p>On Saturday 18th September 2010, we attended the much needed Prayer Vigil at Hyde Park, London. Between 8 pm and 8-30 pm, darkness had fallen and most of the 80,000 congregants assembled were on their knees, heads bowed in solemn prayer on the grass in Hyde Park. In devotion and reverence this Hymn was sung, <strong>&quot;Lead Kindly Light&quot;</strong>.</p>
+
+      <p><strong>Watch the video pasted above</strong> and prayerfully observe on how strong the impartation of the Holy Ghost is. Do check it out and see whether the sweet Presence of the Holy Ghost touches you! You can only know through viewing the video. <span class="highlight" style="display:inline; padding: 0.1rem 0.25rem;">It surely will, for moments of this nature are very rare.</span></p>
+
+      <div class="highlight-green">
+        <p><em>Some of the words:</em> &quot;Lead, kindly light, amid th'encircling gloom, lead thou me on; the night is dark, and I am far from home, lead thou me on. Keep thou my feet; I do not ask to see the distant scene; one step enough for me&quot;</p>
+        <p><strong>The cherished words of The Blessed Cardinal John Henry Newman.</strong></p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      © Anton Nicholas · Blessed and inaugurated 1 August 2002
+      <div class="footer-links">
+        <a href="daily/index.htm">Daily Readings</a> ·
+        <a href="thefruitofprayer.htm">The Fruit of Prayer</a> ·
+        <a href="https://nicholaslondon.org">Paul Nicholas</a> ·
+        <a href="https://twitter.com/AntonNicholas1">@AntonNicholas1</a>
+      </div>
+      <div class="footer-counters">
+        <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Start of StatCounter Code -->
+  <script type="text/javascript">
+    var sc_project=223118;
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+  <noscript>
+    <a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a>
+  </noscript>
+  <!-- End of StatCounter Code -->
+
+  <script>
+    document.querySelectorAll('.video-facade').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var src = btn.getAttribute('data-video-src');
+        var title = btn.getAttribute('data-video-title');
+        var sep = src.indexOf('?') >= 0 ? '&' : '?';
+        var iframe = document.createElement('iframe');
+        iframe.src = src + sep + 'autoplay=1';
+        iframe.title = title;
+        iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        iframe.setAttribute('allowfullscreen', '');
+        btn.parentElement.replaceChildren(iframe);
+      });
+    });
+  </script>
 </body>
 </html>

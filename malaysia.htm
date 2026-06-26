@@ -1,385 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>May our Lord's Favour be extended on Fintan Romuald Nicholas in Kuala Lumpur Malaysia. Deuteronomy Chapter 28 verses 1-12</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <style>
-        :root {
-            --primary: #4E342E;  /* Rich brown */
-            --accent: #00695C;   /* Teal */
-            --highlight: #8BC34A; /* Light green */
-            --bg: #F5F5F5;       /* Light gray */
-            --card-bg: #EDE7E3;  /* Warm off-white */
-            --link-color: #D81B60; /* Vibrant magenta */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May our Lord's Favour be extended on Fintan Romuald Nicholas in Kuala Lumpur Malaysia. Deuteronomy Chapter 28 verses 1-12</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&amp;family=Playfair+Display:wght@700;900&amp;display=swap">
+  <style>
+    :root {
+      --paper: #f7f3ea;
+      --paper-raised: #efe8db;
+      --paper-inset: #e8e0d2;
+      --ink: #2a241c;
+      --ink-soft: #4d4539;
+      --muted: #7a7164;
+      --rule: #d5cbb8;
+      --rule-strong: #bfb39e;
+      --terracotta: #9a4e3c;
+      --gold: #8a7342;
+      --sage: #5f6f56;
+      --slate: #516878;
+      --plum: #6f5a62;
+      --depth: #3d352c;
+      --depth-gold: #bfa06a;
+    }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            gap: 40px;
-            padding: 40px;
-        }
+    html { font-size: 22px; }
 
-        header {
-            grid-column: 1 / 3;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
 
-        nav { grid-column: 1 / 3; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
 
-        .main-content {
-            grid-column: 1 / 2;
-            padding: 20px;
-        }
+    .masthead {
+      text-align: center;
+      padding: 1rem 0 0;
+      border-bottom: 4px solid var(--terracotta);
+      background: var(--paper);
+    }
 
-        .main-content p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-        }
+    .dateline {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      padding: 0 0.25rem;
+    }
 
-        .main-content a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
+    .nameplate-rules {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.3rem 0;
+    }
 
-        .main-content a:hover {
-            color: #C2185B;
-            text-decoration: underline;
-        }
+    .nameplate {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      color: var(--ink);
+    }
 
-        .sidebar {
-            grid-column: 2 / 3;
-            padding: 20px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .nameplate .amp { color: var(--terracotta); }
 
-        .sidebar p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-        }
+    .motto {
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin: 0.35rem 0 0.1rem;
+    }
 
-        .sidebar a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
+    .section-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.95rem;
+      background: var(--paper);
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-top: 0.45rem;
+      padding: 0.4rem 0 0.55rem;
+      border-top: 1px solid var(--rule);
+    }
 
-        .sidebar a:hover {
-            color: #C2185B;
-            text-decoration: underline;
-        }
+    .section-nav a { color: var(--ink-soft); text-decoration: none; padding: 0 0.7rem; font-weight: 600; }
+    .section-nav a:hover { color: var(--terracotta); }
+    .section-nav a[aria-current="page"] { color: var(--terracotta); }
+    .section-nav span { color: var(--rule); user-select: none; }
 
-        .sidebar img {
-            width: 100%;
-            max-width: 480px;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+    .page-title-band {
+      background: var(--depth);
+      border-bottom: 1px solid var(--depth-gold);
+      padding: 1rem 0;
+      text-align: center;
+    }
 
-        .section-preview img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
+    .page-title-band h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      color: var(--depth-gold);
+      line-height: 1.25;
+      max-width: 52rem;
+      margin: 0 auto;
+    }
 
-        .section-content img {
-            max-width: 100%;
-            width: 600px;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+    .page-title-band p {
+      font-style: italic;
+      color: #ebe4d8;
+      font-size: 1.05rem;
+      margin-top: 0.35rem;
+    }
 
-        .highlight { background: rgba(139, 195, 74, 0.2); }
+    .section-kicker {
+      font-size: 0.88rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
 
-        footer {
-            grid-column: 1 / 3;
-        }
+    .section-kicker::after {
+      content: "";
+      display: block;
+      width: 1.75rem;
+      height: 2px;
+      margin-top: 0.25rem;
+      background: currentColor;
+      opacity: 0.45;
+    }
 
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
+    .k-red    { color: var(--terracotta); }
+    .k-gold   { color: var(--gold); }
+    .k-sage   { color: var(--sage); }
+    .k-slate  { color: var(--slate); }
+    .k-plum   { color: var(--plum); }
 
-            .sidebar {
-                max-width: 100%;
-                padding: 15px;
-            }
+    h1, h2, h3 { color: var(--ink); }
 
-            .sidebar img {
-                max-width: 100%;
-            }
-        }
-    </style>
+    .edition-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 0;
+      margin: 1.2rem 0;
+      border-top: 1px solid var(--rule-strong);
+      background: var(--paper-raised);
+    }
+
+    .main-column {
+      padding: 0.2rem 0 0;
+      border-right: 1px solid var(--rule);
+    }
+
+    .sidebar-column {
+      padding: 0.9rem 0.85rem 0.85rem 0.9rem;
+      background: transparent;
+    }
+
+    .body-section {
+      border-top: 1px solid var(--rule);
+      padding: 1.1rem 0.9rem 0.85rem;
+      background: transparent;
+    }
+
+    .body-section:first-child { border-top: none; }
+
+    .body-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.22;
+      margin: 0.15rem 0 0.5rem;
+    }
+
+    .body-section p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .sidebar-column p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .scripture, .highlight-panel {
+      font-style: italic;
+      font-size: 1rem;
+      border-left: 3px solid var(--gold);
+      padding: 0.35rem 0 0.35rem 0.75rem;
+      margin: 0.5rem 0;
+      color: var(--ink-soft);
+    }
+
+    figure { margin: 0.55rem 0 0.4rem; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--paper-inset);
+      padding: 4px;
+    }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .audio-block {
+      margin: 0.55rem 0 0.75rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .audio-block audio {
+      display: block;
+      width: 100%;
+      margin-top: 0.4rem;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--rule);
+      background: #000;
+      margin: 0.55rem 0 0.35rem;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-facade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: #000;
+    }
+
+    .video-facade img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 64px;
+      height: 64px;
+      margin: -32px 0 0 -32px;
+      border-radius: 50%;
+      background: rgba(154, 78, 60, 0.9);
+      pointer-events: none;
+    }
+
+    .video-play::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -12px 0 0 -6px;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .video-caption {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    a { color: var(--terracotta); }
+
+    footer {
+      border-top: 4px solid var(--terracotta);
+      margin-top: 1.6rem;
+      padding: 1rem 0 1.6rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      background: var(--paper);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(154, 78, 60, 0.22); }
+    footer a:hover { color: var(--terracotta); border-bottom-color: var(--terracotta); }
+    .footer-links { margin-top: 0.3rem; }
+    .footer-counters { margin-top: 0.75rem; }
+
+    @media (max-width: 820px) {
+      html { font-size: 19px; }
+      .nameplate { font-size: 2.5rem; }
+      .dateline { flex-direction: column; gap: 0.15rem; text-align: center; }
+      .edition-layout { grid-template-columns: 1fr; }
+      .main-column { border-right: none; border-bottom: 1px solid var(--rule); }
+    }
+
+    @media (max-width: 380px) {
+      html { font-size: 19px; }
+      .edition-layout { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
+
+  <div class="masthead">
     <div class="container">
-        <header>
-            <h1>May our Lord's Favour be extended on Fintan Romuald Nicholas in Kuala Lumpur, Malaysia. Deuteronomy Chapter 28 verses 1-12</h1>
-        </header>
+      <div class="dateline">
+        <div>Est. 1 August 2002 · Malaya · London · Malaysia</div>
+        <div>1,893,704 readers and counting</div>
+      </div>
+      <div class="nameplate-rules">
+        <div class="nameplate">ANTON <span class="amp">&amp;</span> SAIDA NICHOLAS</div>
+      </div>
+      <div class="motto">“The Lord is My Shepherd; I shall not want.” — Psalm 23:1</div>
+      <nav class="section-nav" aria-label="Sections">
+        <a href="daily/index.htm">Daily Readings</a><span>·</span>
+        <a href="thefruitofprayer.htm">Prophecy</a><span>·</span>
+        <a href="profiles/oriental.htm">Family Legacy</a><span>·</span>
+        <a href="book/chapter1.htm">Saida's Journey</a><span>·</span>
+        <a href="malaysia.htm" aria-current="page">Malaysia</a><span>·</span>
+        <a href="testimonies/index.htm">Testimonies</a><span>·</span>
+        <a href="update.htm">Updates</a>
+      </nav>
+    </div>
+  </div>
 
-        <nav>
-            <ul>
-                <li class="main-pages">
-                    <a href="home.htm">Main Pages</a>
-                    <div class="sub-nav">
-                        <a href="home.htm">Home</a>
-                        <a href="thefruitofprayer.htm">The Fruit of Prayer</a>
-                        <a href="malaysia.htm">Malaysia</a>
-                        <a href="update.htm">Updates</a>
-                    </div>
-                </li>
-                <li class="main-pages">
-                    <a href="daily/index.htm">Resources</a>
-                    <div class="sub-nav">
-                        <a href="daily/index.htm">Daily Readings</a>
-                        <a href="tapes.htm">Tapes</a>
-                        <a href="thelordismylight.htm">The Lord is My Light</a>
-                    </div>
-                </li>
-                <li class="main-pages">
-                    <a href="thefruitofprayer.htm">Profiles</a>
-                    <div class="sub-nav">
-                        <a href="profiles/oriental.htm">BP Nicholas</a>
-                        <a href="profiles/benedict.htm">Benedict Ponniah</a>
-                        <a href="https://nicholaslondon.org">Paul Nicholas</a>
-                        <a href="profiles/jannine.htm">Jannine Nicholas</a>
-                        <a href="profiles/dietitian.htm">Valerie Meilton</a>
-                    </div>
-                </li>
-                <li><a href="events/malaysia.htm">Events &amp; Testimonies</a></li>
-            </ul>
-        </nav>
+  <div class="page-title-band">
+    <div class="container">
+      <h1>May our Lord's Favour be extended on Fintan Romuald Nicholas in Kuala Lumpur, Malaysia. Deuteronomy Chapter 28 verses 1-12</h1>
+      <p>Introducing my youngest brother and his family in Kuala Lumpur</p>
+    </div>
+  </div>
 
-        <div class="main-content">
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/fintan.jpg" alt="Fintan Nicholas" loading="lazy">
-                    <div>
-                        <h2>Fintan Nicholas</h2>
-                        <p>Introducing my youngest brother and his family in Kuala Lumpur.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>Introducing my youngest brother, Fintan Nicholas and family, who are currently residing in Kuala Lumpur, Malaysia. Fintan works as the Associate Director of International Dealing Division at Kenanga Investment Bank Berhad. Fintan heads the Inter-Broke Dealing team there and he is also the Senior Dealer.</p>
-                    <p>His wife Jiun Nicholas, née Yong Kwa Jiun, is the Commercial Senior Director at a well-known international organisation near Kuala Lumpur. We want to thank the Living God for blessing, promoting and honouring them to their high positions. They are carrying their son Luke. Please continue to intercede for their whole family, and join us in prayer for their young son Gerard. Father God, we will Praise You Heavenly Father and maintain a joyful spirit for manifesting your Presence through the continuous miracle you are mightily and wondrously working on the life of Gerard Veerasingam Nicholas.</p>
-                    <p>On 14th April 2015 in the UK, Saida visually saw a prophetic vision of an intensely bright light encircling Anton's Dad, Albert, drawing him into Heaven. Anton's Dad in Malaysia aged 99 years old had moved to our Lord's Presence the day before - 13th April 2015. On 26th July 2015 Anton for the first time called a public meeting in Kuala Lumpur Malaysia to honour his Dad's legacy. Without much advertising a group of people turned up at the Ball Room, Ascott Central Kuala Lumpur. Watch the video to observe how much his late Dad would have loved his son speaking so passionately.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sAV14VRAzI4" allowfullscreen title="Anton Nicholas speaks at Ascott Central Kuala Lumpur memorial gathering for Albert Nicholas"></iframe>
-                    <p>During our last visit to Malaysia we had tremendous fellowship together and at every given opportunity we prayed fervently and confessed the Word of God loudly. Occasionally we played the powerful worship rendition of Terry Macalmon as background music to enhance the atmosphere of prayer. We also are rejoicing that Jiun often prays whilst this anointed CD is playing as she drives to work.</p>
-                    <p class="highlight">1 Thessalonians 5:17 Pray without ceasing.</p>
-                    <img src="images/main/fintan_family.jpg" alt="Fintan &amp; Jiun Nicholas" loading="lazy">
-                    <p>The marriage took place at the Holy Rosary Church, Jalan Tun Sambanthan, Kuala Lumpur, Malaysia and the reception at Sheraton Subang Hotel &amp; Towers, Subang Jaya, Selangor.</p>
-                    <img src="images/main/Gerard.jpg" alt="Gerard Nicholas" loading="lazy">
-                    <p>Please continue to pray strong intercession prayers for Gerard. We need God the Father to work an awesome miracle on his life. Photograph taken in 2008.</p>
-                    <p>To encourage yourself to pray, <a href="book/chapter1.htm"><b>follow this link.</b></a> For there are some incredible elements in there that might boost your faith.</p>
-                    <p><b>A. W. Tozer: "It is doubtful that God can use anyone greatly until He has hurt him deeply."</b></p>
-                </div>
-            </div>
+  <div class="container">
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/Paul_Fintan.jpg" alt="Fintan &amp; Paul" loading="lazy">
-                    <div>
-                        <h2>Seriously Engage with My 3 Minute Video Clip</h2>
-                        <p>A battle between Kingdoms and how to be ready.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>It is not a battle between nations, people, religion or ethnicity. It is actually a vicious battle between Kingdoms. It is Kingdom against Kingdom.</p>
-                    <p>Our families need to be preserved and protected. Video pasted below.</p>
-                    <p>This particular 3 Minute video will encourage you on how to be ready. It is compelling viewing.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kh5nvbzwX4g" allowfullscreen title="3 Minute Video: A Battle Between Kingdoms — How to Be Ready"></iframe>
-                    <p class="highlight"><b>Psalm 51:17</b> My sacrifice [the sacrifice acceptable] to God is a broken spirit; a broken and a contrite heart [broken down with sorrow for sin and humbly and thoroughly penitent], such, O God, You will not despise.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-Idpl63I3wA?feature=player_embedded" allowfullscreen title="Anton Nicholas — Inspirational Message"></iframe>
-                    <p class="highlight">I have joined the Twitter Club. Do joyfully <b>follow me</b> and may you be blessed!</p>
-                </div>
-            </div>
+    <div class="edition-layout">
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/LeadKindlyLight.jpg" alt="Lead Kindly Light hymn sheet" loading="lazy">
-                    <div>
-                        <h2>Lead Kindly Light</h2>
-                        <p>A hymn with a powerful history and impact.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p><b>Bahasa Malaysia/Indonesian Translation:</b></p>
-                    <p>*Pada hari Sabtu 18 September 2010, kami menghadiri Doa Malam yang amat mengharukan di Hyde Park, London, United Kingdom.</p>
-                    <p>Antara 8 pm dan 8-30 malam, senja berlabuh dan sebahagian besar dari 80.000 jemaah berkumpul berada di lutut mereka, kepala tertunduk dalam doa khusyuk di rumput di Hyde Park.</p>
-                    <p>Dalam pengabdian dan penghormatan ini Himne dinyanyikan: "Lead Kindly Light". Tekan butang di bawah ini untuk video YouTube dan rasa sendiri sambil mendoa betapa kuat impartasi dari Roh Kudus.</p>
-                    <p>Sila cuba dan lihat samada Kehadiran manis Roh Kudus menyentuh anda! Anda hanya boleh tahu bila melihat video ini.</p>
-                    <p>Kami amat gembira mendapat peluang menghadiri acara ini, dari jam 3 petang hingga 8-30 WIB.</p>
-                    <p>a) Ini himne Kristian, Lead Kindly Light juga kegemaran Mahatma (Mohandas Karamchand) Gandhi dan secara rutin dinyanyikan di pertemuan doa nya. Mr Gandhi mendesak dan menggalakkan ketidak kerasan dan pembangkangan awam sebagai sarana untuk mencapai kemerdekaan India.</p>
-                    <p>b) ahli orkes, dekoratif memakai turban hitam, memainkan lagu ini di pemakaman Perdana Menteri pertama Bebas India, Jawaharlal Nehru, sebelum tubuh ditempatkan di kereta yang menempatkan meriam.*</p>
-                    <iframe width="560" height="390" src="https://www.youtube.com/embed/3j2hBSgZMrw" allowfullscreen title="Lead Kindly Light — Hymn sung at Hyde Park, London papal vigil"></iframe>
-                </div>
-            </div>
+      <div class="main-column">
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/NicholasFamily.jpg" alt="Nicholas Family" loading="lazy">
-                    <div>
-                        <h2>Family Moments</h2>
-                        <p>Celebrating Vanessa's wedding and family blessings.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>This photograph is of some members of Anton's family. It was taken at his niece's wedding. Vanessa Theresa Nicholas married Michael Allan Schmidt. This joyful occasion was celebrated on 24th May 2008 at St. Jerome's Catholic Church, St. Jerome's University, Waterloo, Ontario, Canada.</p>
-                    <p>Vanessa is the first grandchild in our Nicholas family to be married. Commencing from left to right are Emmanuel Savundranayagam, our son Paul Nicholas, my youngest brother Fintan Nicholas, my eldest brother Joseph J. Nicholas, Kyle Nicholas (Joe's son), the Bridegroom Michael, the bride Vanessa, Ashley Nicholas (Joe's daughter), Anne Nicholas née Telfer (Joe's wife), Assunta Savundranayagam and Rosalind Nicholas (Anton's sisters).</p>
-                    <img src="images/main/NicholasFamily.jpg" alt="Nicholas Family" loading="lazy">
-                    <p>The photograph below shows two individuals who are under the blessing of our Lord, namely Fintan Nicholas and Paul Nicholas. We have prayed faithfully daily that the blessing in the original garden of Eden would manifest fully on them both and our Lord has been ever faithful. The surroundings reflect a miniscule image, a primitive shadow of what the garden of Eden would look like: can you imagine how glorious it would have been with the majestic Presence of God abiding in the garden!</p>
-                    <img src="images/main/Paul_Fintan.jpg" alt="Fintan &amp; Paul" loading="lazy">
-                </div>
-            </div>
+        <section class="body-section">
+          <div class="section-kicker k-gold">FINTAN NICHOLAS</div>
+          <h2>Fintan Nicholas</h2>
+          <p>Introducing my youngest brother and his family in Kuala Lumpur.</p>
+          <figure>
+            <img src="images/main/fintan.jpg" alt="Fintan Nicholas" loading="lazy">
+          </figure>
+          <p>Introducing my youngest brother, Fintan Nicholas and family, who are currently residing in Kuala Lumpur, Malaysia. Fintan works as the Associate Director of International Dealing Division at Kenanga Investment Bank Berhad. Fintan heads the Inter-Broke Dealing team there and he is also the Senior Dealer.</p>
+          <p>His wife Jiun Nicholas, née Yong Kwa Jiun, is the Commercial Senior Director at a well-known international organisation near Kuala Lumpur. We want to thank the Living God for blessing, promoting and honouring them to their high positions. They are carrying their son Luke. Please continue to intercede for their whole family, and join us in prayer for their young son Gerard. Father God, we will Praise You Heavenly Father and maintain a joyful spirit for manifesting your Presence through the continuous miracle you are mightily and wondrously working on the life of Gerard Veerasingam Nicholas.</p>
+          <p>On 14th April 2015 in the UK, Saida visually saw a prophetic vision of an intensely bright light encircling Anton's Dad, Albert, drawing him into Heaven. Anton's Dad in Malaysia aged 99 years old had moved to our Lord's Presence the day before - 13th April 2015. On 26th July 2015 Anton for the first time called a public meeting in Kuala Lumpur Malaysia to honour his Dad's legacy. Without much advertising a group of people turned up at the Ball Room, Ascott Central Kuala Lumpur. Watch the video to observe how much his late Dad would have loved his son speaking so passionately.</p>
+          <div class="video-frame">
+            <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/sAV14VRAzI4" data-video-title="Anton Nicholas speaks at Ascott Central Kuala Lumpur memorial gathering for Albert Nicholas" aria-label="Play: Anton Nicholas speaks at Ascott Central Kuala Lumpur memorial gathering for Albert Nicholas">
+              <img src="https://i.ytimg.com/vi/sAV14VRAzI4/hqdefault.jpg" alt="" loading="lazy">
+              <span class="video-play" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="video-caption"><a href="https://www.youtube.com/watch?v=sAV14VRAzI4">Watch on YouTube</a></p>
+          <p>During our last visit to Malaysia we had tremendous fellowship together and at every given opportunity we prayed fervently and confessed the Word of God loudly. Occasionally we played the powerful worship rendition of Terry Macalmon as background music to enhance the atmosphere of prayer. We also are rejoicing that Jiun often prays whilst this anointed CD is playing as she drives to work.</p>
+          <p class="highlight-panel">1 Thessalonians 5:17 Pray without ceasing.</p>
+          <figure>
+            <img src="images/main/fintan_family.jpg" alt="Fintan &amp; Jiun Nicholas" loading="lazy">
+          </figure>
+          <p>The marriage took place at the Holy Rosary Church, Jalan Tun Sambanthan, Kuala Lumpur, Malaysia and the reception at Sheraton Subang Hotel &amp; Towers, Subang Jaya, Selangor.</p>
+          <figure>
+            <img src="images/main/Gerard.jpg" alt="Gerard Nicholas" loading="lazy">
+          </figure>
+          <p>Please continue to pray strong intercession prayers for Gerard. We need God the Father to work an awesome miracle on his life. Photograph taken in 2008.</p>
+          <p>To encourage yourself to pray, <a href="book/chapter1.htm"><strong>follow this link.</strong></a> For there are some incredible elements in there that might boost your faith.</p>
+          <p><strong>A. W. Tozer: "It is doubtful that God can use anyone greatly until He has hurt him deeply."</strong></p>
+        </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/juliana.jpg" alt="Juliana Nicholas" loading="lazy">
-                    <div>
-                        <h2>Juliana Nicholas</h2>
-                        <p>Lead singer of 'The Lord is My Light' and her journey.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p><b>Juliana Nicholas, lead singer on 'The Lord is My Light'</b></p>
-                    <p>Please <a href="cutler.htm"><b>read the letter</b></a> from our late dear Reverend Father Christopher Cutler, parish priest of St. Joseph's Church, Leyton, London UK. (The Order of the Claretian Missionaries) highly recommending Juliana to be granted the opportunity to sing her anointed psalms. <a href="audio/lordlight.mp3"><b>Listen to one of the tracks from 'The Lord is my Light' please click here:</b></a></p>
-                    <p>A 'revival bud' has taken place through the anointed CD, 'The Lord is my Light', the songs being sung by Juliana and directed by her husband Sylvester Nicholas. Alfred Aaron Lee composed the songs. A tremendous, miraculous sales breakthrough has taken place in Malaysia and Singapore. The Catholic churches in Malaysia have opened their doors for this CD to be sold to their parishioners. It looks like the prayers of our late mother Theresa Nicholas have been answered, for she was the one who got up every morning at about 3-30am to intercede and supplicate for her children to follow the ways of the Lord. She must be rejoicing in Heaven with all the other saints with how the CD is blessing the Spirit, Soul, Body and Mind of the Christians and the non Christians. God the Holy Ghost is breaking through all denominational barriers now. This CD is now penetrating the Anglican Church, the Methodist, the House Churches, the Lutheran and Praise be to God the Pentecostal and the Charismatic churches. We rejoice that the Covenant Keeping, 'Lord of the Breakthrough' is breaking barriers and the CD has gone beyond Malaysia and will soon be selling in Australia.</p>
-                    <img src="images/main/syljul.gif" alt="Sylvester and Juliana Nicholas — performers of The Lord is My Light" loading="lazy">
-                    <p class="highlight">Sylvester and Juliana Nicholas have three children, Alexander, Alistair and Aaron. They gathered with thousands at Taylor's University Lakeside Campus, Subang Jaya, Selangor, Malaysia on Sunday, September 28th 2014 to audition in the 'Asia's Got Talent' reality show. The show will debut on AXN early in 2015. AXN Asia is a TV cable and satellite Channel. 'Asia's Got Talent' involves contestants from a total of 13 Asian countries and territories. The 'Got Talent' franchise, which initially commenced in the United States, was co-founded by the well-known music producer Simon Cowell.</p>
-                    <p>The first church in Australia that they will be performing in is: St Jerome's church No 24, Troode Munster, WA 6166 Perth West Australia on the 21st March 2004. <a href="https://www.sonshinefm.ws"><b>Sonshine Fm</b></a> will be interviewing them. Please continue to pray for them.</p>
-                    <p>Further update: 18/01/03 Sylvester and Juliana have penetrated a significant proportion of the Christian churches in the Royal Kingdom of Brunei. We see this as an act of the Holy Ghost. To all the people involved in this venture we want to say thank you.</p>
-                    <p>Thanksgiving items for all these churches that invited Juliana to perform live:</p>
-                    <p>1. Juliana has already performed live in over 100 churches in Malaysia, this includes the States of Sarawak, Sabah and the country of Singapore. We rejoice that the Catholic Archbishop of Singapore Msgr. Nicholas Chia has given his blessings and approval for Sylvester and Juliana to approach the local Catholic churches. This is a significant move. Thank God!</p>
-                    <p>Thanks be to God, this CD is now making a great breakthrough in Sabah, East Malaysia. A sincere thank you to Monsignor Primus of the Sacred Heart Cathedral, for the tremendous affection and help rendered to Sylvester and Juliana during their stay in Sabah.</p>
-                    <p>Also a word of gratitude and thanksgiving to the Covenant Groups of Sabah &amp; the Prayer Group of the Sacred Heart Cathedral in Kota Kinabalu and most importantly to Bro. Eddie the director of Mont fort Youth Training Centre and Helena for all the love shown to Sylvester &amp; Juliana. All of you manifested the genuine love of Jesus Christ and gave them a very warm welcome.</p>
-                </div>
-            </div>
+        <section class="body-section">
+          <div class="section-kicker k-gold">KINGDOM AGAINST KINGDOM</div>
+          <h2>Seriously Engage with My 3 Minute Video Clip</h2>
+          <p>A battle between Kingdoms and how to be ready.</p>
+          <figure>
+            <img src="images/main/Paul_Fintan.jpg" alt="Fintan &amp; Paul" loading="lazy">
+          </figure>
+          <p>It is not a battle between nations, people, religion or ethnicity. It is actually a vicious battle between Kingdoms. It is Kingdom against Kingdom.</p>
+          <p>Our families need to be preserved and protected. Video pasted below.</p>
+          <p>This particular 3 Minute video will encourage you on how to be ready. It is compelling viewing.</p>
+          <div class="video-frame">
+            <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/kh5nvbzwX4g" data-video-title="3 Minute Video: A Battle Between Kingdoms — How to Be Ready" aria-label="Play: 3 Minute Video: A Battle Between Kingdoms — How to Be Ready">
+              <img src="https://i.ytimg.com/vi/kh5nvbzwX4g/hqdefault.jpg" alt="" loading="lazy">
+              <span class="video-play" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="video-caption"><a href="https://www.youtube.com/watch?v=kh5nvbzwX4g">Watch on YouTube</a></p>
+          <p class="highlight-panel"><strong>Psalm 51:17</strong> My sacrifice [the sacrifice acceptable] to God is a broken spirit; a broken and a contrite heart [broken down with sorrow for sin and humbly and thoroughly penitent], such, O God, You will not despise.</p>
+          <div class="video-frame">
+            <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/-Idpl63I3wA" data-video-title="Anton Nicholas — Inspirational Message" aria-label="Play: Anton Nicholas — Inspirational Message">
+              <img src="https://i.ytimg.com/vi/-Idpl63I3wA/hqdefault.jpg" alt="" loading="lazy">
+              <span class="video-play" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="video-caption"><a href="https://www.youtube.com/watch?v=-Idpl63I3wA">Watch on YouTube</a></p>
+          <p class="highlight-panel">I have joined the Twitter Club. Do joyfully <strong>follow me</strong> and may you be blessed!</p>
+        </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/dinner.jpg" alt="Sylvester &amp; Juliana with Bishops" loading="lazy">
-                    <div>
-                        <h2>Live Events</h2>
-                        <p>Sylvester and Juliana's performances across the globe.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>Glory be to God – Sylvester and Juliana were invited to perform in a concert in the United Kingdom! They did the first rendition of the psalms at the Harlequin Theatre in Redhill, Surrey on Thursday 29th May 2003.</p>
-                    <p>On 19th May 2003 Sylvester and Juliana went to Premier Christian Radio (London, UK) to do an interview about their visit and the concerts and the CD, on the Rick Easter show at lunchtime. Rick ran a competition to win a copy of the CD The Lord is My Light and a pair of tickets to the CMC concert. Praise God!</p>
-                    <p>The BBC interviewed them too &amp; UCB (United Christian Broadcasters) reviewed the CD for inclusion in their terrestrial and satellite radio stations' playlists across Europe. Thank God! <a href="itinerary.htm"><b>View their itinerary here</b></a></p>
-                    <p>Our Heavenly Father favoured Sylvester and Juliana by allowing Juliana to sing at England's favourite spiritual place, Walsingham. Juliana sang at an open air service in front of 3000 people. On one occasion the vast gathering even applauded her, which deeply touched the bishops and the other clergy, because it happened during a Holy mass service. (The clapping of hands is an unusual occurrence during Mass). August 2003. <a href="https://www.bbc.co.uk/religion/realmedia/sunday/s20030810z.ram"><b>BBC Radio 4's religious program, broadcast on Sunday 10th August happened to interview them during a report on Walsingham.</b></a></p>
-                </div>
-            </div>
+        <section class="body-section">
+          <div class="section-kicker k-gold">LEAD KINDLY LIGHT</div>
+          <h2>Lead Kindly Light</h2>
+          <p>A hymn with a powerful history and impact.</p>
+          <figure>
+            <img src="images/main/LeadKindlyLight.jpg" alt="Lead Kindly Light hymn sheet" loading="lazy">
+          </figure>
+          <p><strong>Bahasa Malaysia/Indonesian Translation:</strong></p>
+          <p>*Pada hari Sabtu 18 September 2010, kami menghadiri Doa Malam yang amat mengharukan di Hyde Park, London, United Kingdom.</p>
+          <p>Antara 8 pm dan 8-30 malam, senja berlabuh dan sebahagian besar dari 80.000 jemaah berkumpul berada di lutut mereka, kepala tertunduk dalam doa khusyuk di rumput di Hyde Park.</p>
+          <p>Dalam pengabdian dan penghormatan ini Himne dinyanyikan: "Lead Kindly Light". Tekan butang di bawah ini untuk video YouTube dan rasa sendiri sambil mendoa betapa kuat impartasi dari Roh Kudus.</p>
+          <p>Sila cuba dan lihat samada Kehadiran manis Roh Kudus menyentuh anda! Anda hanya boleh tahu bila melihat video ini.</p>
+          <p>Kami amat gembira mendapat peluang menghadiri acara ini, dari jam 3 petang hingga 8-30 WIB.</p>
+          <p>a) Ini himne Kristian, Lead Kindly Light juga kegemaran Mahatma (Mohandas Karamchand) Gandhi dan secara rutin dinyanyikan di pertemuan doa nya. Mr Gandhi mendesak dan menggalakkan ketidak kerasan dan pembangkangan awam sebagai sarana untuk mencapai kemerdekaan India.</p>
+          <p>b) ahli orkes, dekoratif memakai turban hitam, memainkan lagu ini di pemakaman Perdana Menteri pertama Bebas India, Jawaharlal Nehru, sebelum tubuh ditempatkan di kereta yang menempatkan meriam.*</p>
+          <div class="video-frame">
+            <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/3j2hBSgZMrw" data-video-title="Lead Kindly Light — Hymn sung at Hyde Park, London papal vigil" aria-label="Play: Lead Kindly Light — Hymn sung at Hyde Park, London papal vigil">
+              <img src="https://i.ytimg.com/vi/3j2hBSgZMrw/hqdefault.jpg" alt="" loading="lazy">
+              <span class="video-play" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="video-caption"><a href="https://www.youtube.com/watch?v=3j2hBSgZMrw">Watch on YouTube</a></p>
+        </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/tuwasabah.jpg" alt="Sylvester &amp; Juliana with Fr Lee" loading="lazy">
-                    <div>
-                        <h2>Prayer Request</h2>
-                        <p>Support for Sylvester and Juliana's ministry.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>Please pray that God the Holy Ghost will show Divine grace and favour by opening up opportunities where they will be able to perform live in various churches in the United Kingdom and in the United States of America. Below is a photograph of the Anglican Archbishop of Malaysia, (Sabah) and the Bishop of Malaysia (Kuala Lumpur) with their wives. Sylvester and Juliana are standing on the right hand side. Julie is wearing a red dress. The Archbishop of Malaysia invited Sylvester &amp; Juliana to perform live in the Anglican churches for he was deeply moved by their rendition of the psalms.</p>
-                    <img src="images/main/dinner.jpg" alt="Sylvester &amp; Juliana Nicholas with Bishops" loading="lazy">
-                    <p>Here is a picture of Sylvester and Juliana in Sabah with Reverend Father Lee.</p>
-                    <img src="images/main/tuwasabah.jpg" alt="Sylvester &amp; Juliana Nicholas with Fr Lee" loading="lazy">
-                </div>
-            </div>
+        <section class="body-section">
+          <div class="section-kicker k-gold">FAMILY MOMENTS</div>
+          <h2>Family Moments</h2>
+          <p>Celebrating Vanessa's wedding and family blessings.</p>
+          <figure>
+            <img src="images/main/NicholasFamily.jpg" alt="Nicholas Family" loading="lazy">
+          </figure>
+          <p>This photograph is of some members of Anton's family. It was taken at his niece's wedding. Vanessa Theresa Nicholas married Michael Allan Schmidt. This joyful occasion was celebrated on 24th May 2008 at St. Jerome's Catholic Church, St. Jerome's University, Waterloo, Ontario, Canada.</p>
+          <p>Vanessa is the first grandchild in our Nicholas family to be married. Commencing from left to right are Emmanuel Savundranayagam, our son Paul Nicholas, my youngest brother Fintan Nicholas, my eldest brother Joseph J. Nicholas, Kyle Nicholas (Joe's son), the Bridegroom Michael, the bride Vanessa, Ashley Nicholas (Joe's daughter), Anne Nicholas née Telfer (Joe's wife), Assunta Savundranayagam and Rosalind Nicholas (Anton's sisters).</p>
+          <figure>
+            <img src="images/main/NicholasFamily.jpg" alt="Nicholas Family" loading="lazy">
+          </figure>
+          <p>The photograph below shows two individuals who are under the blessing of our Lord, namely Fintan Nicholas and Paul Nicholas. We have prayed faithfully daily that the blessing in the original garden of Eden would manifest fully on them both and our Lord has been ever faithful. The surroundings reflect a miniscule image, a primitive shadow of what the garden of Eden would look like: can you imagine how glorious it would have been with the majestic Presence of God abiding in the garden!</p>
+          <figure>
+            <img src="images/main/Paul_Fintan.jpg" alt="Fintan &amp; Paul" loading="lazy">
+          </figure>
+        </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/reception.jpg" alt="Wedding Reception" loading="lazy">
-                    <div>
-                        <h2>How Did Two Individuals Join in Holy Matrimony?</h2>
-                        <p>A remarkable story of faith and unity.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>Anton was an orthodox, ultra-conservative, true blue Roman Catholic, a faithful early morning daily communicant. Since the age of 5 family prayer was a daily occurrence. Jesus had to appear personally in a three dimensional open vision for Anton to receive a Heavenly assurance to marry an evangelical Christian. Do view the video below to witness how the narrative in the vision came to fulfilment. Ever since then their lives took on an unexpected course. Hear and view the prophetic word proclaimed to Anton &amp; Saida by the Rev. Father Michael Gwinnell and the late Rev. Canon Nicholas Rivett-Carnac, the former Vicar of St. Marks Church, Kennington.</p>
-                    <p><a href="book/chapter1.htm"><b>Press HERE to read an incredible Testimony.</b></a></p>
-                    <p>John chapter 17 verses 20-21: "I am praying not only for these disciples but also for all who will ever believe in me through their message. 21) I pray that they will all be one, just as you and I are one—as you are in me, Father, and I am in you. And may they be in us so that the world will believe you sent me."</p>
-                    <iframe width="425" height="349" src="https://www.youtube.com/embed/4_klvCmSa5U" allowfullscreen title="Anton &amp; Saida Nicholas — Prophetic Word and Vision Testimony"></iframe>
-                </div>
-            </div>
+        <section class="body-section">
+          <div class="section-kicker k-gold">JULIANA NICHOLAS</div>
+          <h2>Juliana Nicholas</h2>
+          <p>Lead singer of 'The Lord is My Light' and her journey.</p>
+          <figure>
+            <img src="images/main/juliana.jpg" alt="Juliana Nicholas" loading="lazy">
+          </figure>
+          <p><strong>Juliana Nicholas, lead singer on 'The Lord is My Light'</strong></p>
+          <p>Please <a href="cutler.htm"><strong>read the letter</strong></a> from our late dear Reverend Father Christopher Cutler, parish priest of St. Joseph's Church, Leyton, London UK. (The Order of the Claretian Missionaries) highly recommending Juliana to be granted the opportunity to sing her anointed psalms. <a href="audio/lordlight.mp3"><strong>Listen to one of the tracks from 'The Lord is my Light' please click here:</strong></a></p>
+          <div class="audio-block">
+            <audio controls preload="none" src="audio/lordlight.mp3">
+              <a href="audio/lordlight.mp3">Listen to one of the tracks from 'The Lord is my Light' please click here:</a>
+            </audio>
+          </div>
+          <p>A 'revival bud' has taken place through the anointed CD, 'The Lord is my Light', the songs being sung by Juliana and directed by her husband Sylvester Nicholas. Alfred Aaron Lee composed the songs. A tremendous, miraculous sales breakthrough has taken place in Malaysia and Singapore. The Catholic churches in Malaysia have opened their doors for this CD to be sold to their parishioners. It looks like the prayers of our late mother Theresa Nicholas have been answered, for she was the one who got up every morning at about 3-30am to intercede and supplicate for her children to follow the ways of the Lord. She must be rejoicing in Heaven with all the other saints with how the CD is blessing the Spirit, Soul, Body and Mind of the Christians and the non Christians. God the Holy Ghost is breaking through all denominational barriers now. This CD is now penetrating the Anglican Church, the Methodist, the House Churches, the Lutheran and Praise be to God the Pentecostal and the Charismatic churches. We rejoice that the Covenant Keeping, 'Lord of the Breakthrough' is breaking barriers and the CD has gone beyond Malaysia and will soon be selling in Australia.</p>
+          <figure>
+            <img src="images/main/syljul.gif" alt="Sylvester and Juliana Nicholas — performers of The Lord is My Light" loading="lazy">
+          </figure>
+          <p class="highlight-panel">Sylvester and Juliana Nicholas have three children, Alexander, Alistair and Aaron. They gathered with thousands at Taylor's University Lakeside Campus, Subang Jaya, Selangor, Malaysia on Sunday, September 28th 2014 to audition in the 'Asia's Got Talent' reality show. The show will debut on AXN early in 2015. AXN Asia is a TV cable and satellite Channel. 'Asia's Got Talent' involves contestants from a total of 13 Asian countries and territories. The 'Got Talent' franchise, which initially commenced in the United States, was co-founded by the well-known music producer Simon Cowell.</p>
+          <p>The first church in Australia that they will be performing in is: St Jerome's church No 24, Troode Munster, WA 6166 Perth West Australia on the 21st March 2004. <a href="https://www.sonshinefm.ws"><strong>Sonshine Fm</strong></a> will be interviewing them. Please continue to pray for them.</p>
+          <p>Further update: 18/01/03 Sylvester and Juliana have penetrated a significant proportion of the Christian churches in the Royal Kingdom of Brunei. We see this as an act of the Holy Ghost. To all the people involved in this venture we want to say thank you.</p>
+          <p>Thanksgiving items for all these churches that invited Juliana to perform live:</p>
+          <p>1. Juliana has already performed live in over 100 churches in Malaysia, this includes the States of Sarawak, Sabah and the country of Singapore. We rejoice that the Catholic Archbishop of Singapore Msgr. Nicholas Chia has given his blessings and approval for Sylvester and Juliana to approach the local Catholic churches. This is a significant move. Thank God!</p>
+          <p>Thanks be to God, this CD is now making a great breakthrough in Sabah, East Malaysia. A sincere thank you to Monsignor Primus of the Sacred Heart Cathedral, for the tremendous affection and help rendered to Sylvester and Juliana during their stay in Sabah.</p>
+          <p>Also a word of gratitude and thanksgiving to the Covenant Groups of Sabah &amp; the Prayer Group of the Sacred Heart Cathedral in Kota Kinabalu and most importantly to Bro. Eddie the director of Mont fort Youth Training Centre and Helena for all the love shown to Sylvester &amp; Juliana. All of you manifested the genuine love of Jesus Christ and gave them a very warm welcome.</p>
+        </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="images/main/Lake_Gardens.jpg" alt="Lake Gardens" loading="lazy">
-                    <div>
-                        <h2>Prophetic Vision Shared in Malaysia</h2>
-                        <p>A powerful message from the land of my birth.</p>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>Do watch this 2009 video of Anton speaking on YouTube showing exactly what was, in preparation, prophetically and strategically shared about The Holy Ghost at the gathering in Kuala Lumpur, Malaysia. View why he received their rapt attention. The first segment of the video is shown below.</p>
-                    <p>A portion of the 2010 prophetic word is cited within the video. READ the whole prophecy <a href="prophecies/index.htm"><b>here</b></a></p>
-                    <p class="highlight">TO VIEW the remaining three segments please follow this <a href="videos/antonvideomal.htm"><b>link</b></a></p>
-                    <iframe width="560" height="390" src="https://www.youtube.com/embed/fK6RHeq4zpo" allowfullscreen title="Anton Nicholas speaking prophetically about The Holy Ghost in Kuala Lumpur, Malaysia"></iframe>
-                    <p><i>View the video above to see why a reference is made to Rev: Jean Darnall. This was the lady who taught Anton a lot about the Holy Ghost. She is currently a Pastoral Elder with Pastor Jack Hayford. Pastor Jack was the founding Pastor of The Church On The Way in Van Nuys, California. Jean was one time an Associate Pastor at the world famous Angelus Temple originally founded by Aimee Semple McPherson. We did note that during July 2010 another lady, Rev Tammy Dunahoo was appointed General Supervisor of this Pentecostal Denomination.</i></p>
-                </div>
-            </div>
-        </div>
+        <section class="body-section">
+          <div class="section-kicker k-gold">LIVE EVENTS</div>
+          <h2>Live Events</h2>
+          <p>Sylvester and Juliana's performances across the globe.</p>
+          <figure>
+            <img src="images/main/dinner.jpg" alt="Sylvester &amp; Juliana with Bishops" loading="lazy">
+          </figure>
+          <p>Glory be to God – Sylvester and Juliana were invited to perform in a concert in the United Kingdom! They did the first rendition of the psalms at the Harlequin Theatre in Redhill, Surrey on Thursday 29th May 2003.</p>
+          <p>On 19th May 2003 Sylvester and Juliana went to Premier Christian Radio (London, UK) to do an interview about their visit and the concerts and the CD, on the Rick Easter show at lunchtime. Rick ran a competition to win a copy of the CD The Lord is My Light and a pair of tickets to the CMC concert. Praise God!</p>
+          <p>The BBC interviewed them too &amp; UCB (United Christian Broadcasters) reviewed the CD for inclusion in their terrestrial and satellite radio stations' playlists across Europe. Thank God! <a href="itinerary.htm"><strong>View their itinerary here</strong></a></p>
+          <p>Our Heavenly Father favoured Sylvester and Juliana by allowing Juliana to sing at England's favourite spiritual place, Walsingham. Juliana sang at an open air service in front of 3000 people. On one occasion the vast gathering even applauded her, which deeply touched the bishops and the other clergy, because it happened during a Holy mass service. (The clapping of hands is an unusual occurrence during Mass). August 2003. <a href="https://www.bbc.co.uk/religion/realmedia/sunday/s20030810z.ram"><strong>BBC Radio 4's religious program, broadcast on Sunday 10th August happened to interview them during a report on Walsingham.</strong></a></p>
+        </section>
 
-        <div class="sidebar">
-            <p>View our pictures on the <b><a href="home.htm">home page</a></b></p>
-            <p>We need to plant here without any optional caveats the challenging words of A. W. Tozer, "It is doubtful that God can use anyone greatly until He has hurt him deeply".</p>
-            <p>So <a href="book/chapter1.htm"><b>read</b></a> what the Nicholas family had to persevere through. It will make a fascinating read.</p>
-            <p><img src="images/profiles/grad_val.jpg" alt="Paul's graduation ceremony" loading="lazy"></p>
-            <p>Paul graduated with an Honours Degree in his Mathematics tripos from Christ's College, University of Cambridge, 1st July 2005. Paul is pictured with his parents, his sister Jannine and our adopted family member Valerie who is positioned on the extreme left.</p>
-            <p>Paul attained his MSc from Imperial College, London. He was also awarded a distinction (a first) for his MSc.</p>
-            <p><a href="malaysianews.htm"><b>Read Malaysian press coverage</b></a> of Paul's journey to Cambridge (Bernama, NST, and Berita Harian, 2002).</p>
-            <p>The further exciting news is that our daughter Jannine has been given a conditional offer at St. John's College, Cambridge, to read for a BA Honours degree in Law commencing October 2009. One of the reasons she opted for this College was to follow in the footsteps of her grand Uncle <a href="profiles/benedict.htm"><b>Benedict Ponniah</b></a>, who was rightly positioned to become the Secretary General of the United Nations. A Queens Scholar, in the same prime league as the renowned Seniors Mr &amp; Mrs Lee Kuan Yew (the first Prime Minister of modern Singapore). <a href="profiles/jannine.htm"><b>The conditions are steep for Jannine</b></a> she needs to get a minimum mark of 90% for her A level subjects.</p>
-            <p><img src="images/profiles/grad_jvn.jpg" alt="Jannine being admitted to her BA on 28 June 2012" loading="lazy"></p>
-            <p>Photo of Jannine Nicholas being admitted to her BA (Hons) degree in Law in her graduation ceremony at the Senate House, University of Cambridge on 28th June 2012. This photo shows Jannine kneeling before the Master of St John's College, Professor C.M. Dobson, whilst he says these words:</p>
-            <p class="highlight">"Auctoritate mihi commissa admitto te ad gradum Baccalaurei in Artibus, in nomine Patris et Filii et Spiritus Sancti." "By the authority committed to me, I admit you to the degree of Bachelor of Arts in the name of the Father and of the Son and of the Holy Spirit."</p>
-            <p><img src="images/daily/grandpa.jpg" alt="My Dad Albert A Nicholas" loading="lazy"></p>
-            <p>My Dad is positioned in the centre of this photograph. You will observe that a photograph of my late Mum can be seen in the background. It was my father's Dad, Bastianpillai Paul Nicholas between the years of 1918-1920, who commenced his first monetary business providing financial services in Ipoh, Perak, Malaya. <b>Due to the date references he is recognised as one of the first Asian bankers in the history of British Colonial Malaya.</b> Please read more here: <a href="profiles/oriental.htm"><b>Press Link</b></a></p>
-        </div>
+        <section class="body-section">
+          <div class="section-kicker k-gold">PRAYER REQUEST</div>
+          <h2>Prayer Request</h2>
+          <p>Support for Sylvester and Juliana's ministry.</p>
+          <figure>
+            <img src="images/main/tuwasabah.jpg" alt="Sylvester &amp; Juliana with Fr Lee" loading="lazy">
+          </figure>
+          <p>Please pray that God the Holy Ghost will show Divine grace and favour by opening up opportunities where they will be able to perform live in various churches in the United Kingdom and in the United States of America. Below is a photograph of the Anglican Archbishop of Malaysia, (Sabah) and the Bishop of Malaysia (Kuala Lumpur) with their wives. Sylvester and Juliana are standing on the right hand side. Julie is wearing a red dress. The Archbishop of Malaysia invited Sylvester &amp; Juliana to perform live in the Anglican churches for he was deeply moved by their rendition of the psalms.</p>
+          <figure>
+            <img src="images/main/dinner.jpg" alt="Sylvester &amp; Juliana Nicholas with Bishops" loading="lazy">
+          </figure>
+          <p>Here is a picture of Sylvester and Juliana in Sabah with Reverend Father Lee.</p>
+          <figure>
+            <img src="images/main/tuwasabah.jpg" alt="Sylvester &amp; Juliana Nicholas with Fr Lee" loading="lazy">
+          </figure>
+        </section>
 
-        <footer class="footer">
-            <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
-            <!-- Flag Counter -->
-            <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
-        </footer>
+        <section class="body-section">
+          <div class="section-kicker k-gold">HOLY MATRIMONY</div>
+          <h2>How Did Two Individuals Join in Holy Matrimony?</h2>
+          <p>A remarkable story of faith and unity.</p>
+          <figure>
+            <img src="images/main/reception.jpg" alt="Wedding Reception" loading="lazy">
+          </figure>
+          <p>Anton was an orthodox, ultra-conservative, true blue Roman Catholic, a faithful early morning daily communicant. Since the age of 5 family prayer was a daily occurrence. Jesus had to appear personally in a three dimensional open vision for Anton to receive a Heavenly assurance to marry an evangelical Christian. Do view the video below to witness how the narrative in the vision came to fulfilment. Ever since then their lives took on an unexpected course. Hear and view the prophetic word proclaimed to Anton &amp; Saida by the Rev. Father Michael Gwinnell and the late Rev. Canon Nicholas Rivett-Carnac, the former Vicar of St. Marks Church, Kennington.</p>
+          <p><a href="book/chapter1.htm"><strong>Press HERE to read an incredible Testimony.</strong></a></p>
+          <p>John chapter 17 verses 20-21: "I am praying not only for these disciples but also for all who will ever believe in me through their message. 21) I pray that they will all be one, just as you and I are one—as you are in me, Father, and I am in you. And may they be in us so that the world will believe you sent me."</p>
+          <div class="video-frame">
+            <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/4_klvCmSa5U" data-video-title="Anton &amp; Saida Nicholas — Prophetic Word and Vision Testimony" aria-label="Play: Anton &amp; Saida Nicholas — Prophetic Word and Vision Testimony">
+              <img src="https://i.ytimg.com/vi/4_klvCmSa5U/hqdefault.jpg" alt="" loading="lazy">
+              <span class="video-play" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="video-caption"><a href="https://www.youtube.com/watch?v=4_klvCmSa5U">Watch on YouTube</a></p>
+        </section>
+
+        <section class="body-section">
+          <div class="section-kicker k-gold">PROPHETIC VISION</div>
+          <h2>Prophetic Vision Shared in Malaysia</h2>
+          <p>A powerful message from the land of my birth.</p>
+          <figure>
+            <img src="images/main/Lake_Gardens.jpg" alt="Lake Gardens" loading="lazy">
+          </figure>
+          <p>Do watch this 2009 video of Anton speaking on YouTube showing exactly what was, in preparation, prophetically and strategically shared about The Holy Ghost at the gathering in Kuala Lumpur, Malaysia. View why he received their rapt attention. The first segment of the video is shown below.</p>
+          <p>A portion of the 2010 prophetic word is cited within the video. READ the whole prophecy <a href="testimonies/prophecies/index.htm"><strong>here</strong></a></p>
+          <p class="highlight-panel">TO VIEW the remaining three segments please follow this <a href="video/antonvideomal.htm"><strong>link</strong></a></p>
+          <div class="video-frame">
+            <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/fK6RHeq4zpo" data-video-title="Anton Nicholas speaking prophetically about The Holy Ghost in Kuala Lumpur, Malaysia" aria-label="Play: Anton Nicholas speaking prophetically about The Holy Ghost in Kuala Lumpur, Malaysia">
+              <img src="https://i.ytimg.com/vi/fK6RHeq4zpo/hqdefault.jpg" alt="" loading="lazy">
+              <span class="video-play" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="video-caption"><a href="https://www.youtube.com/watch?v=fK6RHeq4zpo">Watch on YouTube</a></p>
+          <p><em>View the video above to see why a reference is made to Rev: Jean Darnall. This was the lady who taught Anton a lot about the Holy Ghost. She is currently a Pastoral Elder with Pastor Jack Hayford. Pastor Jack was the founding Pastor of The Church On The Way in Van Nuys, California. Jean was one time an Associate Pastor at the world famous Angelus Temple originally founded by Aimee Semple McPherson. We did note that during July 2010 another lady, Rev Tammy Dunahoo was appointed General Supervisor of this Pentecostal Denomination.</em></p>
+        </section>
+
+      </div>
+
+      <aside class="sidebar-column">
+        <div class="section-kicker k-gold">FAMILY NEWS</div>
+        <p>View our pictures on the <strong><a href="home.htm">home page</a></strong></p>
+        <p>We need to plant here without any optional caveats the challenging words of A. W. Tozer, "It is doubtful that God can use anyone greatly until He has hurt him deeply".</p>
+        <p>So <a href="book/chapter1.htm"><strong>read</strong></a> what the Nicholas family had to persevere through. It will make a fascinating read.</p>
+        <figure>
+          <img src="images/profiles/grad_val.jpg" alt="Paul's graduation ceremony" loading="lazy">
+        </figure>
+        <p>Paul graduated with an Honours Degree in his Mathematics tripos from Christ's College, University of Cambridge, 1st July 2005. Paul is pictured with his parents, his sister Jannine and our adopted family member Valerie who is positioned on the extreme left.</p>
+        <p>Paul attained his MSc from Imperial College, London. He was also awarded a distinction (a first) for his MSc.</p>
+        <p><a href="malaysianews.htm"><strong>Read Malaysian press coverage</strong></a> of Paul's journey to Cambridge (Bernama, NST, and Berita Harian, 2002).</p>
+        <p>The further exciting news is that our daughter Jannine has been given a conditional offer at St. John's College, Cambridge, to read for a BA Honours degree in Law commencing October 2009. One of the reasons she opted for this College was to follow in the footsteps of her grand Uncle <a href="profiles/benedict.htm"><strong>Benedict Ponniah</strong></a>, who was rightly positioned to become the Secretary General of the United Nations. A Queens Scholar, in the same prime league as the renowned Seniors Mr &amp; Mrs Lee Kuan Yew (the first Prime Minister of modern Singapore). <a href="profiles/jannine.htm"><strong>The conditions are steep for Jannine</strong></a> she needs to get a minimum mark of 90% for her A level subjects.</p>
+        <figure>
+          <img src="images/profiles/grad_jvn.jpg" alt="Jannine being admitted to her BA on 28 June 2012" loading="lazy">
+        </figure>
+        <p>Photo of Jannine Nicholas being admitted to her BA (Hons) degree in Law in her graduation ceremony at the Senate House, University of Cambridge on 28th June 2012. This photo shows Jannine kneeling before the Master of St John's College, Professor C.M. Dobson, whilst he says these words:</p>
+        <p class="highlight-panel">"Auctoritate mihi commissa admitto te ad gradum Baccalaurei in Artibus, in nomine Patris et Filii et Spiritus Sancti." "By the authority committed to me, I admit you to the degree of Bachelor of Arts in the name of the Father and of the Son and of the Holy Spirit."</p>
+        <figure>
+          <img src="images/daily/grandpa.jpg" alt="My Dad Albert A Nicholas" loading="lazy">
+        </figure>
+        <p>My Dad is positioned in the centre of this photograph. You will observe that a photograph of my late Mum can be seen in the background. It was my father's Dad, Bastianpillai Paul Nicholas between the years of 1918-1920, who commenced his first monetary business providing financial services in Ipoh, Perak, Malaya. <strong>Due to the date references he is recognised as one of the first Asian bankers in the history of British Colonial Malaya.</strong> Please read more here: <a href="profiles/oriental.htm"><strong>Press Link</strong></a></p>
+      </aside>
+
     </div>
 
-    <!-- Start of StatCounter Code -->
-    <script type="text/javascript">
-    var sc_project=223118;
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
-    <noscript>
-    <a href="https://www.statcounter.com" target="_blank"><img src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a>
-    </noscript>
-    <!-- End of StatCounter Code -->
+  </div>
 
-    <script src="assets/js/sections.js"></script>
+  <footer>
+    <div class="container">
+      © Anton Nicholas · Blessed and inaugurated 1 August 2002
+      <div class="footer-links">
+        <a href="daily/index.htm">Daily Readings</a> ·
+        <a href="thefruitofprayer.htm">The Fruit of Prayer</a> ·
+        <a href="https://nicholaslondon.org">Paul Nicholas</a> ·
+        <a href="https://twitter.com/AntonNicholas1">@AntonNicholas1</a>
+      </div>
+      <div class="footer-counters">
+        <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    var sc_project=223118;
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+  <noscript>
+    <a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a>
+  </noscript>
+
+  <script>
+    document.querySelectorAll('.video-facade').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var src = btn.getAttribute('data-video-src');
+        var title = btn.getAttribute('data-video-title');
+        var sep = src.indexOf('?') >= 0 ? '&' : '?';
+        var iframe = document.createElement('iframe');
+        iframe.src = src + sep + 'autoplay=1';
+        iframe.title = title;
+        iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        iframe.setAttribute('allowfullscreen', '');
+        btn.parentElement.replaceChildren(iframe);
+      });
+    });
+  </script>
+
 </body>
 </html>

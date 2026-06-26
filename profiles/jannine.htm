@@ -1,263 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en-gb">
-    <title>Jannine Nicholas</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <style>
-        :root {
-            --primary: #6B2D8A;  /* Deep rich purple */
-            --accent: #A78BFA;   /* Light purple */
-            --highlight: #FBBF24; /* Amber */
-            --bg: #F5F0FF;       /* Light purple-tinted off-white */
-            --card-bg: #EDE9FE;  /* Very light purple */
-            --link-color: #D81B60; /* Vibrant magenta */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jannine Nicholas — Anton &amp; Saida Nicholas</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&amp;family=Playfair+Display:wght@700;900&amp;display=swap">
+  <style>
+    :root {
+      --paper: #f7f3ea;
+      --paper-raised: #efe8db;
+      --paper-inset: #e8e0d2;
+      --ink: #2a241c;
+      --ink-soft: #4d4539;
+      --muted: #7a7164;
+      --rule: #d5cbb8;
+      --rule-strong: #bfb39e;
+      --terracotta: #9a4e3c;
+      --gold: #8a7342;
+      --sage: #5f6f56;
+      --slate: #516878;
+      --plum: #6f5a62;
+      --depth: #3d352c;
+      --depth-gold: #bfa06a;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px;
-        }
+    html { font-size: 22px; }
 
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            position: relative;
-            overflow: hidden;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        header h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
 
-        .main-content {
-            padding: 20px;
-        }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
 
-        .section-preview img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
+    .masthead {
+      text-align: center;
+      padding: 1rem 0 0;
+      border-bottom: 4px solid var(--terracotta);
+      background: var(--paper);
+    }
 
-        .section-content img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+    .dateline {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      padding: 0 0.25rem;
+    }
 
-        .highlight { background: rgba(251, 191, 36, 0.2); }
+    .nameplate-rules {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.3rem 0;
+    }
 
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
+    .nameplate {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      color: var(--ink);
+    }
 
-        a:hover {
-            color: #C2185B;
-            text-decoration: underline;
-        }
+    .nameplate .amp { color: var(--terracotta); }
 
+    .motto {
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin: 0.35rem 0 0.1rem;
+    }
 
-        @media (max-width: 900px) {
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
+    .section-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.95rem;
+      background: var(--paper);
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-top: 0.45rem;
+      padding: 0.4rem 0 0.55rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-nav a { color: var(--ink-soft); text-decoration: none; padding: 0 0.7rem; font-weight: 600; }
+    .section-nav a:hover { color: var(--terracotta); }
+    .section-nav a[aria-current="page"] { color: var(--terracotta); }
+    .section-nav span { color: var(--rule); user-select: none; }
+
+    .page-title-band {
+      background: var(--depth);
+      border-bottom: 1px solid var(--depth-gold);
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .page-title-band h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      color: var(--depth-gold);
+      line-height: 1.25;
+      max-width: 52rem;
+      margin: 0 auto;
+    }
+
+    .page-title-band h1.upper {
+      font-size: 1.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      max-width: none;
+    }
+
+    .page-title-band p {
+      font-style: italic;
+      color: #ebe4d8;
+      font-size: 1.05rem;
+      margin-top: 0.35rem;
+    }
+
+    .section-kicker {
+      font-size: 0.88rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+
+    .section-kicker::after {
+      content: "";
+      display: block;
+      width: 1.75rem;
+      height: 2px;
+      margin-top: 0.25rem;
+      background: currentColor;
+      opacity: 0.45;
+    }
+
+    .k-red    { color: var(--terracotta); }
+    .k-gold   { color: var(--gold); }
+    .k-sage   { color: var(--sage); }
+    .k-slate  { color: var(--slate); }
+    .k-plum   { color: var(--plum); }
+
+    h1, h2, h3 { color: var(--ink); }
+
+    .body-section {
+      border-top: 1px solid var(--rule-strong);
+      padding: 1.1rem 0.9rem 0.85rem;
+      margin-bottom: 1.2rem;
+      background: var(--paper-raised);
+    }
+
+    .body-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.22;
+      margin: 0.15rem 0 0.5rem;
+    }
+
+    .body-section h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0.5rem 0 0.4rem;
+      color: var(--ink-soft);
+    }
+
+    .body-section p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 1.2rem;
+      border-top: 1px solid var(--rule-strong);
+      background: var(--paper-raised);
+      padding: 0.2rem 0 0;
+    }
+
+    .wide-col {
+      padding: 0.9rem 0.85rem 0.85rem 0.9rem;
+      background: transparent;
+    }
+
+    .wide-col:not(:last-child) { border-right: 1px solid var(--rule); }
+
+    .wide-col p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .scripture {
+      font-style: italic;
+      font-size: 1rem;
+      border-left: 3px solid var(--gold);
+      padding: 0.35rem 0 0.35rem 0.75rem;
+      margin: 0.5rem 0;
+      color: var(--ink-soft);
+    }
+
+    .highlight {
+      background: var(--paper);
+      border-left: 3px solid var(--gold);
+      padding: 0.5rem 0.75rem;
+      margin: 0.5rem 0;
+    }
+
+    figure { margin: 0.55rem 0 0.4rem; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--paper-inset);
+      padding: 4px;
+    }
+
+    .figure-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 0.55rem 0;
+    }
+
+    .figure-row figure { margin: 0; }
+
+    .figure-row.three { grid-template-columns: repeat(3, 1fr); }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--rule);
+      background: #000;
+      margin: 0.55rem 0 0.35rem;
+    }
+
+    .video-facade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: #000;
+    }
+
+    .video-facade img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 64px;
+      height: 64px;
+      margin: -32px 0 0 -32px;
+      border-radius: 50%;
+      background: rgba(154, 78, 60, 0.9);
+      pointer-events: none;
+    }
+
+    .video-play::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -12px 0 0 -6px;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .video-caption {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    .audio-block {
+      margin: 0.55rem 0 0.75rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .audio-block audio {
+      display: block;
+      width: 100%;
+      margin-top: 0.4rem;
+    }
+
+    .legacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .legacy-card {
+      border: 1px solid var(--rule);
+      padding: 0.75rem;
+      background: var(--paper);
+    }
+
+    .legacy-card img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--paper-inset);
+      padding: 4px;
+      margin-bottom: 0.4rem;
+    }
+
+    .legacy-card p { margin-bottom: 0.4rem; font-size: 0.95rem; }
+
+    ul { margin: 0.5rem 0 0.5rem 1.25rem; }
+    li { margin-bottom: 0.25rem; }
+
+    a { color: var(--terracotta); }
+
+    footer {
+      border-top: 4px solid var(--terracotta);
+      margin-top: 1.6rem;
+      padding: 1rem 0 1.6rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      background: var(--paper);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(154, 78, 60, 0.22); }
+    footer a:hover { color: var(--terracotta); border-bottom-color: var(--terracotta); }
+    .footer-links { margin-top: 0.3rem; }
+    .footer-counters { margin-top: 0.75rem; }
+
+    @media (max-width: 820px) {
+      html { font-size: 19px; }
+      .nameplate { font-size: 2.5rem; }
+      .dateline { flex-direction: column; gap: 0.15rem; text-align: center; }
+      .page-title-band h1 { font-size: 1.25rem; letter-spacing: 0.05em; }
+      .two-col, .figure-row, .figure-row.three, .legacy-grid { grid-template-columns: 1fr; }
+      .wide-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1rem;
+        margin-bottom: 0.6rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .two-col, .three-col, .video-grid, .figure-row, .figure-row.three, .edition-layout { grid-template-columns: 1fr; }
+      .col:not(:last-child), .wide-col:not(:last-child) { border-right: none; }
+    }
+  </style>
 </head>
 <body>
+
+  <div class="masthead">
     <div class="container">
-        <header>
-            <h1>Jannine Nicholas</h1>
-            <img src="../images/profiles/JVN.jpg" alt="Jannine Nicholas" class="hero-image">
-        </header>
+      <div class="dateline">
+        <div>Est. 1 August 2002 · Malaya · London · Malaysia</div>
+        <div>1,893,704 readers and counting</div>
+      </div>
+      <div class="nameplate-rules">
+        <div class="nameplate">ANTON <span class="amp">&amp;</span> SAIDA NICHOLAS</div>
+      </div>
+      <div class="motto">“The Lord is My Shepherd; I shall not want.” — Psalm 23:1</div>
+      <nav class="section-nav" aria-label="Sections">
+        <a href="../daily/index.htm">Daily Readings</a><span>·</span>
+        <a href="../thefruitofprayer.htm">Prophecy</a><span>·</span>
+        <a href="oriental.htm" aria-current="page">Family Legacy</a><span>·</span>
+        <a href="../book/chapter1.htm">Saida's Journey</a><span>·</span>
+        <a href="../malaysia.htm">Malaysia</a><span>·</span>
+        <a href="../testimonies/index.htm">Testimonies</a><span>·</span>
+        <a href="../update.htm">Updates</a>
+      </nav>
+    </div>
+  </div>
 
-        <nav>
-            <ul>
-                <li class="main-pages">
-                    <a href="../home.htm">Main Pages</a>
-                    <div class="sub-nav">
-                        <a href="../home.htm">Home</a>
-                        <a href="../thefruitofprayer.htm">The Fruit of Prayer</a>
-                        <a href="../malaysia.htm">Malaysia</a>
-                        <a href="../update.htm">Updates</a>
-                    </div>
-                </li>
-                <li><a href="../daily/index.htm">Resources</a></li>
-                <li class="main-pages">
-                    <a href="../thefruitofprayer.htm">Profiles</a>
-                    <div class="sub-nav">
-                        <a href="../profiles/oriental.htm">BP Nicholas</a>
-                        <a href="../profiles/benedict.htm">Benedict Ponniah</a>
-                        <a href="https://nicholaslondon.org">Paul Nicholas</a>
-                        <a href="../profiles/jannine.htm">Jannine Nicholas</a>
-                        <a href="../profiles/dietitian.htm">Valerie Meilton</a>
-                    </div>
-                </li>
-                <li><a href="../events/malaysia.htm">Events &amp; Testimonies</a></li>
-            </ul>
-        </nav>
+  <div class="page-title-band">
+    <div class="container">
+      <h1 class="upper">JANNINE NICHOLAS</h1>
+      <p>St. John&#x27;s College, Cambridge — Law, Winfield Society President</p>
+    </div>
+  </div>
 
-        <div class="main-content">
-            <div class="section">
-                <div class="section-preview">
-                    <img src="../images/main/alleyns.jpg" alt="Alleyn's School" loading="lazy">
-                    <h2>Early Years and Education</h2>
-                </div>
-                <div class="section-content">
-                    <p><b>Introduction</b></p>
-                    <p>At age 3, Jannine Nicholas memorized the Lord's Prayer and recited it daily. Like her brother Paul, she wrote out the Word of God, completing 24 books of the Bible. Her brother Paul, by age 17, had written out 54 books and entered Cambridge University. <a href="https://nicholaslondon.org"><b>Read Paul's story here.</b></a></p>
-                    <p><b>Alleyn's School</b></p>
-                    <img src="../images/main/alleyns.jpg" width="300" height="355" alt="Jannine at Alleyn's School" loading="lazy">
-                    <p>Jannine attended Alleyn's Junior School, Townley Road, Dulwich SE22. In 2000/2001, Form 5W, she sat alongside Anna Putt and Augustus Lonsdale, with Class Teacher Miss W. Tyler, Alexander Ooi, and Angeli Jeyarajah behind. Miss Tyler, who left in January 2002 for Dean Close Preparatory School, motivated Jannine's academic excellence. The Headmistress was Mrs. Bridget Weir, and Dr. Colin Niven was Headmaster of the Senior School.</p>
-                    <p>At age 5, Jannine passed an entrance exam at Alleyn's, securing one of 16 spots from 200 applicants. <span class="highlight">Five of these 16 later attended Cambridge University.</span> At age 11, she won scholarships to St. Dunstan's College and Sydenham High School, with her name in 'The Times' on 25th June 2002 for a top award at St. Dunstan's.</p>
-                </div>
-            </div>
+  <div class="container">
+    <section class="body-section">
+      <div class="section-kicker k-plum">INTRODUCTION</div>
+      Jannine Nicholas
+      <figure><img src="../images/profiles/JVN.jpg" alt="Jannine Nicholas" loading="lazy"></figure>
+    </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="../images/profiles/advertiser.jpg" alt="Croydon Advertiser" loading="lazy">
-                    <h2>Academic Milestones</h2>
-                </div>
-                <div class="section-content">
-                    <p><b>September 2006</b></p>
-                    <p>In Year 10 at Old Palace School, Jannine earned an A* in her first GCSE (Astronomy) after nine months of study, sitting the exam on 13th June 2006.</p>
-                    <p><b>March 2007</b></p>
-                    <p>Jannine won a Gold Certificate in the UK Senior Mathematical Challenge, ranking in the top 6% for mathematical reasoning and fluency.</p>
-                    <p><b>May 2007</b></p>
-                    <p>Jannine began her GCSEs with a French Oral on 1st May 2007, concluding with Physics and French on 15th June. Old Palace School offered Sixth Form scholarships for the first time in 118 years, and Jannine was a contender.</p>
-                    <p><b>August 2007</b></p>
-                    <img src="../images/profiles/advertiser.jpg" width="425" height="585" alt="Jannine in Croydon Advertiser" loading="lazy">
-                    <p>On 23rd August 2007, Jannine achieved 11 A* GCSEs (Mathematics, Biology, Chemistry, Physics, English, English Literature, German, Latin, French, History, Astronomy). The Croydon Advertiser featured her on 31st August. Dr. Judy Harris awarded her a 50% Sixth Form scholarship.</p>
-                    <p><b>January 2009</b></p>
-                    <p>St. John's College, Cambridge offered Jannine a conditional place for a BA in Law, requiring top A-level grades. She also received an offer from the London School of Economics.</p>
-                    <p><b>August 2009</b></p>
-                    <p>On 20th August 2009, Jannine scored 96% in Economics, 91% in Chemistry, 89% in Mathematics, and 87% in Latin, securing her Cambridge place (confirmed 22nd August).</p>
-                </div>
-            </div>
+    <section class="body-section">
+      <div class="section-kicker k-plum">EARLY YEARS AND EDUCATION</div>
+      <h2>Early Years and Education</h2>
+      <figure><img src="../images/main/alleyns.jpg" alt="Alleyn&#x27;s School" loading="lazy"></figure>
+      <p>Introduction</p>
+      <p>At age 3, Jannine Nicholas memorized the Lord&#x27;s Prayer and recited it daily. Like her brother Paul, she wrote out the Word of God, completing 24 books of the Bible. Her brother Paul, by age 17, had written out 54 books and entered Cambridge University. <a href="https://nicholaslondon.org">Read Paul&#x27;s story here.</a></p>
+      <p>Alleyn&#x27;s School</p>
+      <figure><img src="../images/main/alleyns.jpg" alt="Jannine at Alleyn&#x27;s School" width="300" height="355" loading="lazy"></figure>
+      <p>Jannine attended Alleyn&#x27;s Junior School, Townley Road, Dulwich SE22. In 2000/2001, Form 5W, she sat alongside Anna Putt and Augustus Lonsdale, with Class Teacher Miss W. Tyler, Alexander Ooi, and Angeli Jeyarajah behind. Miss Tyler, who left in January 2002 for Dean Close Preparatory School, motivated Jannine&#x27;s academic excellence. The Headmistress was Mrs. Bridget Weir, and Dr. Colin Niven was Headmaster of the Senior School.</p>
+      <p>At age 5, Jannine passed an entrance exam at Alleyn&#x27;s, securing one of 16 spots from 200 applicants. <div class="highlight"><p>Five of these 16 later attended Cambridge University.</p></div> At age 11, she won scholarships to St. Dunstan&#x27;s College and Sydenham High School, with her name in &#x27;The Times&#x27; on 25th June 2002 for a top award at St. Dunstan&#x27;s.</p>
+    </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="../images/profiles/stjohns2.jpg" alt="St John's College" loading="lazy">
-                    <h2>Cambridge Experience</h2>
-                </div>
-                <div class="section-content">
-                    <p><b>St John's College</b></p>
-                    <img src="../images/profiles/stjohns2.jpg" width="450" height="335" alt="St John's College" loading="lazy">
-                    <p>Jannine matriculated at St. John's College, Cambridge in October 2009, one of eight global Law students accepted. Founded by Lady Margaret Beaufort, the college has notable alumni including nine Nobel Prize winners and six Prime Ministers. Jannine read Proverbs daily with her father before leaving, covering it over 60 times.</p>
-                    <p>In 2010, she became Secretary of The Winfield Society, and in October 2011, President, delivering the Winfield Dinner address on 11th February 2012 to legal luminaries.</p>
-                    <p><b>Graduation</b></p>
-                    <img src="../images/profiles/grad_jvn.jpg" width="560" height="446" alt="Jannine graduating" loading="lazy">
-                    <p>On 28th June 2012, Jannine graduated with a BA (Hons) in Law, with Professor C.M. Dobson saying: <i>"Auctoritate mihi commissa admitto te ad gradum Baccalaurei in Artibus, in nomine Patris et Filii et Spiritus Sancti."</i></p>
-                    <p><b>Royal Visit</b></p>
-                    <img src="../images/profiles/queen_stjohns.jpg" width="600" height="450" alt="Queen at St John's" loading="lazy">
-                    <p>On 27th April 2011, Queen Elizabeth and The Duke of Edinburgh visited St. John's for its 500th anniversary garden party, photographed by Jannine.</p>
-                </div>
-            </div>
+    <section class="body-section">
+      <div class="section-kicker k-plum">ACADEMIC MILESTONES</div>
+      <h2>Academic Milestones</h2>
+      <figure><img src="../images/profiles/advertiser.jpg" alt="Croydon Advertiser" loading="lazy"></figure>
+      <p>September 2006</p>
+      <p>In Year 10 at Old Palace School, Jannine earned an A* in her first GCSE (Astronomy) after nine months of study, sitting the exam on 13th June 2006.</p>
+      <p>March 2007</p>
+      <p>Jannine won a Gold Certificate in the UK Senior Mathematical Challenge, ranking in the top 6% for mathematical reasoning and fluency.</p>
+      <p>May 2007</p>
+      <p>Jannine began her GCSEs with a French Oral on 1st May 2007, concluding with Physics and French on 15th June. Old Palace School offered Sixth Form scholarships for the first time in 118 years, and Jannine was a contender.</p>
+      <p>August 2007</p>
+      <figure><img src="../images/profiles/advertiser.jpg" alt="Jannine in Croydon Advertiser" width="425" height="585" loading="lazy"></figure>
+      <p>On 23rd August 2007, Jannine achieved 11 A* GCSEs (Mathematics, Biology, Chemistry, Physics, English, English Literature, German, Latin, French, History, Astronomy). The Croydon Advertiser featured her on 31st August. Dr. Judy Harris awarded her a 50% Sixth Form scholarship.</p>
+      <p>January 2009</p>
+      <p>St. John&#x27;s College, Cambridge offered Jannine a conditional place for a BA in Law, requiring top A-level grades. She also received an offer from the London School of Economics.</p>
+      <p>August 2009</p>
+      <p>On 20th August 2009, Jannine scored 96% in Economics, 91% in Chemistry, 89% in Mathematics, and 87% in Latin, securing her Cambridge place (confirmed 22nd August).</p>
+    </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="../images/profiles/OPS_cake.jpg" alt="Old Palace Cake" loading="lazy">
-                    <h2>School Life and Achievements</h2>
-                </div>
-                <div class="section-content">
-                    <p><b>Old Palace School</b></p>
-                    <img src="../images/profiles/OPS_cake.jpg" width="450" height="335" alt="Old Palace Cake" loading="lazy">
-                    <p>This cake marked the Leavers' Ball on 25th June 2009 at Woldingham Golf Club. Jannine attended with Maria Thommyppillai and Janki Mehta.</p>
-                    <img src="../images/profiles/jannine_ball.jpg" width="500" height="600" alt="Old Palace Ball" loading="lazy">
-                    <p><b>A-Level Success</b></p>
-                    <img src="../images/profiles/OPS_Achievers.jpg" width="450" height="335" alt="Old Palace Achievers" loading="lazy">
-                    <p>Published in the Croydon Advertiser on 28th August 2009, this photo shows Old Palace students, including Jannine (front row, right), excelling in A-levels.</p>
-                    <p><b>Historical Note</b></p>
-                    <p>Old Palace, a former summer residence for Archbishops of Canterbury for 500 years, welcomed figures like Henry VIII and Elizabeth I. Archbishop John Whitgift founded the Whitgift Foundation.</p>
-                </div>
-            </div>
+    <section class="body-section">
+      <div class="section-kicker k-plum">CAMBRIDGE EXPERIENCE</div>
+      <h2>Cambridge Experience</h2>
+      <figure><img src="../images/profiles/stjohns2.jpg" alt="St John&#x27;s College" loading="lazy"></figure>
+      <p>St John&#x27;s College</p>
+      <figure><img src="../images/profiles/stjohns2.jpg" alt="St John&#x27;s College" width="450" height="335" loading="lazy"></figure>
+      <p>Jannine matriculated at St. John&#x27;s College, Cambridge in October 2009, one of eight global Law students accepted. Founded by Lady Margaret Beaufort, the college has notable alumni including nine Nobel Prize winners and six Prime Ministers. Jannine read Proverbs daily with her father before leaving, covering it over 60 times.</p>
+      <p>In 2010, she became Secretary of The Winfield Society, and in October 2011, President, delivering the Winfield Dinner address on 11th February 2012 to legal luminaries.</p>
+      <p>Graduation</p>
+      <figure><img src="../images/profiles/grad_jvn.jpg" alt="Jannine graduating" width="560" height="446" loading="lazy"></figure>
+      <p>On 28th June 2012, Jannine graduated with a BA (Hons) in Law, with Professor C.M. Dobson saying: &quot;Auctoritate mihi commissa admitto te ad gradum Baccalaurei in Artibus, in nomine Patris et Filii et Spiritus Sancti.&quot;</p>
+      <p>Royal Visit</p>
+      <figure><img src="../images/profiles/queen_stjohns.jpg" alt="Queen at St John&#x27;s" width="600" height="450" loading="lazy"></figure>
+      <p>On 27th April 2011, Queen Elizabeth and The Duke of Edinburgh visited St. John&#x27;s for its 500th anniversary garden party, photographed by Jannine.</p>
+    </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="../images/daily/garden.jpg" alt="Garden" loading="lazy">
-                    <h2>Faith, Family, and Gardens</h2>
-                </div>
-                <div class="section-content">
-                    <p><b>Spiritual Foundation</b></p>
-                    <p>For over 13 years, Jannine's father, Anton, prayed and recited scripture daily with her. Hear her reading Psalm 102 at All Saints Church, Peckham on 19th July 2009: <a href="../audio/Jannine_Psalm102.mp3"><b>Listen here.</b></a></p>
-                    <p><b>Parents' Marriage</b></p>
-                    <p>Anton, a Roman Catholic, married Saida after a divine vision. <a href="../book/chapter1.htm"><b>Read the testimony.</b></a></p>
-                    <iframe width="425" height="349" src="https://www.youtube.com/embed/4_klvCmSa5U" allowfullscreen title="Jannine Nicholas – Faith testimony video"></iframe>
-                    <p><b>Gardens</b></p>
-                    <img src="../images/daily/garden.jpg" width="430" height="323" alt="Nasturtium" loading="lazy">
-                    <img src="../images/profiles/lilies.jpg" width="384" height="512" alt="Clematis" loading="lazy">
-                    <p>The family garden, tended by Valerie Meilton, features Clematis 'The President.' Photos from Butchart Gardens, Canada, inspire their vision.</p>
-                    <img src="../images/profiles/canada1.jpg" width="340" height="250" alt="Gardens" loading="lazy">
-                    <img src="../images/profiles/canada2.jpg" width="340" height="250" alt="Gardens" loading="lazy">
-                </div>
-            </div>
+    <section class="body-section">
+      <div class="section-kicker k-plum">SCHOOL LIFE AND ACHIEVEMENTS</div>
+      <h2>School Life and Achievements</h2>
+      <figure><img src="../images/profiles/OPS_cake.jpg" alt="Old Palace Cake" loading="lazy"></figure>
+      <p>Old Palace School</p>
+      <figure><img src="../images/profiles/OPS_cake.jpg" alt="Old Palace Cake" width="450" height="335" loading="lazy"></figure>
+      <p>This cake marked the Leavers&#x27; Ball on 25th June 2009 at Woldingham Golf Club. Jannine attended with Maria Thommyppillai and Janki Mehta.</p>
+      <figure><img src="../images/profiles/jannine_ball.jpg" alt="Old Palace Ball" width="500" height="600" loading="lazy"></figure>
+      <p>A-Level Success</p>
+      <figure><img src="../images/profiles/OPS_Achievers.jpg" alt="Old Palace Achievers" width="450" height="335" loading="lazy"></figure>
+      <p>Published in the Croydon Advertiser on 28th August 2009, this photo shows Old Palace students, including Jannine (front row, right), excelling in A-levels.</p>
+      <p>Historical Note</p>
+      <p>Old Palace, a former summer residence for Archbishops of Canterbury for 500 years, welcomed figures like Henry VIII and Elizabeth I. Archbishop John Whitgift founded the Whitgift Foundation.</p>
+    </section>
 
-            <div class="section">
-                <div class="section-preview">
-                    <img src="../images/profiles/QIS.png" alt="Top Universities" loading="lazy">
-                    <h2>Congratulations and Beyond</h2>
-                </div>
-                <div class="section-content">
-                    <p><b>Messages of Congratulations</b></p>
-                    <p>"That is truly great news—what wonderful results." – Ray (Law Partner)<br>
-                    "I wish Jannine all the best and joy as she pursues her career in Law at Cambridge." – Pastor Rafik Daudjee<br>
-                    "I'm absolutely delighted to read that Jannine is off to Cambridge to study law!" – Martina (Dentist)<br>
+    <section class="body-section">
+      <div class="section-kicker k-plum">FAITH, FAMILY, AND GARDENS</div>
+      <h2>Faith, Family, and Gardens</h2>
+      <figure><img src="../images/daily/garden.jpg" alt="Garden" loading="lazy"></figure>
+      <p>Spiritual Foundation</p>
+      <p>For over 13 years, Jannine&#x27;s father, Anton, prayed and recited scripture daily with her. Hear her reading Psalm 102 at All Saints Church, Peckham on 19th July 2009: <a href="../audio/Jannine_Psalm102.mp3">Listen here.</a></p>
+      <div class="audio-block">
+        <audio controls preload="none" src="../audio/Jannine_Psalm102.mp3">
+          <a href="../audio/Jannine_Psalm102.mp3">Listen here.</a>
+        </audio>
+      </div>
+      <p>Parents&#x27; Marriage</p>
+      <p>Anton, a Roman Catholic, married Saida after a divine vision. <a href="../book/chapter1.htm">Read the testimony.</a></p>
+            <div class="video-frame">
+        <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/4_klvCmSa5U" data-video-title="Jannine Nicholas – Faith testimony video" aria-label="Play: Jannine Nicholas – Faith testimony video">
+          <img src="https://i.ytimg.com/vi/4_klvCmSa5U/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="video-caption"><a href="https://www.youtube.com/watch?v=4_klvCmSa5U">Watch on YouTube</a></p>
+      <p>Gardens</p>
+      <figure><img src="../images/daily/garden.jpg" alt="Nasturtium" width="430" height="323" loading="lazy"></figure>
+      <figure><img src="../images/profiles/lilies.jpg" alt="Clematis" width="384" height="512" loading="lazy"></figure>
+      <p>The family garden, tended by Valerie Meilton, features Clematis &#x27;The President.&#x27; Photos from Butchart Gardens, Canada, inspire their vision.</p>
+      <figure><img src="../images/profiles/canada1.jpg" alt="Gardens" width="340" height="250" loading="lazy"></figure>
+      <figure><img src="../images/profiles/canada2.jpg" alt="Gardens" width="340" height="250" loading="lazy"></figure>
+    </section>
+
+    <section class="body-section">
+      <div class="section-kicker k-plum">CONGRATULATIONS AND BEYOND</div>
+      <h2>Congratulations and Beyond</h2>
+      <figure><img src="../images/profiles/QIS.png" alt="Top Universities" loading="lazy"></figure>
+      <p>Messages of Congratulations</p>
+      <p>&quot;That is truly great news—what wonderful results.&quot; – Ray (Law Partner)<br>
+                    &quot;I wish Jannine all the best and joy as she pursues her career in Law at Cambridge.&quot; – Pastor Rafik Daudjee<br>
+                    &quot;I&#x27;m absolutely delighted to read that Jannine is off to Cambridge to study law!&quot; – Martina (Dentist)<br>
                     (Full list available in original document)</p>
-                    <p><b>Wilberforce Academy</b></p>
-                    <p>Jannine attended the 2011 Wilberforce Academy at Oxford, hearing speakers like Bishop Michael Nazir-Ali. <a href="https://www.wilberforceacademy.org.uk/#6"><b>Read her testimony.</b></a></p>
-                    <p><b>Malaysian Preaching</b></p>
-                    <p>Anton shared Jannine's Cambridge journey in Malaysia:</p>
-                    <iframe width="500" height="300" src="https://www.youtube.com/embed/Vij9m71RS6Q" allowfullscreen title="Anton Nicholas – Malaysian preaching on Jannine's Cambridge journey"></iframe>
-                </div>
-            </div>
+      <p>Wilberforce Academy</p>
+      <p>Jannine attended the 2011 Wilberforce Academy at Oxford, hearing speakers like Bishop Michael Nazir-Ali. <a href="https://www.wilberforceacademy.org.uk/#6">Read her testimony.</a></p>
+      <p>Malaysian Preaching</p>
+      <p>Anton shared Jannine&#x27;s Cambridge journey in Malaysia:</p>
+            <div class="video-frame">
+        <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/Vij9m71RS6Q" data-video-title="Anton Nicholas – Malaysian preaching on Jannine&#x27;s Cambridge journey" aria-label="Play: Anton Nicholas – Malaysian preaching on Jannine&#x27;s Cambridge journey">
+          <img src="https://i.ytimg.com/vi/Vij9m71RS6Q/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="video-caption"><a href="https://www.youtube.com/watch?v=Vij9m71RS6Q">Watch on YouTube</a></p>
+    </section>
 
+    <section class="body-section">
+      <h2>Family Legacy</h2>
+      <div class="legacy-grid">
+        <div class="legacy-card">
+          <figure><img src="../images/profiles/bp.jpg" alt="B.P. Nicholas" loading="lazy"></figure>
+          <p>B.P. Nicholas</p>
+          <p>Bastianpillai Paul Nicholas founded the Oriental Bank of Malaya Limited in 1936, becoming the only ethnic Tamil to acquire a banking license in British Colonial Malaya. A visionary entrepreneur, he overcame colonial hurdles to establish a lasting financial legacy, headquartered in Kuala Lumpur.</p>
         </div>
-
-        <div class="legacy-section">
-            <h2>Family Legacy</h2>
-            <div class="legacy-grid">
-                <div class="legacy-card">
-                    <img src="../images/profiles/bp.jpg" alt="B.P. Nicholas" loading="lazy">
-                    <p><b>B.P. Nicholas</b></p>
-                    <p>Bastianpillai Paul Nicholas founded the Oriental Bank of Malaya Limited in 1936, becoming the only ethnic Tamil to acquire a banking license in British Colonial Malaya. A visionary entrepreneur, he overcame colonial hurdles to establish a lasting financial legacy, headquartered in Kuala Lumpur.</p>
-                </div>
-                <div class="legacy-card">
-                    <img src="../images/profiles/benedict.gif" alt="Benedict Ponniah" loading="lazy">
-                    <p><b>Benedict Ponniah</b></p>
-                    <p>Benedict Ponniah, a Queen's Scholar in 1934, achieved a Triple First in Law at St. John's College, Cambridge. He topped the Ceylon Civil Service exam and was poised to become Under Secretary to the UN Secretary General before his untimely death in 1949 at age 34.</p>
-                </div>
-                <div class="legacy-card">
-                    <img src="../images/profiles/grad_val.jpg" alt="Paul Nicholas" loading="lazy">
-                    <p><b>Paul Nicholas</b></p>
-                    <p>Paul Nicholas, great-grandson of B.P. Nicholas, graduated with an Honours Degree in Mathematics from Christ's College, Cambridge in 2005. He later earned an MSc with distinction from Imperial College London, funded by his employer, reflecting the family's mathematical legacy.</p>
-                </div>
-            </div>
+        <div class="legacy-card">
+          <figure><img src="../images/profiles/benedict.gif" alt="Benedict Ponniah" loading="lazy"></figure>
+          <p>Benedict Ponniah</p>
+          <p>Benedict Ponniah, a Queen&#x27;s Scholar in 1934, achieved a Triple First in Law at St. John&#x27;s College, Cambridge. He topped the Ceylon Civil Service exam and was poised to become Under Secretary to the UN Secretary General before his untimely death in 1949 at age 34.</p>
         </div>
+        <div class="legacy-card">
+          <figure><img src="../images/profiles/grad_val.jpg" alt="Paul Nicholas" loading="lazy"></figure>
+          <p>Paul Nicholas</p>
+          <p>Paul Nicholas, great-grandson of B.P. Nicholas, graduated with an Honours Degree in Mathematics from Christ&#x27;s College, Cambridge in 2005. He later earned an MSc with distinction from Imperial College London, funded by his employer, reflecting the family&#x27;s mathematical legacy.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-        <footer class="footer">
+  <footer>
     <div class="container">
-        <p>&copy; 2026 Anton Nicholas. All rights reserved.</p>
-        <!-- Flag Counter -->
+      © Anton Nicholas · Blessed and inaugurated 1 August 2002
+      <div class="footer-links">
+        <a href="../daily/index.htm">Daily Readings</a> ·
+        <a href="../thefruitofprayer.htm">The Fruit of Prayer</a> ·
+        <a href="https://nicholaslondon.org">Paul Nicholas</a> ·
+        <a href="https://twitter.com/AntonNicholas1">@AntonNicholas1</a>
+      </div>
+      <div class="footer-counters">
         <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+      </div>
     </div>
-</footer>
-    </div>
+  </footer>
 
-    <script src="../assets/js/sections.js"></script>
+  <!-- Start of StatCounter Code -->
+  <script type="text/javascript">
+    var sc_project=223118;
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+  <noscript>
+    <a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a>
+  </noscript>
+  <!-- End of StatCounter Code -->
+
+  <script>
+    document.querySelectorAll('.video-facade').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var src = btn.getAttribute('data-video-src');
+        var title = btn.getAttribute('data-video-title');
+        var sep = src.indexOf('?') >= 0 ? '&' : '?';
+        var iframe = document.createElement('iframe');
+        iframe.src = src + sep + 'autoplay=1';
+        iframe.title = title;
+        iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        iframe.setAttribute('allowfullscreen', '');
+        btn.parentElement.replaceChildren(iframe);
+      });
+    });
+  </script>
 </body>
 </html>

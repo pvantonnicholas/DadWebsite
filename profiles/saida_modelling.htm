@@ -1,73 +1,502 @@
-<html>
- <script language="javascript" 
-src="http://www.neoworx.net/neocounter/neocounter2/neoworx_tracker.php?registered_id=99730&counter_id=99730"> </script>
- 
- <!-- Start of StatCounter Code -->
-<script type="text/javascript" language="javascript">
-var sc_project=223118; 
- </script>
-
-<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript>
- <a href="http://www.statcounter.com" target="_blank"><img  src="http://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" border="0"></a></noscript>
-<!-- End of StatCounter Code -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Language" content="en-gb">
-<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
-<meta name="ProgId" content="FrontPage.Editor.Document">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Saida modelling</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saida modelling — Anton &amp; Saida Nicholas</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&amp;family=Playfair+Display:wght@700;900&amp;display=swap">
+  <style>
+    :root {
+      --paper: #f7f3ea;
+      --paper-raised: #efe8db;
+      --paper-inset: #e8e0d2;
+      --ink: #2a241c;
+      --ink-soft: #4d4539;
+      --muted: #7a7164;
+      --rule: #d5cbb8;
+      --rule-strong: #bfb39e;
+      --terracotta: #9a4e3c;
+      --gold: #8a7342;
+      --sage: #5f6f56;
+      --slate: #516878;
+      --plum: #6f5a62;
+      --depth: #3d352c;
+      --depth-gold: #bfa06a;
+    }
+
+    html { font-size: 22px; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1rem; }
+
+    .masthead {
+      text-align: center;
+      padding: 1rem 0 0;
+      border-bottom: 4px solid var(--terracotta);
+      background: var(--paper);
+    }
+
+    .dateline {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      padding: 0 0.25rem;
+    }
+
+    .nameplate-rules {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.3rem 0;
+    }
+
+    .nameplate {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .nameplate .amp { color: var(--terracotta); }
+
+    .motto {
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin: 0.35rem 0 0.1rem;
+    }
+
+    .section-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.95rem;
+      background: var(--paper);
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-top: 0.45rem;
+      padding: 0.4rem 0 0.55rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-nav a { color: var(--ink-soft); text-decoration: none; padding: 0 0.7rem; font-weight: 600; }
+    .section-nav a:hover { color: var(--terracotta); }
+    .section-nav a[aria-current="page"] { color: var(--terracotta); }
+    .section-nav span { color: var(--rule); user-select: none; }
+
+    .page-title-band {
+      background: var(--depth);
+      border-bottom: 1px solid var(--depth-gold);
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .page-title-band h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      color: var(--depth-gold);
+      line-height: 1.25;
+      max-width: 52rem;
+      margin: 0 auto;
+    }
+
+    .page-title-band h1.upper {
+      font-size: 1.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      max-width: none;
+    }
+
+    .page-title-band p {
+      font-style: italic;
+      color: #ebe4d8;
+      font-size: 1.05rem;
+      margin-top: 0.35rem;
+    }
+
+    .section-kicker {
+      font-size: 0.88rem;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+
+    .section-kicker::after {
+      content: "";
+      display: block;
+      width: 1.75rem;
+      height: 2px;
+      margin-top: 0.25rem;
+      background: currentColor;
+      opacity: 0.45;
+    }
+
+    .k-red    { color: var(--terracotta); }
+    .k-gold   { color: var(--gold); }
+    .k-sage   { color: var(--sage); }
+    .k-slate  { color: var(--slate); }
+    .k-plum   { color: var(--plum); }
+
+    h1, h2, h3 { color: var(--ink); }
+
+    .body-section {
+      border-top: 1px solid var(--rule-strong);
+      padding: 1.1rem 0.9rem 0.85rem;
+      margin-bottom: 1.2rem;
+      background: var(--paper-raised);
+    }
+
+    .body-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.22;
+      margin: 0.15rem 0 0.5rem;
+    }
+
+    .body-section h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0.5rem 0 0.4rem;
+      color: var(--ink-soft);
+    }
+
+    .body-section p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 1.2rem;
+      border-top: 1px solid var(--rule-strong);
+      background: var(--paper-raised);
+      padding: 0.2rem 0 0;
+    }
+
+    .wide-col {
+      padding: 0.9rem 0.85rem 0.85rem 0.9rem;
+      background: transparent;
+    }
+
+    .wide-col:not(:last-child) { border-right: 1px solid var(--rule); }
+
+    .wide-col p { margin-bottom: 0.5rem; font-size: 1rem; }
+
+    .scripture {
+      font-style: italic;
+      font-size: 1rem;
+      border-left: 3px solid var(--gold);
+      padding: 0.35rem 0 0.35rem 0.75rem;
+      margin: 0.5rem 0;
+      color: var(--ink-soft);
+    }
+
+    .highlight {
+      background: var(--paper);
+      border-left: 3px solid var(--gold);
+      padding: 0.5rem 0.75rem;
+      margin: 0.5rem 0;
+    }
+
+    figure { margin: 0.55rem 0 0.4rem; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--paper-inset);
+      padding: 4px;
+    }
+
+    .figure-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 0.55rem 0;
+    }
+
+    .figure-row figure { margin: 0; }
+
+    .figure-row.three { grid-template-columns: repeat(3, 1fr); }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--rule);
+      background: #000;
+      margin: 0.55rem 0 0.35rem;
+    }
+
+    .video-facade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: #000;
+    }
+
+    .video-facade img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 64px;
+      height: 64px;
+      margin: -32px 0 0 -32px;
+      border-radius: 50%;
+      background: rgba(154, 78, 60, 0.9);
+      pointer-events: none;
+    }
+
+    .video-play::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -12px 0 0 -6px;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .video-caption {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    .audio-block {
+      margin: 0.55rem 0 0.75rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .audio-block audio {
+      display: block;
+      width: 100%;
+      margin-top: 0.4rem;
+    }
+
+    .legacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .legacy-card {
+      border: 1px solid var(--rule);
+      padding: 0.75rem;
+      background: var(--paper);
+    }
+
+    .legacy-card img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--paper-inset);
+      padding: 4px;
+      margin-bottom: 0.4rem;
+    }
+
+    .legacy-card p { margin-bottom: 0.4rem; font-size: 0.95rem; }
+
+    ul { margin: 0.5rem 0 0.5rem 1.25rem; }
+    li { margin-bottom: 0.25rem; }
+
+    a { color: var(--terracotta); }
+
+    footer {
+      border-top: 4px solid var(--terracotta);
+      margin-top: 1.6rem;
+      padding: 1rem 0 1.6rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      background: var(--paper);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(154, 78, 60, 0.22); }
+    footer a:hover { color: var(--terracotta); border-bottom-color: var(--terracotta); }
+    .footer-links { margin-top: 0.3rem; }
+    .footer-counters { margin-top: 0.75rem; }
+
+    @media (max-width: 820px) {
+      html { font-size: 19px; }
+      .nameplate { font-size: 2.5rem; }
+      .dateline { flex-direction: column; gap: 0.15rem; text-align: center; }
+      .page-title-band h1 { font-size: 1.25rem; letter-spacing: 0.05em; }
+      .two-col, .figure-row, .figure-row.three, .legacy-grid { grid-template-columns: 1fr; }
+      .wide-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1rem;
+        margin-bottom: 0.6rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .two-col, .three-col, .video-grid, .figure-row, .figure-row.three, .edition-layout { grid-template-columns: 1fr; }
+      .col:not(:last-child), .wide-col:not(:last-child) { border-right: none; }
+    }
+  </style>
 </head>
-
 <body>
 
-<p align="center"><font face="Book Antiqua" size="6">Saida modelling</font></p>
-<p>
-<img border="0" src="http://www.antonnicholas.org.uk/images/profiles/saida_modelling_1.jpg" width="678" height="468"></p>
-<p>
-<img border="0" src="http://www.antonnicholas.org.uk/images/profiles/saida_modelling_2.jpg" width="674" height="469"></p>
-<p>
-<img border="0" src="http://www.antonnicholas.org.uk/images/profiles/saida_modelling_3.jpg" width="675" height="459"></p>
-<p>
-<img border="0" src="http://www.antonnicholas.org.uk/images/profiles/saidaanton.jpg" width="538" height="561"></p>
+  <div class="masthead">
+    <div class="container">
+      <div class="dateline">
+        <div>Est. 1 August 2002 · Malaya · London · Malaysia</div>
+        <div>1,893,704 readers and counting</div>
+      </div>
+      <div class="nameplate-rules">
+        <div class="nameplate">ANTON <span class="amp">&amp;</span> SAIDA NICHOLAS</div>
+      </div>
+      <div class="motto">“The Lord is My Shepherd; I shall not want.” — Psalm 23:1</div>
+      <nav class="section-nav" aria-label="Sections">
+        <a href="../daily/index.htm">Daily Readings</a><span>·</span>
+        <a href="../thefruitofprayer.htm">Prophecy</a><span>·</span>
+        <a href="oriental.htm" aria-current="page">Family Legacy</a><span>·</span>
+        <a href="../book/chapter1.htm">Saida's Journey</a><span>·</span>
+        <a href="../malaysia.htm">Malaysia</a><span>·</span>
+        <a href="../testimonies/index.htm">Testimonies</a><span>·</span>
+        <a href="../update.htm">Updates</a>
+      </nav>
+    </div>
+  </div>
 
-<p align="center">
-<a href="http://www.antonnicholas.org.uk/book/chapter1.htm">
-<font face="Book Antiqua"><b><font size="5">Read Saida's&nbsp; story by</font></b><font size="5">
-</font></font><span style="font-weight: 700">
-<font face="Book Antiqua" color="#800080" size="5">&nbsp;pressing this link:</font></span><span lang="en-gb"><font size="5" style="font-weight: 700" color="#800080" face="Book Antiqua">&nbsp;Release 
-from severe pain.</font></span></a><span lang="en-gb"><font size="5" style="font-weight: 700" color="#800080" face="Book Antiqua"><a href="http://www.antonnicholas.org.uk/book/chapter1.htm">
-</a></font></span></p>
+  <div class="page-title-band">
+    <div class="container">
+      <h1 class="upper">SAIDA MODELLING</h1>
+      <p>Photographs from Saida&#x27;s modelling days — before the Kingdom call</p>
+    </div>
+  </div>
 
-<p align="center">
-<span style="font-weight: 700"><font face="Book Antiqua" size="5">We wonder what 
+  <div class="container">
+    <section class="body-section">
+      <div class="section-kicker k-red">SAIDA MODELLING</div>
+      <p>Saida modelling</p>
+      
+<figure><img src="../images/profiles/saida_modelling_1.jpg" alt="" width="678" height="468" loading="lazy"></figure>
+      
+<figure><img src="../images/profiles/saida_modelling_2.jpg" alt="" width="674" height="469" loading="lazy"></figure>
+      
+<figure><img src="../images/profiles/saida_modelling_3.jpg" alt="" width="675" height="459" loading="lazy"></figure>
+      
+<figure><img src="../images/profiles/saidaanton.jpg" alt="" width="538" height="561" loading="lazy"></figure>
+      <p>
+<a href="../book/chapter1.htm">
+Read Saida&#x27;s  story by
+ pressing this link: Release 
+from severe pain.</a><a href="../book/chapter1.htm">
+</a></p>
+      <p>
+We wonder what 
 would have happened if Saida did not pursue the Kingdom of God and His 
-Righteousness. <a href="http://www.antonnicholas.org.uk/book/chapter1.htm">The 
-answer is in this link:</a></font></span></p>
-
-<body>
+Righteousness. <a href="../book/chapter1.htm">The 
+answer is in this link:</a></p>
+      
 <br> <br>
- <p align="center"> <font <font size="5"> 
-On this Marriage Prophetic video below, where a father is directly speaking to his son, the essential truth on how to pray effectively with definite fruitful results will manifest themselves.<br> <br> <b>  Paul Anton Imbaraj Nicholas is the first great grandson of the Banking Visionary B P Nicholas. Paul Nicholas has emulated the mantle of his great grandfather.</b> <br> <br> Both videos of the wedding have now been viewed by more than 14,400 individuals. Our You Tube Channel has been viewed by 253,800 individuals worldwide.</font></span></p>
-   <br><br>				
-                    
-</b> </a>
- &nbsp; 
-<p align="center">				
-		  			
- <iframe width="560" height="315" src="://www.youtube.com/embed/qXFgl9FzJPs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>  
+On this Marriage Prophetic video below, where a father is directly speaking to his son, the essential truth on how to pray effectively with definite fruitful results will manifest themselves.<br> <br>   Paul Anton Imbaraj Nicholas is the first great grandson of the Banking Visionary B P Nicholas. Paul Nicholas has emulated the mantle of his great grandfather. <br> <br> Both videos of the wedding have now been viewed by more than 14,400 individuals. Our You Tube Channel has been viewed by 253,800 individuals worldwide.</p>
+<br><br>
+ 
+   
+<p>
+      <div class="video-frame">
+        <button type="button" class="video-facade" data-video-src="https://www.youtube.com/embed/qXFgl9FzJPs" data-video-title="YouTube video" aria-label="Play: YouTube video">
+          <img src="https://i.ytimg.com/vi/qXFgl9FzJPs/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="video-caption"><a href="https://www.youtube.com/watch?v=qXFgl9FzJPs">Watch on YouTube</a></p>
+<br> <br>
 
-</a><br> <br> 
+<p> </p>
+<p> </p>
+</p>
+    </section>
+  </div>
 
-      </font></b> 
+  <footer>
+    <div class="container">
+      © Anton Nicholas · Blessed and inaugurated 1 August 2002
+      <div class="footer-links">
+        <a href="../daily/index.htm">Daily Readings</a> ·
+        <a href="../thefruitofprayer.htm">The Fruit of Prayer</a> ·
+        <a href="https://nicholaslondon.org">Paul Nicholas</a> ·
+        <a href="https://twitter.com/AntonNicholas1">@AntonNicholas1</a>
+      </div>
+      <div class="footer-counters">
+        <a href="https://info.flagcounter.com/oi2W"><img src="https://s09.flagcounter.com/count/oi2W/bg_1D31E0/txt_FAFAFA/border_EB497F/columns_5/maxflags_250/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter" border="0" loading="lazy"></a>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Start of StatCounter Code -->
+  <script type="text/javascript">
+    var sc_project=223118;
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+  <noscript>
+    <a href="https://www.statcounter.com" target="_blank" rel="noopener noreferrer"><img src="https://c1.statcounter.com/counter.php?sc_project=223118&amp;java=0" alt="website stats" loading="lazy"></a>
+  </noscript>
+  <!-- End of StatCounter Code -->
 
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
+  <script>
+    document.querySelectorAll('.video-facade').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var src = btn.getAttribute('data-video-src');
+        var title = btn.getAttribute('data-video-title');
+        var sep = src.indexOf('?') >= 0 ? '&' : '?';
+        var iframe = document.createElement('iframe');
+        iframe.src = src + sep + 'autoplay=1';
+        iframe.title = title;
+        iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        iframe.setAttribute('allowfullscreen', '');
+        btn.parentElement.replaceChildren(iframe);
+      });
+    });
+  </script>
 </body>
-
 </html>
