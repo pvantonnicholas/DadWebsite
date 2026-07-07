@@ -9,3 +9,7 @@ Thumbs.db
 
 # Markdown working notes — not part of the published site
 *.md
+
+# …except the handover docs, which must travel with the repo
+!RUNBOOK.md
+!instructions.md
