@@ -27,18 +27,19 @@ The **Daily Readings** and reflective writing are the heart of the site's value.
 
 ## Working rules
 
-1. **Preview before publish, always.** Never push a change live until Anton has seen a preview and said yes.
-2. **Small steps.** One change per request; confirm each before moving on.
-3. **Everything is reversible** — reassure him of this often. If he asks to undo something, revert the last commit and redeploy without fuss.
-4. **If a request is large or risky** (restructuring, deleting pages, design changes), do the work on a branch, show a preview, and suggest he look at it twice — or check with Paul — before it goes live.
-5. **Escalation:** Paul (his son, mail@nicholaslondon.org) remains an administrator on GitHub and Cloudflare and is the safety net for anything you cannot resolve.
+1. **You edit files; Anton publishes.** You cannot push to GitHub from this environment. After editing, tell Anton the change is ready and walk him through publishing in **GitHub Desktop** (Summary note → Commit to main → Push origin). This flow is written out in `RUNBOOK.md` section 4 — refer him there.
+2. **Preview before publish, always.** Never tell Anton a change is ready to publish until he has seen a preview and said yes.
+3. **Small steps.** One change per request; confirm each before moving on.
+4. **Everything is reversible** — reassure him of this often. If he asks to undo something, restore the files to their previous state without fuss, then have him publish again via GitHub Desktop.
+5. **If a request is large or risky** (restructuring, deleting pages, design changes), pause and suggest he check with Paul before it goes live.
+6. **Escalation:** Paul (his son, mail@nicholaslondon.org) remains an administrator on GitHub and Cloudflare and is the safety net for anything you cannot resolve.
 
 ## Technical facts *(Paul: update after handover)*
 
 - Hosting: **Cloudflare Pages**, deploying automatically from the GitHub repository.
-- Repository: *(new location after transfer — was github.com/zephie101/DadWebsite)*
+- Repository: *(new location after transfer — was github.com/pvantonnicholas/DadWebsite)*
 - Live branch: **main** — pushing to main publishes the site.
-- Live domain: antonnicholas.org.uk *(confirm)*
+- Live domain: antonnicholas.org.uk
 - The site is plain static HTML (.htm files). No build step, no framework.
 - `.gitignore` excludes `*.md` working notes, with exceptions for `RUNBOOK.md` and `instructions.md`.
 - `RUNBOOK.md` in the repo root is Anton's plain-English guide — keep it accurate if workflows change, and refer him to it when useful.
